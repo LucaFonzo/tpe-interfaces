@@ -1,3 +1,4 @@
+/*Fuentes*/
 @font-face {
   font-family: 'Roboto';
   src: url('../assets/fonts/Roboto-Slab.ttf');
@@ -12,8 +13,10 @@
 @font-face {
   font-family: 'Ruda';
   src: url('../assets/fonts/Ruda.ttf');
+  font-weight: 200;
 }
 
+/*Reseteo de los estilos del navegador*/
 * {
   margin: 0;
   padding: 0;
@@ -22,10 +25,20 @@
   outline: none;
   border: none;
   box-sizing: border-box;
+  font-family: Ruda;
+  font-weight: normal;
   color: #F2EDED;
 }
 
-h1, h2, h3 {
+body {
+  display: grid;
+  grid-template-rows: 100px auto 300px;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3 {
   font-family: Roboto;
 }
 
@@ -43,11 +56,15 @@ h3 {
 
 p {
   font-size: 14px;
-  font-family: Ruda;
 }
 
+a {
+  text-decoration: underline;
+}
+
+/* Clases genéricas para el layout */	
+
 .container {
-  max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,6 +87,10 @@ p {
   justify-content: space-around;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -78,25 +99,37 @@ p {
   align-items: center;
 }
 
-.mt-10 {
-  margin-top: 10px;
+.my-10{
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
+
+.mt-10{
+  margin-top: 10%;
+}
+
+.mb-10{
+  margin-bottom: 10%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.d-none {
+  display: none;
+}
+
+/*Header, main y footer*/
 
 header {
   display: flex;
   height: 100px;
 }
 
-footer {
-  height: 300px;
-}
-
-footer div {
-  margin-top: 50px;
-}
-
-main {
-  background-color: #E1E1E1;
+header svg {
+  width: 24px;
+  height: 24px;
 }
 
 .logo {
@@ -120,33 +153,26 @@ main {
   /*CSS para la imagen de perfil*/
 }
 
-.hidden {
-  visibility: hidden;
+main {
+  background-color: #E1E1E1;
+  height: 100%;
 }
 
-.d-none {
-  display: none;
+footer {
+  height: 300px;
 }
+
+footer div {
+  margin-top: 50px;
+}
+
+/*Botones*/
 
 .primary-btn {
+  font-family: Ruda;
+  letter-spacing: 2.32px;
+  font-size: 16px;
   border-radius: 30px;
-  background-color: #432F58;
   padding: 15px 20px;
-  box-shadow: none;
-  width: auto;
+  width: fit-content;
 }
-
-.container form {
-  height: 700px;
-}
-
-.input-group {
-  margin: 10px;
-}
-
-.input-group label {
-  display: block;
-  width: auto;
-}
-
-.input-group input {}

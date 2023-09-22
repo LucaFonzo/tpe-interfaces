@@ -1,0 +1,35 @@
+form {
+    font-family: Ruda;
+    font-size: 16px;
+    height: fit-content;
+    padding: 56px 6%;
+}
+
+.input-group, form.p, form button.primary-btn {
+    margin: 6% 2%;
+    width: 100%;
+}
+
+form button.primary-btn {
+    display: block;
+}
+
+.input-group label {
+    display: block;
+    width: auto;
+    margin-bottom: 2%;
+    letter-spacing: 2.5px;
+}
+
+.input-group > input {
+    height: 2.3rem;
+}
+
+.sub-password span {
+    letter-spacing: 2.3px;
+    margin-right: 2rem;
+}
+
+.sub-password p {
+    width: 4rem;
+}
