@@ -6,6 +6,7 @@
     border: none;
     outline: none;
     box-sizing: border-box;
+    color: #F2EDED;
 }
 
 @font-face {
@@ -23,12 +24,34 @@
     src: url('../assets/fonts/Ruda.ttf');
 }
 
+.main-color{
+    background-color: #432F58;
+}
+
+.secondary-color{
+    background-color: #2E4055;
+}
+
+.accent-color{
+    background-color: #FADEDE;
+}
+
+header{
+    display: flex;
+    height: 100px;
+}
+
+main{
+    background-color: #E1E1E1;
+}
+
 .logo{
     /*CSS para el div del logo*/
 }
 
 .logo svg{
-    /*CSS para el icono*/
+    width: 40px;
+    height: 25px;
 }
 
 .searchbar{
@@ -45,4 +68,8 @@
 
 .hidden{
     visibility: hidden;
+}
+
+.display-none {
+    display: none;
 }

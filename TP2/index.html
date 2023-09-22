@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/icons.css">
     <title>Iniciar sesión</title>
 </head>
 
 <body>
-    <header>
+    <header class="main-color">
         <nav>
             <svg class="burguer-icn"></svg>
-            <ul class="hidden">
+            <ul class="display-none">
                 <li><svg class="profile-icn"></svg><button class="nav-btn">Mi perfil</button></li>
                 <li><svg class="game-icn"></svg><button class="nav-btn">Mis juegos</button></li>
                 <li><svg class="cart-icn"></svg><button class="nav-btn">Mis compras</button></li>
@@ -20,11 +22,11 @@
                 <li><svg class="dice-icn"></svg><button class="nav-btn">Jugar aleatorio</button></li>
                 <li><svg class="tool-icn"></svg><button class="nav-btn">Configuración</button></li>
                 <hr>
-                <li><svg class="logout-icn"></svg><button class="nav-btn special">Cerrar sesión</button></li>
+                <li><svg class="log-out-icn"></svg><button class="nav-btn special">Cerrar sesión</button></li>
                 <li><svg class="alert-icn"></svg><button class="nav-btn">Reportar un problema</button></li>
                 <li><svg class="info-icn"></svg><button class="nav-btn">Información</button></li>
             </ul>
-            <ul class="hiddden">
+            <ul class="display-none">
                 <li><svg class="action-icn"></svg><button class="nav-btn">Acción</button></li>
                 <li><svg class="arcade-icn"></svg><button class="nav-btn">Arcade</button></li>
                 <li><svg class="race-icn"></svg><button class="nav-btn">Carreras</button></li>
@@ -52,6 +54,32 @@
             <svg class="logout-icn"></svg>
         </div>
     </header>
+
+
+    <main class="main-color">
+        <form>
+            <h2>Iniciar sesión</h2>
+            <div>
+                <label for="email">Email</label>
+                <input type="text" name="email" required>
+            </div>
+            <div>
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" required>
+            </div>
+
+            <button class="primary-btn main-color">Iniciar sesión</button>
+            <p>o</p>
+            <button>Iniciar sesión con <svg class="facebook-icn"></svg></button>
+            <button>Iniciar sesión con <svg class="google-icn"></svg></button>
+
+
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
 </body>
 
 </html>
