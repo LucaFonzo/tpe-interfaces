@@ -1,24 +1,32 @@
-*{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    outline: none;
-    border: none;
-    box-sizing: border-box;
-    color: #F2EDED;
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Slab.ttf');
+  font-weight: 400;
 }
 
-.main-color{
-    background-color: #432F58;
+@font-face {
+  font-family: 'MPLUS2';
+  src: url('../assets/fonts/MPLUS2.ttf');
 }
 
-.secondary-color{
-    background-color: #2E4055;
+@font-face {
+  font-family: 'Ruda';
+  src: url('../assets/fonts/Ruda.ttf');
 }
 
-.accent-color{
-    background-color: #FADEDE;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  color: #F2EDED;
+}
+
+h1, h2, h3 {
+  font-family: Roboto;
 }
 
 h1 {
@@ -35,22 +43,7 @@ h3 {
 
 p {
   font-size: 14px;
-}
-
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../assets/fonts/Roboto-Slab.ttf');
-}
-
-@font-face {
-    font-family: 'MPLUS2';
-    src: url('../assets/fonts/MPLUS2.ttf');
-}
-
-@font-face {
-    font-family: 'Ruda';
-    src: url('../assets/fonts/Ruda.ttf');
+  font-family: Ruda;
 }
 
 .container {
@@ -68,6 +61,11 @@ p {
   display: flex;
 }
 
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .justify-around {
   justify-content: space-around;
 }
@@ -76,13 +74,17 @@ p {
   justify-content: center;
 }
 
+.align-center {
+  align-items: center;
+}
+
 .mt-10 {
   margin-top: 10px;
 }
 
-header{
-    display: flex;
-    height: 100px;
+header {
+  display: flex;
+  height: 100px;
 }
 
 footer {
@@ -93,37 +95,37 @@ footer div {
   margin-top: 50px;
 }
 
-main{
-    background-color: #E1E1E1;
+main {
+  background-color: #E1E1E1;
 }
 
-.logo{
-    /*CSS para el div del logo*/
+.logo {
+  /*CSS para el div del logo*/
 }
 
-.logo svg{
-    width: 40px;
-    height: 25px;
+.logo svg {
+  width: 40px;
+  height: 25px;
 }
 
-.searchbar{
-    /*CSS para el div del buscador*/
+.searchbar {
+  /*CSS para el div del buscador*/
 }
 
-.main-menu{
-    /*CSS para el div del menu del header*/
+.main-menu {
+  /*CSS para el div del menu del header*/
 }
 
 .profile-pic {
-    /*CSS para la imagen de perfil*/
+  /*CSS para la imagen de perfil*/
 }
 
-.hidden{
-    visibility: hidden;
+.hidden {
+  visibility: hidden;
 }
 
-.display-none {
-    display: none;
+.d-none {
+  display: none;
 }
 
 .primary-btn {
@@ -142,12 +144,9 @@ main{
   margin: 10px;
 }
 
-.input-group label{
+.input-group label {
   display: block;
   width: auto;
 }
 
-.input-group input {
-
-}
-
+.input-group input {}
