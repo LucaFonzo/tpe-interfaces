@@ -62,8 +62,13 @@ a {
   text-decoration: underline;
 }
 
-/* Clases genéricas para el layout */	
+svg {
+  width: 24px;
+  height: 24px;
+}
 
+/* Clases genéricas para el layout */
+/*Flexbox*/
 .container {
   display: flex;
   justify-content: center;
@@ -99,19 +104,21 @@ a {
   align-items: center;
 }
 
-.my-10{
+/*Márgenes*/
+.my-10 {
   margin-top: 10%;
   margin-bottom: 10%;
 }
 
-.mt-10{
+.mt-10 {
   margin-top: 10%;
 }
 
-.mb-10{
+.mb-10 {
   margin-bottom: 10%;
 }
 
+/*Ocultamiento*/
 .hidden {
   visibility: hidden;
 }
@@ -130,6 +137,10 @@ header {
 header svg {
   width: 24px;
   height: 24px;
+}
+
+header a {
+  text-decoration: none;
 }
 
 .logo {

@@ -2,16 +2,21 @@ form {
     font-family: Ruda;
     font-size: 16px;
     height: fit-content;
-    padding: 56px 6%;
+    padding: 65px 100px;
 }
 
-.input-group, form.p, form button.primary-btn {
+.input-group, form button.primary-btn {
     margin: 6% 2%;
     width: 100%;
 }
 
-form button.primary-btn {
-    display: block;
+form div+p{
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+button svg {
+    margin-left: 0.5rem;
 }
 
 .input-group label {
