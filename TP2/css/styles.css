@@ -8,3 +8,41 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Slab.ttf');
+}
+
+@font-face {
+    font-family: 'MPLUS2';
+    src: url('../assets/fonts/MPLUS2.ttf');
+}
+
+@font-face {
+    font-family: 'Ruda';
+    src: url('../assets/fonts/Ruda.ttf');
+}
+
+.logo{
+    /*CSS para el div del logo*/
+}
+
+.logo svg{
+    /*CSS para el icono*/
+}
+
+.searchbar{
+    /*CSS para el div del buscador*/
+}
+
+.main-menu{
+    /*CSS para el div del menu del header*/
+}
+
+.profile-pic {
+    /*CSS para la imagen de perfil*/
+}
+
+.hidden{
+    visibility: hidden;
+}
