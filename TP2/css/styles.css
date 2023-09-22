@@ -3,11 +3,40 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-    border: none;
     outline: none;
+    border: none;
     box-sizing: border-box;
     color: #F2EDED;
 }
+
+.main-color{
+    background-color: #432F58;
+}
+
+.secondary-color{
+    background-color: #2E4055;
+}
+
+.accent-color{
+    background-color: #FADEDE;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+p {
+  font-size: 14px;
+}
+
 
 @font-face {
     font-family: 'Roboto';
@@ -24,21 +53,44 @@
     src: url('../assets/fonts/Ruda.ttf');
 }
 
-.main-color{
-    background-color: #432F58;
+.container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.secondary-color{
-    background-color: #2E4055;
+.text-center {
+  text-align: center;
 }
 
-.accent-color{
-    background-color: #FADEDE;
+.d-flex {
+  display: flex;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.mt-10 {
+  margin-top: 10px;
 }
 
 header{
     display: flex;
     height: 100px;
+}
+
+footer {
+  height: 300px;
+}
+
+footer div {
+  margin-top: 50px;
 }
 
 main{
@@ -73,3 +125,29 @@ main{
 .display-none {
     display: none;
 }
+
+.primary-btn {
+  border-radius: 30px;
+  background-color: #432F58;
+  padding: 15px 20px;
+  box-shadow: none;
+  width: auto;
+}
+
+.container form {
+  height: 700px;
+}
+
+.input-group {
+  margin: 10px;
+}
+
+.input-group label{
+  display: block;
+  width: auto;
+}
+
+.input-group input {
+
+}
+
