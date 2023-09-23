@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/colors.css">
+  <link rel="stylesheet" type="text/css" href="css/icons.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
+  <title>Registrarse</title>
+</head>
+
+<body>
+  <header class="main-color">
+    <nav>
+      <svg class="icon hamburguer-icn"></svg>
+      <ul class="d-none">
+        <li><svg class="icon profile-icn"></svg><button class="nav-btn">Mi perfil</button></li>
+        <li><svg class="icon game-icn"></svg><button class="nav-btn">Mis juegos</button></li>
+        <li><svg class="icon cart-icn"></svg><button class="nav-btn">Mis compras</button></li>
+        <li><svg class="icon category-icn"></svg><button class="nav-btn special">Categorías</button></li>
+        <li><svg class="icon search-icn"></svg><button class="nav-btn">Buscar juegos</button></li>
+        <li><svg class="icon dice-icn"></svg><button class="nav-btn">Jugar aleatorio</button></li>
+        <li><svg class="icon tool-icn"></svg><button class="nav-btn">Configuración</button></li>
+        <hr>
+        <li><svg class="icon log-out-icn"></svg><button class="nav-btn special">Cerrar sesión</button></li>
+        <li><svg class="icon alert-icn"></svg><button class="nav-btn">Reportar un problema</button></li>
+        <li><svg class="icon info-icn"></svg><button class="nav-btn">Información</button></li>
+      </ul>
+      <ul class="d-none">
+        <li><svg class="icon action-icn"></svg><button class="nav-btn">Acción</button></li>
+        <li><svg class="icon arcade-icn"></svg><button class="nav-btn">Arcade</button></li>
+        <li><svg class="icon race-icn"></svg><button class="nav-btn">Carreras</button></li>
+        <li><svg class="icon sport-icn"></svg><button class="nav-btn">Deportes</button></li>
+        <li><svg class="icon rpg-icn"></svg><button class="nav-btn">RPG</button></li>
+        <li><svg class="icon strat-icn"></svg><button class="nav-btn">Estrategia</button></li>
+      </ul>
+    </nav>
+
+    <div class="logo">
+      <a href="home.html">
+        <svg class="game-icn"></svg>
+        <h1>Juegazos</h1>
+      </a>
+    </div>
+
+    <div class="searchbar">
+      <input type="text" placeholder="Buscar juegos...">
+      <svg class="icon search-icn"></svg>
+    </div>
+
+    <div class="main-menu">
+      <svg class="icon cart-icn"></svg>
+      <img src="assets/img/profile.png" alt="profile" class="profile-pic">
+      <svg class="icon log-out-icn"></svg>
+    </div>
+  </header>
+
+
+  <main class="d-flex-col justify-center align-center">
+    <form class="d-flex-col justify-center main-color s1 my-10">
+
+      <h2 class="text-center mb-10">Registarse</h2>
+
+      <div class="d-flex">
+        <div class="input-group d-flex-col">
+          <label for="name">Nombre*</label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="input-group d-flex-col">
+          <label for="name">Apellido*</label>
+          <input type="text" name="name" required>
+        </div>
+      </div>
+
+
+      <div class="input-group d-flex-col">
+        <label for="name">Nombre de usuario</label>
+        <input type="text" name="name" required>
+      </div>
+
+      <div class="input-group d-flex-col">
+        <label for="email">Email*</label>
+        <input type="text" name="email" required>
+      </div>
+
+      <div class="input-group d-flex-col">
+        <label for="password">Contraseña*</label>
+        <input type="password" name="password" required>
+      </div>
+
+      <div class="input-group d-flex-col">
+        <label for="repeat-password">Repetir contraseña*</label>
+        <input type="password" name="repeat-password" required>
+      </div>
+
+      <div class="sub-password d-flex justify-between">
+        <span><input type="checkbox" name="accept-terms"> Acepto terminos y condiciones</span>
+      </div>
+      <div>
+        <button class="primary-btn main-color">Captcha</button>
+      </div>
+      <div class=" text-center mt-5">
+        <p>*Campos obligatorios</p>
+      </div>
+
+      <button class="primary-btn main-color d-flex align-center justify-center">Registrarse</button>
+
+      <p class="text-center">o</p>
+
+      <div>
+        <button class="primary-btn main-color d-flex align-center justify-center">Iniciar sesión con <svg
+            class="icon facebook-icn">F</svg></button>
+        <button class="primary-btn main-color d-flex align-center justify-center">Iniciar sesión con <svg
+            class="icon google-icn">G</svg></button>
+      </div>
+      <p class="text-center">Ya tenés una cuenta? <a href="index.html">Inicia sesion</a></p>
+    </form>
+  </main>
+
+  <footer class="main-color">
+    <div class="container d-flex justify-around">
+      <div>
+        <h2>This is a title</h2>
+      </div>
+      <div>
+        <p>Terminos de uso y condiciones</p>
+      </div>
+      <div>
+        <p>AYUDA</p>
+      </div>
+      <div>
+        <p>Redes</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
