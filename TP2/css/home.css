@@ -4,9 +4,15 @@
   border-radius: 10px;
 }
 
+.card:hover {
+  /**transition: ease-out 5ms;**/
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
 .card-img-top {
   min-width: 270px;
   max-height: 150px;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-body {
