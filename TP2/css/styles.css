@@ -70,6 +70,14 @@ svg {
 /* Clases genéricas para el layout */
 /*Flexbox*/
 .container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-800 {
+  max-width: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,6 +104,10 @@ svg {
   justify-content: space-between;
 }
 
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -115,11 +127,19 @@ svg {
 }
 
 .mt-5 {
-  margin-top: 5px;
+  margin-top: 5%;
 }
 
 .mb-10 {
   margin-bottom: 10%;
+}
+
+.ml-10 {
+  margin-left: 10%;
+}
+
+.ml-5 {
+  margin-left: 5%;
 }
 
 /*Ocultamiento*/
@@ -134,9 +154,9 @@ svg {
 /*Header, main y footer*/
 
 header {
-  display: flex;
   height: 100px;
 }
+
 
 header svg {
   width: 24px;
@@ -147,8 +167,7 @@ header a {
   text-decoration: none;
 }
 
-.logo {
-  /*CSS para el div del logo*/
+.logo a {
 }
 
 .logo svg {
@@ -156,16 +175,26 @@ header a {
   height: 25px;
 }
 
+
 .searchbar {
-  /*CSS para el div del buscador*/
+  
 }
 
+.search-input {
+}
+
+.search-icon {
+  
+}
+
+
+
 .main-menu {
-  /*CSS para el div del menu del header*/
+  
 }
 
 .profile-pic {
-  /*CSS para la imagen de perfil*/
+  
 }
 
 main {

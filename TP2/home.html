@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/colors.css">
   <link rel="stylesheet" type="text/css" href="css/icons.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link rel="stylesheet" type="text/css" href="css/login.css">
-  <title>Iniciar sesión</title>
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <title>Home</title>
 </head>
-
 <body>
   <header class="main-color">
     <nav>
       <svg class="icon hamburguer-icn"></svg>
+      <div class="logo">
+        <a href="home.html">
+          <svg class="game-icn"></svg>
+          <h1>Juegazos</h1>
+        </a>
+      </div>
       <ul class="d-none">
         <li><svg class="icon profile-icn"></svg><button class="nav-btn">Mi perfil</button></li>
         <li><svg class="icon game-icn"></svg><button class="nav-btn">Mis juegos</button></li>
@@ -37,76 +41,45 @@
         <li><svg class="icon strat-icn"></svg><button class="nav-btn">Estrategia</button></li>
       </ul>
     </nav>
-
-    <div class="logo">
-      <a href="home.html">
-        <svg class="game-icn"></svg>
-        <h1>Juegazos</h1>
-      </a>
-    </div>
-
     <div class="searchbar">
-      <input type="text" placeholder="Buscar juegos...">
+      <input class="search-input" type="text" placeholder="Buscar juegos...">
       <svg class="icon search-icn"></svg>
     </div>
-
     <div class="main-menu">
       <svg class="icon cart-icn"></svg>
       <img src="assets/img/profile.png" alt="profile" class="profile-pic">
       <svg class="icon log-out-icn"></svg>
     </div>
   </header>
-
-
-  <main class="d-flex-col justify-center align-center">
-    <form class="d-flex-col justify-center main-color s1 my-10">
-
-      <h2 class="text-center mb-10">Iniciar sesión</h2>
-
-      <div class="input-group d-flex-col">
-        <label for="email">Email</label>
-        <input type="text" name="email" required>
+  <main class="container">
+    <div class="card sec-color">
+      <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
+        <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's content.
+        </p>
+        <div class="d-flex justify-around mt-10">
+          <p class="mt-5">$50</p>
+          <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
+        </div>
       </div>
-
-      <div class="input-group d-flex-col">
-        <label for="password">Contraseña</label>
-        <input type="password" name="password" required>
-      </div>
-
-      <div class="sub-password d-flex justify-between">
-        <span><input type="checkbox" name="remember"> Recordarme</span>
-        <p><a href="">Olvidé mi contraseña</a></p>
-      </div>
-
-      <button class="primary-btn main-color d-flex align-center justify-center">Iniciar sesión</button>
-
-      <p class="text-center">o</p>
-
-      <div>
-        <button class="primary-btn main-color d-flex align-center justify-center">Iniciar sesión con <svg class="icon facebook-icn">F</svg></button>
-        <button class="primary-btn main-color d-flex align-center justify-center">Iniciar sesión con <svg class="icon google-icn">G</svg></button>
-      </div>
-
-      <p class="text-center"><a href="">Políticas de privacidad</a></p>
-      <p class="text-center">¿No tenés cuenta? <a href="register.html">Crear una</a></p>
-    </form>
+    </div>
   </main>
   <footer class="main-color">
     <div class="container justify-evenly">
-        <div>
-          <h2>This is a title</h2>
-        </div>
-        <div>
-          <p>Terminos de uso y condiciones</p>
-        </div>
-        <div>
-          <p>AYUDA</p>
-        </div>
-        <div>
-          <p>Redes</p>
-        </div>
+      <div>
+        <h2>This is a title</h2>
+      </div>
+      <div>
+        <p>Terminos de uso y condiciones</p>
+      </div>
+      <div>
+        <p>AYUDA</p>
+      </div>
+      <div>
+        <p>Redes</p>
+      </div>
     </div>
   </footer>
 </body>
-
 </html>

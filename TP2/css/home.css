@@ -1,0 +1,15 @@
+.card {
+  max-width: 270px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.card-img-top {
+  min-width: 270px;
+  max-height: 150px;
+}
+
+.card-body {
+  max-width: 270px;
+  max-height: 190px;
+}
