@@ -11,19 +11,6 @@
 </head>
 <body>
   <header class="main-color d-flex justify-around align-center">
-    <div class="d-flex">
-      <div class="ml-10">
-        <button onclick="show()" class="main-color">
-          <svg class="icon hamburguer-icn"></svg>
-        </button>
-      </div>
-    </div>
-    <div class="logo">
-      <a href="home.html" class="d-flex">
-        <svg class="game-icn"></svg>
-        <h1>Juegazos</h1>
-      </a>
-    </div>
     <div class="navigation">
       <nav class="d-flex align-center">
         <ul class="main-color-s2">
@@ -37,7 +24,9 @@
             <p>Mis compras</p>
           </li>
           <li><svg class="icon category-icn"></svg>
-            <button class="nav-btn main-color-s2" id="category-icn"><p>Categorias</p></button>
+            <button class="nav-btn main-color-s2" id="category-icn">
+              <p>Categorias</p>
+            </button>
           </li>
           <li><svg class="icon search-icn"></svg>
             <p>Buscar juegos</p>
@@ -69,27 +58,32 @@
         </ul>
       </nav>
     </div>
+    <div class="d-flex">
+      <div class="mt-10">
+        <button onclick="show()" class="main-color">
+          <svg class="icon hamburguer-icn"></svg>
+        </button>
+      </div>
+      <div class="logo">
+        <a href="home.html">
+          <svg class="game-icn"></svg>
+          <h1>Juegazos</h1>
+        </a>
+      </div>
+    </div>
     <div class="searchbar">
       <input class="search-input" type="text" placeholder="Buscar juegos...">
-      <svg class="icon search-icn"></svg>
+      <div class="d-flex align-center justify-center mt-10">
+        <svg class="icon search-icn"></svg>
+      </div>
     </div>
-    <div class="main-menu">
+    <div class="main-menu d-flex align-center justify-between">
       <svg class="icon cart-icn"></svg>
       <img src="assets/img/profile.png" alt="profile" class="profile-pic">
       <svg class="icon log-out-icn"></svg>
     </div>
   </header>
-  <main>
-    <div class="main-image">
-      <div class="container">
-        <h2>Tom & Jerry: 4 en linea</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestias voluptatem necessitatibus sequi
-          accusamus repudiandae natus tenetur eum facilis exercitationem maxime quia sunt, eveniet aut fuga, magnam labore
-          corrupti cupiditate!</p>
-        <button class="primary-btn main-color">Jugar</button>
-      </div>
-      <img src="assets/img/tom-jerry-fondo.jpg" alt="">
-    </div>
+  <main class="container">
     <div class="card sec-color">
       <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
       <div class="card-body">

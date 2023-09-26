@@ -177,6 +177,7 @@ header a {
 
 .logo {
   position: relative;
+  margin-left: 50%;
 }
 
 .logo svg {
@@ -274,6 +275,36 @@ nav ul {
 .categories {
   width: 200px;
   height: auto;
+}
+
+
+.searchbar {
+  position: relative;
+  width: 400px;
+}
+
+.searchbar div {
+  position: absolute;
+  right: 10px;
+  bottom: 1px;
+  border-left: 1px solid #000;
+  height: 50px;
+}
+
+.searchbar .search-icn {
+  margin-left: 20px ;
+  fill: #210D36;
+}
+
+.search-input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.main-menu {
+  width: 150px;
 }
 
 
