@@ -92,6 +92,10 @@ svg {
   display: flex;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .d-flex-col {
   display: flex;
   flex-direction: column;
@@ -115,6 +119,10 @@ svg {
 
 .align-center {
   align-items: center;
+}
+
+.position-relative {
+  position: relative;
 }
 
 /*Márgenes*/
@@ -143,6 +151,7 @@ svg {
   margin-left: 5%;
 }
 
+
 /*Ocultamiento*/
 .hidden {
   visibility: hidden;
@@ -153,11 +162,9 @@ svg {
 }
 
 /*Header, main y footer*/
-
 header {
   height: 100px;
 }
-
 
 header svg {
   width: 24px;
@@ -168,34 +175,17 @@ header a {
   text-decoration: none;
 }
 
-.logo a {
+.logo {
+  position: relative;
 }
 
 .logo svg {
+  transform: rotate(-30deg);
   width: 40px;
   height: 25px;
-}
-
-
-.searchbar {
-  
-}
-
-.search-input {
-}
-
-.search-icon {
-  
-}
-
-
-
-.main-menu {
-  
-}
-
-.profile-pic {
-  
+  position: absolute;
+  bottom: 10px;
+  left: -30px;
 }
 
 main {
@@ -219,4 +209,53 @@ footer div {
   border-radius: 30px;
   padding: 15px 20px;
   width: fit-content;
+}
+
+.nav-btn {
+  padding: 10px;
+  border-radius: 15px;
+  color: #E1E1E1;
+  border: solid 4px #E1E1E1;
+}
+
+a,button{
+    cursor: pointer;
+}
+
+nav{
+    position: absolute;
+    top: 50px;
+    width: 200px;
+    height: auto;
+}
+
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  max-width: 200px;
+}
+
+.navigation{
+    position: fixed;
+    left: -500px;
+    width: 350px;
+    transition: .5s;
+}
+
+
+.bar{
+    position: fixed;
+}
+
+.bar{
+    top: 3px;
+    background: #000;
+    transition: all .3s ease-in;
+}
+
+.navigation.active{
+    left: 0;
 }

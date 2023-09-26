@@ -66,6 +66,7 @@
 
 .hamburguer-icn{
     background-image: url('../assets/icons/hamburguer.svg');
+    cursor: pointer;
 }
 
 .info-icn{

@@ -10,37 +10,57 @@
   <title>Home</title>
 </head>
 <body>
-  <header class="main-color">
-    <nav>
-      <svg class="icon hamburguer-icn"></svg>
-      <div class="logo">
-        <a href="home.html">
-          <svg class="game-icn"></svg>
-          <h1>Juegazos</h1>
-        </a>
+  <header class="main-color d-flex justify-around align-center">
+    <div class="d-flex">
+      <div class="ml-10">
+        <button onclick="show()">
+          <svg class="icon hamburguer-icn"></svg>
+        </button>
       </div>
-      <ul class="d-none">
-        <li><svg class="icon profile-icn"></svg><button class="nav-btn">Mi perfil</button></li>
-        <li><svg class="icon game-icn"></svg><button class="nav-btn">Mis juegos</button></li>
-        <li><svg class="icon cart-icn"></svg><button class="nav-btn">Mis compras</button></li>
-        <li><svg class="icon category-icn"></svg><button class="nav-btn special">Categorías</button></li>
-        <li><svg class="icon search-icn"></svg><button class="nav-btn">Buscar juegos</button></li>
-        <li><svg class="icon dice-icn"></svg><button class="nav-btn">Jugar aleatorio</button></li>
-        <li><svg class="icon tool-icn"></svg><button class="nav-btn">Configuración</button></li>
-        <hr>
-        <li><svg class="icon log-out-icn"></svg><button class="nav-btn special">Cerrar sesión</button></li>
-        <li><svg class="icon alert-icn"></svg><button class="nav-btn">Reportar un problema</button></li>
-        <li><svg class="icon info-icn"></svg><button class="nav-btn">Información</button></li>
-      </ul>
-      <ul class="d-none">
-        <li><svg class="icon action-icn"></svg><button class="nav-btn">Acción</button></li>
-        <li><svg class="icon arcade-icn"></svg><button class="nav-btn">Arcade</button></li>
-        <li><svg class="icon race-icn"></svg><button class="nav-btn">Carreras</button></li>
-        <li><svg class="icon sport-icn"></svg><button class="nav-btn">Deportes</button></li>
-        <li><svg class="icon rpg-icn"></svg><button class="nav-btn">RPG</button></li>
-        <li><svg class="icon strat-icn"></svg><button class="nav-btn">Estrategia</button></li>
-      </ul>
-    </nav>
+    </div>
+    <div class="navigation">
+      <nav class="main-color-s2">
+        <ul>
+          <li><svg class="icon profile-icn"></svg>
+            <p>Mi perfil</p>
+          </li>
+          <li><svg class="icon game-icn"></svg>
+            <p>Mis juegos</p>
+          </li>
+          <li><svg class="icon cart-icn"></svg>
+            <p>Mis compras</p>
+          </li>
+          <li><svg class="icon category-icn"></svg>
+            <p>Categorias</p>
+          </li>
+          <li><svg class="icon search-icn"></svg>
+            <p>Buscar juegos</p>
+          </li>
+          <li><svg class="icon dice-icn"></svg>
+            <p>Jugar juego aleatorio</p>
+          </li>
+          <li><svg class="icon tool-icn"></svg>
+            <p>Configuracion</p>
+          </li>
+          <hr>
+          <li><svg class="icon log-out-icn"></svg><button class="nav-btn special main-color-s2">
+              <p>Cerrar sesion</p>
+          </li>
+          <li><svg class="icon alert-icn"></svg>
+            <p>Reportar un problema</p></button>
+          </li>
+          <li><svg class="icon info-icn"></svg>
+            <p>Informacion</p>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="logo">
+      <a href="home.html" class="d-flex">
+        <svg class="game-icn"></svg>
+        <h1>Juegazos</h1>
+      </a>
+    </div>
     <div class="searchbar">
       <input class="search-input" type="text" placeholder="Buscar juegos...">
       <svg class="icon search-icn"></svg>
@@ -51,7 +71,10 @@
       <svg class="icon log-out-icn"></svg>
     </div>
   </header>
-  <main class="container">
+  <main>
+    <div>
+      <img src="assets/img/tom-jerry-fondo.jpg" alt="">
+    </div>
     <div class="card sec-color">
       <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
       <div class="card-body">
@@ -81,5 +104,6 @@
       </div>
     </div>
   </footer>
+  <script src="js/app.js"></script>
 </body>
 </html>
