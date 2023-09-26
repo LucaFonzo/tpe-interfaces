@@ -225,17 +225,28 @@ a,button{
 nav{
     position: absolute;
     top: 50px;
-    width: 200px;
+    width: 500px;
     height: auto;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 
 nav ul li {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 10px;
-  max-width: 200px;
+  max-width: 300px;
+}
+
+nav ul {
+  width: 350px;
+  height: auto;
 }
 
 .navigation{
@@ -258,4 +269,33 @@ nav ul li {
 
 .navigation.active{
     left: 0;
+}
+
+.categories {
+  width: 200px;
+  height: auto;
+}
+
+
+/*CARD*/
+.card {
+  max-width: 270px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.card:hover {
+  /**transition: ease-out 5ms;**/
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+.card-img-top {
+  min-width: 270px;
+  max-height: 150px;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  max-width: 270px;
+  max-height: 190px;
 }
