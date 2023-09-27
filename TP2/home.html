@@ -15,37 +15,37 @@
       <nav class="d-flex align-center">
         <ul class="main-color-s2">
           <li><svg class="icon profile-icn"></svg>
-            <p class="text-center">Mi perfil</p>
+            <span class="text-center">Mi perfil</span>
           </li>
           <li><svg class="icon game-icn"></svg>
-            <p>Mis juegos</p>
+            <span>Mis juegos</span>
           </li>
           <li><svg class="icon cart-icn"></svg>
-            <p>Mis compras</p>
+            <span>Mis compras</span>
           </li>
           <li><svg class="icon category-icn"></svg>
             <button class="nav-btn main-color-s2" id="category-icn">
-              <p>Categorias</p>
+              <span>Categorias</span>
             </button>
           </li>
           <li><svg class="icon search-icn"></svg>
-            <p>Buscar juegos</p>
+            <span>Buscar juegos</span>
           </li>
           <li><svg class="icon dice-icn"></svg>
-            <p>Jugar juego aleatorio</p>
+            <span>Jugar juego aleatorio</span>
           </li>
           <li><svg class="icon tool-icn"></svg>
-            <p>Configuracion</p>
+            <span>Configuracion</span>
           </li>
           <hr>
           <li><svg class="icon log-out-icn"></svg><button class="nav-btn special main-color-s2">
-              <p>Cerrar sesion</p>
+              <span>Cerrar sesion</span>
           </li>
           <li><svg class="icon alert-icn"></svg>
-            <p>Reportar un problema</p></button>
+            <span>Reportar un problema</span></button>
           </li>
           <li><svg class="icon info-icn"></svg>
-            <p>Informacion</p>
+            <span>Informacion</span>
           </li>
         </ul>
         <ul class="main-color-s1 categories hidden">
@@ -58,29 +58,28 @@
         </ul>
       </nav>
     </div>
-    <div class="d-flex">
-      <div class="mt-10">
-        <button onclick="show()" class="main-color">
-          <svg class="icon hamburguer-icn"></svg>
-        </button>
+    <div class="header-hero">
+      <div class="d-flex justify-between align-center">
+        <div>
+          <button onclick="show()" class="main-color">
+            <svg class="icon hamburguer-icn"></svg>
+          </button>
+        </div>
+        <div class="logo">
+          <a href="home.html">
+            <svg class="game-icn"></svg>
+            <h1>Juegazos</h1>
+          </a>
+        </div>
       </div>
-      <div class="logo">
-        <a href="home.html">
-          <svg class="game-icn"></svg>
-          <h1>Juegazos</h1>
-        </a>
+      <div class="search-bar">
+            <input type="text" placeholder="Buscar juegos..." class="input-with-icon">
       </div>
-    </div>
-    <div class="searchbar">
-      <input class="search-input" type="text" placeholder="Buscar juegos...">
-      <div class="d-flex align-center justify-center mt-10">
-        <svg class="icon search-icn"></svg>
+      <div class="main-menu d-flex align-center justify-between">
+        <svg class="icon cart-icn"></svg>
+        <img src="assets/img/profile.png" alt="profile" class="profile-pic">
+        <svg class="icon log-out-icn"></svg>
       </div>
-    </div>
-    <div class="main-menu d-flex align-center justify-between">
-      <svg class="icon cart-icn"></svg>
-      <img src="assets/img/profile.png" alt="profile" class="profile-pic">
-      <svg class="icon log-out-icn"></svg>
     </div>
   </header>
   <main class="container">
