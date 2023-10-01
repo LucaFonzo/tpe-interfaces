@@ -1,6 +1,6 @@
 .icon{
-    background-size: contain;
-    fill: #FFFFFF;
+  background-size: contain;
+  fill: #f1f1f1;
 }
 
 .action-icn{
@@ -37,7 +37,6 @@
 
 .facebook-icn{
     background-image: url('../assets/icons/facebook.svg');
-    
 }
 
 .full-screen-icn{

@@ -202,6 +202,7 @@ header a {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 60%;
 }
 
 @media screen and (min-width: 1020px) {
@@ -219,71 +220,92 @@ header a {
   outline: none;
   background-color: #f1f1f1;
   border-radius: 10px;
+}
+
+.main-menu *{
+  padding: 10px;
+}
+
+a,button{
+  cursor: pointer;
+}
+
+nav {
+  position: absolute;
+  top: 50px;
+  width: auto;
+  max-width: 500px;
+  height: auto;
+}
+
+
+@media screen and (min-width: 1020px) {
+  nav {
+    width: auto;
+    max-width: 800px;
+  }
+}
+
+
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
   width: 100%;
 }
 
-  a,button{
-      cursor: pointer;
-  }
+nav ul li span,button {
+  margin-left: 10px;
+}
 
-  nav{
-      position: absolute;
-      top: 50px;
-      width: 500px;
-      height: auto;
-  }
+.navigation{
+  position: absolute;
+  left: -400px;
+  transition: .5s;
+}
 
-  nav ul {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+.side-menu {
+  padding: 10px;
+}
 
 
-  nav ul li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 10px;
-  }
+.bar{
+  position: absolute;
+}
 
-  .navigation{
-      position: absolute;
-      left: -500px;
-      transition: .5s;
-  }
+.bar{
+  top: 3px;
+  background: #000;
+  transition: all .3s ease-in;
+}
 
+.navigation.active{
+  left: 0;
+}
 
-  .bar{
-    position: absolute;
-  }
-
-  .bar{
-      top: 3px;
-      background: #000;
-      transition: all .3s ease-in;
-  }
-
-  .navigation.active{
-      left: 0;
-  }
-
-  .categories {
-    height: auto;
-  }
+.categories {
+  height: auto;
+}
 
 main {
-    height: 100%;
-  }
+  height: 100%;
+}
 
-  footer {
-    height: 300px;
-  }
+footer {
+  height: 300px;
+}
 
-  footer div {
-    margin-top: 50px;
-  }
+footer div {
+  margin: 10px;
+}
 
 
 /*Botones*/
@@ -295,6 +317,7 @@ main {
   border-radius: 30px;
   padding: 15px 20px;
   width: fit-content;
+  text-align: center;
 }
 
 .nav-btn {
