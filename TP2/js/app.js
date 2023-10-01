@@ -1,3 +1,5 @@
+document.querySelector('#burger-btn').addEventListener('click', show);
+
 function show() {
   document.querySelector('.navigation').classList.toggle('active');
 };

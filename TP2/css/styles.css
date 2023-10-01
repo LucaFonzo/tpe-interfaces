@@ -162,35 +162,65 @@ svg {
 }
 
 /*Header, main y footer*/
-  header {
+header {
   height: auto;
 }
 
-  header svg {
-    width: 24px;
-    height: 24px;
-  }
+header svg {
+  width: 24px;
+  height: 24px;
+}
 
-  header a {
-    text-decoration: none;
-  }
+header a {
+  text-decoration: none;
+}
 
-  .header-hero {
-    width: 100%;
-  }
+.header-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px;
+  max-width: 1100px;
+  width: 100%;
+}
 
-  .logo {
-    position: relative;
-  }
+.logo {
+  position: relative;
+}
 
-  .logo svg {
-    transform: rotate(-30deg);
-    width: 40px;
-    height: 25px;
-    position: absolute;
-    bottom: 10px;
-    left: -30px;
+.logo svg {
+  transform: rotate(-30deg);
+  width: 40px;
+  height: 25px;
+  position: absolute;
+  bottom: 10px;
+  left: -30px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1020px) {
+  .search-bar input {
+    width: 400px;
+    height: 50px;
   }
+}
+
+.input-with-icon {
+  background: url('../assets/icons/search.svg') no-repeat right center; /* Establece la imagen de fondo a la derecha del campo de entrada */
+  background-size: 20px 20px; /* Ajusta el tamaño del icono según tus necesidades */
+  padding: 10px; /* Agrega espacio a la derecha para el icono */
+  border: none;
+  outline: none;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  width: 100%;
+}
 
   a,button{
       cursor: pointer;
@@ -241,10 +271,6 @@ svg {
 
   .categories {
     height: auto;
-  }
-
-  .main-menu {
-    display: none;
   }
 
 main {
@@ -302,19 +328,3 @@ main {
 }
 
 
-.search-bar {
-  display: flex;
-  justify-content: center;
-  align-items: ce;
-}
-
-.input-with-icon {
-  background: url('../assets/icons/search.svg') no-repeat right center; /* Establece la imagen de fondo a la derecha del campo de entrada */
-  background-size: 20px 20px; /* Ajusta el tamaño del icono según tus necesidades */
-  padding: 10px; /* Agrega espacio a la derecha para el icono */
-  border: none;
-  outline: none;
-  width: 70%; /* Hace que el campo de entrada ocupe todo el ancho disponible */
-  background-color: #f1f1f1;
-  border-radius: 10px;
-}

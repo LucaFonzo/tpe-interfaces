@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="css/home.css">
   <title>Home</title>
 </head>
+
 <body>
   <header class="main-color d-flex justify-around align-center">
     <div class="navigation">
@@ -59,30 +61,28 @@
       </nav>
     </div>
     <div class="header-hero">
-      <div class="d-flex justify-between align-center">
-        <div>
-          <button onclick="show()" class="main-color">
-            <svg class="icon hamburguer-icn"></svg>
-          </button>
-        </div>
-        <div class="logo">
-          <a href="home.html">
-            <svg class="game-icn"></svg>
-            <h1>Juegazos</h1>
-          </a>
-        </div>
+      <div>
+        <button id="burger-btn" class="main-color">
+          <svg class="icon hamburguer-icn"></svg>
+        </button>
+      </div>
+      <div class="logo">
+        <a href="home.html">
+          <svg class="game-icn"></svg>
+          <h1>Juegazos</h1>
+        </a>
       </div>
       <div class="search-bar">
-            <input type="text" placeholder="Buscar juegos..." class="input-with-icon">
+        <input type="text" placeholder="Buscar juegos..." class="input-with-icon">
       </div>
-      <div class="main-menu d-flex align-center justify-between">
+      <div class="main-menu d-flex justify-between align-center">
         <svg class="icon cart-icn"></svg>
         <img src="assets/img/profile.png" alt="profile" class="profile-pic">
         <svg class="icon log-out-icn"></svg>
       </div>
     </div>
   </header>
-  <main class="container">
+  <main>
     <div class="card sec-color">
       <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
       <div class="card-body">
@@ -114,4 +114,5 @@
   </footer>
   <script src="js/app.js"></script>
 </body>
+
 </html>
