@@ -38,3 +38,10 @@ button svg {
 .sub-password p {
     width: 4rem;
 }
+
+.header-hero {
+  max-width: 1200px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
