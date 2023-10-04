@@ -1,0 +1,18 @@
+
+.panel-control {
+  width: 250px;
+  margin-left: 20px;
+}
+
+.instructions p {
+  margin: 10px;
+}
+
+.description-container {
+  width: 900px;
+  height: 200px;
+}
+
+.about-container p {
+  margin-top: 10px;
+}

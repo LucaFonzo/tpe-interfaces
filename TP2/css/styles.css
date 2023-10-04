@@ -31,9 +31,6 @@
 }
 
 body {
-  display: grid;
-  grid-template-rows: 100px auto 300px;
-  height: 100vh;
   background-color: #E1E1E1;
 }
 
@@ -72,9 +69,7 @@ svg {
 /*Flexbox*/
 .container {
   max-width: 1200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .container-800 {
@@ -202,7 +197,7 @@ header a {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 60%;
+  width: auto;
 }
 
 @media screen and (min-width: 1020px) {
@@ -220,7 +215,9 @@ header a {
   outline: none;
   background-color: #f1f1f1;
   border-radius: 10px;
+  width: 100%;
 }
+
 
 .main-menu *{
   padding: 10px;
@@ -332,10 +329,11 @@ footer div {
   max-width: 270px;
   height: 350px;
   border-radius: 10px;
+  margin-right: 10px;
 }
 
 .card:hover {
-  /**transition: ease-out 5ms;**/
+  transition: ease-out 5ms;
   box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
 }
 
@@ -349,5 +347,3 @@ footer div {
   max-width: 270px;
   max-height: 190px;
 }
-
-
