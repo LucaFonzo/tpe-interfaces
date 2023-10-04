@@ -1,6 +1,11 @@
-
+.game {
+  width: 70%;
+}
+.game img {
+  width: 100%;
+}
 .panel-control {
-  width: 250px;
+  width: 30%;
   margin-left: 20px;
 }
 
@@ -9,10 +14,31 @@
 }
 
 .description-container {
-  width: 900px;
   height: 200px;
 }
 
 .about-container p {
   margin-top: 10px;
+}
+
+.comment-container {
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.input-comment {
+  width: 70%;
+}
+.input-comment input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.warning-comment {
+  margin-left: 10px;
+  width: 30%;
 }
