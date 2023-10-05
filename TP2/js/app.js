@@ -6,3 +6,4 @@ function show() {
 document.querySelector('#category-icn').addEventListener('click', () => {
   document.querySelector('.categories').classList.toggle('hidden');
 });
+

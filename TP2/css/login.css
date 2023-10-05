@@ -27,6 +27,7 @@ button svg {
 }
 
 .input-group > input {
+  color: black;
     height: 2.3rem;
 }
 

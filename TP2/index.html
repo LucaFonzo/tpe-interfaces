@@ -21,9 +21,12 @@
         </a>
       </div>
   </header>
-
-
+  <div class="loader"></div>
   <main class="d-flex-col justify-center align-center">
+    <div class="loader-container">
+      <div class="loader"></div>
+      <div class="percentage">0%</div>
+    </div>
     <form class="d-flex-col justify-center main-color-s1 my-10">
 
       <h2 class="text-center mb-10">Iniciar sesión</h2>
@@ -43,7 +46,7 @@
         <p><a href="">Olvidé mi contraseña</a></p>
       </div>
 
-      <button class="primary-btn main-color d-flex align-center justify-center">Iniciar sesión</button>
+      <button type="button" id="btn-login" class="primary-btn main-color d-flex align-center justify-center">Iniciar sesión</button>
 
       <p class="text-center">o</p>
 
@@ -72,6 +75,8 @@
         </div>
     </div>
   </footer>
+  <script src="js/spinner.js">
+  </script>
 </body>
 
 </html>
