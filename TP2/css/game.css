@@ -28,7 +28,7 @@
 }
 
 .input-comment {
-  width: 70%;
+  width: 80%;
 }
 .input-comment input {
   padding: 10px;
@@ -40,5 +40,38 @@
 
 .warning-comment {
   margin-left: 10px;
-  width: 30%;
+  width: 20%;
+}
+
+.comment {
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+}
+.comment div{
+  margin-left: 10px;
+}
+
+.img-profile img {
+  border-radius: 30px;
+  max-width: 60px;
+}
+
+.comment-info {
+  max-width: 80%;
+}
+
+.comment-info p {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #F2EDED;
+  color: black;
+}
+
+.comment-title {
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+.comment-title h2 {
+  color: black;
 }
