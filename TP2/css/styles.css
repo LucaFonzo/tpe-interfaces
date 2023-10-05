@@ -367,11 +367,8 @@ footer div {
     width: 50px;
     height: 50px;
     animation: spin 2s linear infinite;
-    position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
-    display: none; /* Initially hidden */
+    display: none;
 }
 
 @keyframes spin {
@@ -381,4 +378,15 @@ footer div {
 
 .content {
     text-align: center;
+}
+
+.container-loader {
+  display: none;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.progress-text span{
+  color: black;
 }
