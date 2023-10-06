@@ -323,9 +323,13 @@ main {
 }
 
 footer {
-  height: 200px;
+  height: auto;
 }
-
+@media screen and (min-width: 1024px) {
+  footer {
+    height: 200px;
+  }
+}
 footer div {
   display: flex;
   justify-content: center;
@@ -441,6 +445,9 @@ footer div {
     display: block;
   }
   .arrow-down-icn {
+    display: none;
+  }
+  .arrow-up-icn {
     display: none;
   }
 }
