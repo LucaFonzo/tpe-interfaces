@@ -157,6 +157,9 @@ svg {
 .d-none {
   display: none;
 }
+.d-block {
+  display: block;
+}
 
 /*Header, main y footer*/
 header {
@@ -435,7 +438,6 @@ footer div {
 
 
 .opcionesDesplegable {
-  display: none;
   list-style: none;
   margin: 0;
   padding: 0;

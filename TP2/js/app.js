@@ -19,14 +19,16 @@ btnsDesplegable.forEach((btn,index) => {
     const arrow = arrows[index];
     const dropdownList = dropdownLists[index];
     console.log(arrow);
-    if (dropdownList.style.display === 'block') {
-      arrow.classList.remove('arrow-up-icn')
+    if (dropdownList.classList.contains('d-block')) {
+      arrow.classList.remove('arrow-up-icn');
       arrow.classList.add('arrow-down-icn');
-      dropdownList.style.display = 'none';
+      dropdownList.classList.remove('d-block');
+      dropdownList.classList.add('d-none');
     } else {
       arrow.classList.add('arrow-up-icn')
       arrow.classList.remove('arrow-down-icn');
-      dropdownList.style.display = 'block';
+      dropdownList.classList.add('d-block');
+      dropdownList.classList.remove('d-none');
     }
   });
 })
