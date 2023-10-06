@@ -123,3 +123,11 @@
 .twitter-icn{
     background-image: url('../assets/icons/twitter.svg');
 }
+
+.arrow-down-icn {
+  background: url('../assets/icons/flecha-abajo.svg') no-repeat;
+}
+
+.arrow-up-icn {
+  background: url('../assets/icons/flecha-arriba.svg') no-repeat;
+}

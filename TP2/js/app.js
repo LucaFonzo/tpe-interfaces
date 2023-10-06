@@ -9,12 +9,24 @@ document.querySelector('#category-icn').addEventListener('click', () => {
 
 
 const btnsDesplegable = document.querySelectorAll('.botonDesplegable');
-btnsDesplegable.forEach(btn => {
+const dropdownLists = document.querySelectorAll('.opcionesDesplegable');
+const arrows = document.querySelectorAll('.arrow-down-icn');
+btnsDesplegable.forEach((btn,index) => {
   btn.addEventListener('click', (e) => {
-    if (e.target.nextSibling.nextSibling.style.display === 'block') {
-      e.target.nextSibling.nextSibling.style.display = 'none';
+    if (window.innerWidth >= 1024) {
+      return;
+    }
+    const arrow = arrows[index];
+    const dropdownList = dropdownLists[index];
+    console.log(arrow);
+    if (dropdownList.style.display === 'block') {
+      arrow.classList.remove('arrow-up-icn')
+      arrow.classList.add('arrow-down-icn');
+      dropdownList.style.display = 'none';
     } else {
-      e.target.nextSibling.nextSibling.style.display = 'block';
+      arrow.classList.add('arrow-up-icn')
+      arrow.classList.remove('arrow-down-icn');
+      dropdownList.style.display = 'block';
     }
   });
 })

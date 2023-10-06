@@ -322,13 +322,21 @@ main {
   border: solid 4px #E1E1E1;
 }
 
-.container-footer {
+footer {
+  height: 200px;
+}
+
+footer div {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-footer {
-  height: 200px;
+@media screen and (min-width: 1024px) {
+  footer div  {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /*CARD*/
@@ -404,6 +412,16 @@ footer {
   flex-direction: column;
 }
 
+
+.desplegable button {
+  font-size: 18px;
+}
+.desplegable button span{
+  margin-right: 10px;
+}
+.desplegable button svg {
+  margin-left: 10px;
+}
 .botonDesplegable {
   color: white;
   border: none;
@@ -411,14 +429,24 @@ footer {
   cursor: pointer;
 }
 
+
 .opcionesDesplegable {
   display: none;
   list-style: none;
   margin: 0;
   padding: 0;
 }
+@media screen and (min-width: 1024px) {
+  .opcionesDesplegable {
+    display: block;
+  }
+  .arrow-down-icn {
+    display: none;
+  }
+}
 
 .opcionesDesplegable li {
+  font-size: 14px;
   padding: 10px;
   cursor: pointer;
 }
