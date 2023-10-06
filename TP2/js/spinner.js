@@ -14,6 +14,7 @@ function redirectToAnotherPage() {
       clearInterval(interval); // Stop the interval when progress reaches 100%
       setTimeout(function () {
         loader.style.display = 'none'; // Hide the loading animation
+        percentage.display = 'none';
         window.location.href = 'home.html'; // Redirect to another page
       }, 500); // Delay before redirecting (0.5 seconds in this example)
     }

@@ -90,7 +90,9 @@ svg {
 .flex-wrap {
   flex-wrap: wrap;
 }
-
+.flex-direction-column {
+  flex-direction: column;
+}
 .d-flex-col {
   display: flex;
   flex-direction: column;
@@ -184,6 +186,10 @@ header a {
   position: relative;
 }
 
+.logo a {
+  text-decoration: none;
+}
+
 .logo svg {
   transform: rotate(-30deg);
   width: 40px;
@@ -197,7 +203,7 @@ header a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
+  width: 100%;
 }
 
 @media screen and (min-width: 1020px) {
@@ -296,16 +302,6 @@ main {
   height: 100%;
 }
 
-footer {
-  height: 300px;
-}
-
-footer div {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 10px;
-}
-
 
 /*Botones*/
 
@@ -324,6 +320,15 @@ footer div {
   border-radius: 15px;
   color: #E1E1E1;
   border: solid 4px #E1E1E1;
+}
+
+.container-footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+footer {
+  height: 200px;
 }
 
 /*CARD*/
@@ -389,4 +394,36 @@ footer div {
 
 .progress-text span{
   color: black;
+}
+
+/* Estilos para el desplegable */
+.desplegable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.botonDesplegable {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.opcionesDesplegable {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.opcionesDesplegable li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.opcionesDesplegable li:hover {
+  background-color: #341D4C;
+  color: white;
 }
