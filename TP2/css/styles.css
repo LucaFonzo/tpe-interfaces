@@ -346,7 +346,21 @@ footer div {
   }
 }
 
-/*CARD*/
+/*CARD AND CARROUSEL*/
+
+@media screen and (min-width: 1024px) {
+  .carousel-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 840px; /* Adjust the width as needed */
+  margin: 0 auto;
+}
+.carousel {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
 .card {
   max-width: 270px;
   height: 350px;
@@ -355,7 +369,7 @@ footer div {
 }
 
 .card:hover {
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .card-img-top {
@@ -369,17 +383,27 @@ footer div {
   max-height: 190px;
 }
 
-.carrousel {
+.carousel-button {
+  background-color: #E1E1E1;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+}
+
+.carousel-container {
   display: flex;
   overflow-y: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+.carousel {
+  display: flex;
 }
 
-@media screen and (min-width: 1020px) {
-  .carrousel {
-    overflow-y: hidden;
-  }
-}
 
+
+/*SPINNER*/
 .loader {
     border: 4px solid #f3f3f3;
     border-top: 4px solid #3498db;
