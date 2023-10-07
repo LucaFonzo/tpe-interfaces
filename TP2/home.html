@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <header class="main-color d-flex justify-center align-center">
+  <header class="main-color-s1 align-center">
     <div class="navigation">
       <nav class="d-flex align-center">
         <ul class="main-color-s2 side-menu">
@@ -59,26 +59,25 @@
         </ul>
       </nav>
     </div>
-    <div class="header-hero">
-      <div>
-        <button id="burger-btn" class="main-color">
-          <svg class="icon hamburguer-icn"></svg>
-        </button>
-      </div>
-      <div class="logo">
-        <a href="home.html">
-          <svg class="game-icn"></svg>
-          <h1>Juegazos</h1>
-        </a>
-      </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Buscar juegos..." class="input-with-icon">
-      </div>
-      <div class="main-menu d-flex justify-between align-center">
-        <svg class="icon cart-icn"></svg>
-        <img src="assets/img/profile.png" alt="profile" class="profile-pic">
-        <svg class="icon log-out-icn"></svg>
-      </div>
+
+    <button id="burger-btn" class="main-color">
+      <svg class="icon hamburger-icn"></svg>
+    </button>
+
+
+    <div class="logo d-flex justify-center align-center">
+      <a href="home.html" class="d-flex">
+        <svg class="game-icn"></svg>
+        <h1>Juegazos</h1>
+      </a>
+    </div>
+
+    <input type="text" placeholder="Buscar juegos..." class="search-bar">
+
+    <div class="main-menu d-flex justify-between align-center">
+      <svg class="desktop icon cart-icn"></svg>
+      <img src="assets/img/profile-pic.jpg" alt="profile" class="profile-pic">
+      <svg class="desktop icon log-out-icn"></svg>
     </div>
   </header>
   <main>
@@ -86,129 +85,87 @@
       <img src="assets/img/tom-jerry-fondo.jpg" alt="">
     </div>
     <div class="container">
-      <div class="d-flex justify-evenly">
-        <button id="prev-btn" class="carousel-button"><svg class="icon left-arrow-icn"></svg></button>
-        <div class="carousel-container">
-          <div class="carousel">
-            <div class="card sec-color">
-              <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
-                <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-                <div class="d-flex justify-around mt-10">
-                  <p class="mt-5">$50</p>
-                  <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
-                </div>
+      <h2>Recomendados para vos</h2>
+      <div class="d-flex align-center mt-5">
+        <div>
+          <svg class="left-arrow-icn"></svg>
+        </div>
+        <div class="carrousel">
+          <div class="card sec-color">
+            <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
+              <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+              <div class="d-flex justify-around mt-10">
+                <p class="mt-5">$50</p>
+                <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
               </div>
             </div>
-            <div class="card sec-color">
-              <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
-                <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-                <div class="d-flex justify-around mt-10">
-                  <p class="mt-5">$50</p>
-                  <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
-                </div>
-              </div>
-            </div>
-            <div class="card sec-color">
-              <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
-                <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-                <div class="d-flex justify-around mt-10">
-                  <p class="mt-5">$50</p>
-                  <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
-                </div>
-              </div>
-            </div>
-            <div class="card sec-color">
-              <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
-                <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-                <div class="d-flex justify-around mt-10">
-                  <p class="mt-5">$50</p>
-                  <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
-                </div>
-              </div>
-            </div>
-            <div class="card sec-color">
-              <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
-                <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-                <div class="d-flex justify-around mt-10">
-                  <p class="mt-5">$50</p>
-                  <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
-                </div>
-              </div>
-            </div>
-            <div class="card sec-color">
-              <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
-                <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-                <div class="d-flex justify-around mt-10">
-                  <p class="mt-5">$50</p>
-                  <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
-                </div>
-              </div>
-            </div>
-            <div class="card sec-color">
-              <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
-                <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-                <div class="d-flex justify-around mt-10">
-                  <p class="mt-5">$50</p>
-                  <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
-                </div>
-              </div>
-            </div>
-            <div class="card sec-color">
-              <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
-                <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-                <div class="d-flex justify-around mt-10">
-                  <p class="mt-5">$50</p>
-                  <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
-                </div>
-              </div>
-            </div>
-            <div class="card sec-color">
-              <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
-                <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-                <div class="d-flex justify-around mt-10">
-                  <p class="mt-5">$50</p>
-                  <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
-                </div>
-              </div>
-            </div>
-            <!-- Add more cards as needed -->
           </div>
+          <div class="card sec-color">
+            <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
+              <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+              <div class="d-flex justify-around mt-10">
+                <p class="mt-5">$50</p>
+                <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
+              </div>
+            </div>
+          </div>
+          <div class="card sec-color">
+            <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
+              <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+              <div class="d-flex justify-around mt-10">
+                <p class="mt-5">$50</p>
+                <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
+              </div>
+            </div>
+          </div>
+          <div class="card sec-color">
+            <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
+              <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+              <div class="d-flex justify-around mt-10">
+                <p class="mt-5">$50</p>
+                <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
+              </div>
+            </div>
+          </div>
+          <div class="card sec-color">
+            <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
+              <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+              <div class="d-flex justify-around mt-10">
+                <p class="mt-5">$50</p>
+                <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
+              </div>
+            </div>
+          </div>
+          <div class="card sec-color">
+            <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
+              <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+              <div class="d-flex justify-around mt-10">
+                <p class="mt-5">$50</p>
+                <button class="primary-btn main-color d-flex align-center justify-center">Agregar al carrito</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <svg class="right-arrow-icn"></svg>
         </div>
         <button id="next-btn" class="carousel-button"><svg class="icon right-arrow-icn"></svg>
         </button>
@@ -217,28 +174,31 @@
   </main>
   <footer class="main-color mt-10 d-flex align-center justify-center">
     <div class="main-color">
-      <div class="logo">
-        <a href="home.html">
+      <div class="logo d-flex">
+        <a href="home.html" class="d-flex">
           <svg class="game-icn"></svg>
           <h2>Juegazos</h2>
         </a>
       </div>
       <div class="desplegable main-color">
-        <button class="main-color botonDesplegable d-flex justify-between"><span>Condciones de uso y privacidad</span><svg class="arrow-down-icn icon"></svg></button>
+        <button class="main-color botonDesplegable d-flex justify-between"><span>Condciones de uso y
+            privacidad</span><svg class="arrow-down-icn icon"></svg></button>
         <ul class="main-color opcionesDesplegable d-none">
           <li class="text-center">Terminos y condiciones</li>
           <li class="text-center">Privacidad y cookies</li>
         </ul>
       </div>
       <div class="desplegable main-color">
-        <button class="main-color botonDesplegable d-flex justify-between"><span>Nosotros</span><svg class="arrow-down-icn icon"></svg></button>
+        <button class="main-color botonDesplegable d-flex justify-between"><span>Nosotros</span><svg
+            class="arrow-down-icn icon"></svg></button>
         <ul class="main-color opcionesDesplegable d-none">
           <li class="text-center">Quienes somos</li>
           <li class="text-center">Contacto</li>
         </ul>
       </div>
       <div class="desplegable main-color">
-        <button class="main-color botonDesplegable d-flex align-center"><span>Ayuda</span><svg class="arrow-down-icn icon"></svg></button>
+        <button class="main-color botonDesplegable d-flex align-center"><span>Ayuda</span><svg
+            class="arrow-down-icn icon"></svg></button>
         <ul class="main-color opcionesDesplegable d-none">
           <li class="text-center">Reembolsos</li>
           <li class="text-center">Seguridad</li>
