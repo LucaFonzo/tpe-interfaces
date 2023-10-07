@@ -63,8 +63,8 @@
     background-image: url('../assets/icons/half-star.svg');
 }
 
-.hamburguer-icn{
-    background-image: url('../assets/icons/hamburguer.svg');
+.hamburger-icn{
+    background-image: url('../assets/icons/hamburger.svg');
     cursor: pointer;
 }
 
