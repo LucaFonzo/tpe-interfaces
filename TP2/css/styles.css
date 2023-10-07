@@ -1,4 +1,4 @@
-/*Fuentes*/
+/*Fonts*/
 @font-face {
   font-family: 'Roboto';
   src: url('../assets/fonts/Roboto-Slab.ttf');
@@ -16,7 +16,7 @@
   font-weight: 200;
 }
 
-/*Reseteo de los estilos del navegador*/
+/*Browser stylesheet reset*/
 * {
   margin: 0;
   padding: 0;
@@ -66,11 +66,11 @@ button {
 }
 
 svg {
-  width: 24px;
   height: 24px;
+  width: 24px;
 }
 
-/* Clases genéricas para el layout */
+/* Generic layout classes */
 /*Flexbox*/
 .container {
   max-width: 1200px;
@@ -117,6 +117,10 @@ svg {
   justify-content: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .align-center {
   align-items: center;
 }
@@ -125,7 +129,7 @@ svg {
   position: relative;
 }
 
-/*Márgenes*/
+/*Margins*/
 .my-10 {
   margin-top: 10%;
   margin-bottom: 10%;
@@ -152,7 +156,7 @@ svg {
 }
 
 
-/*Ocultamiento*/
+/*Hidening*/
 .hidden {
   visibility: hidden;
 }
@@ -179,151 +183,19 @@ svg {
   }
 }
 
-/*Header, main y footer*/
-header {
-  display: grid;
-  grid-template-columns: 7.2% 6.4% 6.13% 57.6% 5.33% 14.4% 5.06%;
-  grid-template-rows: 15px 24px 15px 34px;
-  grid-template-areas:
-    'empty1 empty1 empty1 empty1 empty1 menu empty2'
-    'empty3 burger empty4 search empty5 menu empty2'
-    'empty6 empty6 empty6 logo empty7 menu empty2'
-    'empty6 empty6 empty6 logo empty9 empty9 empty2';
-  height: 110px;
-  padding: 10px 5px 10px 5px;
-}
+/*Buttons*/
 
-#burger-btn {
-  grid-area: burger;
-}
-
-.logo {
-  grid-area: logo;
+.primary-btn {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: Ruda;
+  letter-spacing: 2.5px;
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 10px 18px;
   width: fit-content;
-  margin-top: 5%;
-}
-
-.logo a {
-  text-decoration: none;
-}
-
-.logo svg {
-  transform: rotate(-30deg);
-  width: 40px;
-  height: 25px;
-  position: relative;
-  left: 8px;
-  top: 12px;
   text-align: center;
 }
-
-.search-bar {
-  grid-area: search;
-  color: #1C1E26;
-  background: linear-gradient(to right,
-      transparent 0%,
-      transparent calc(100% - 1px),
-      #E1E1E1 0%,
-      #E1E1E1 100%) no-repeat,
-    url('../assets/icons/search.svg') no-repeat;
-  background-position:
-    right 1.8rem center,
-    right 0.5rem center;
-  background-size:
-    1px 34px,
-    16px 16px;
-  background-color: #f1f1f1;
-  width: 100%;
-  height: 30px;
-  border-radius: 12px;
-  padding-left: 1rem;
-  padding-right: 1.9rem;
-}
-
-.search-bar:focus {
-  border: #7B678F solid 2px;
-}
-
-.main-menu {
-  grid-area: menu;
-  height: fit-content;
-}
-
-@media screen and (min-width: 1020px) {
-  header {
-    grid-template-columns: 1fr 1fr 2fr 2fr 2fr 4fr 4fr 2fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-      'empty1 burger empty2 logo empty3 search empty4 menu empty5';
-  }
-
-  .logo {
-    margin: 0;
-  }
-
-  .search-bar {
-    width: 400px;
-    height: 44px;
-  }
-
-  .main-menu * {
-    margin: 0.75rem;
-  }
-}
-
-.profile-pic {
-  height: 54px;
-  width: 54px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-nav {
-  position: absolute;
-  top: 50px;
-  width: auto;
-  max-width: 500px;
-  height: auto;
-}
-
-
-@media screen and (min-width: 1020px) {
-  nav {
-    width: auto;
-    max-width: 800px;
-  }
-}
-
-
-
-nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-nav ul li {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  width: 100%;
-}
-
-nav ul li span button {
-  margin-left: 10px;
-}
-
-.navigation {
-  position: absolute;
-  left: -400px;
-  transition: .5s;
-}
-
-.side-menu {
-  padding: 10px;
-}
-
 
 .bar {
   position: absolute;
@@ -335,37 +207,11 @@ nav ul li span button {
   transition: all .3s ease-in;
 }
 
-.navigation.active {
-  left: 0;
-}
-
-.categories {
-  height: auto;
-}
-
 main {
   height: 100%;
 }
 
-
-/*Botones*/
-
-.primary-btn {
-  font-family: Ruda;
-  letter-spacing: 2.32px;
-  font-size: 16px;
-  border-radius: 30px;
-  padding: 15px 20px;
-  width: fit-content;
-  text-align: center;
-}
-
-.nav-btn {
-  padding: 10px;
-  border-radius: 15px;
-  color: #E1E1E1;
-  border: solid 4px #E1E1E1;
-}
+/*Footer*/
 
 footer {
   height: auto;

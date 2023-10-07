@@ -1,10 +1,16 @@
+const nav = document.querySelector('nav');
+const categories = document.querySelector('.categories');
+
 document.querySelector('#burger-btn').addEventListener('click', show);
 
 function show() {
-  document.querySelector('.navigation').classList.toggle('active');
+  nav.classList.toggle('active');
+  categories.classList.remove('active');
+  setTimeout(() => {categories.classList.toggle('d-none');}, 500);
 };
+
 document.querySelector('#category-icn').addEventListener('click', () => {
-  document.querySelector('.categories').classList.toggle('hidden');
+  categories.classList.toggle('active');
 });
 
 

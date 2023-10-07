@@ -1,133 +1,139 @@
-.icon{
-  background-size: contain;
-  fill: #f1f1f1;
+.icon {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    fill: #f1f1f1;
 }
 
-.action-icn{
+.action-icn {
     background-image: url('../assets/icons/action.svg');
 }
 
-.alert-icn{
+.alert-icn {
     background-image: url('../assets/icons/alert.svg');
 }
 
-.arcade-icn{
+.arcade-icn {
     background-image: url('../assets/icons/arcade.svg');
 }
 
-.cancel-icn{
+.cancel-icn {
     background-image: url('../assets/icons/cancel.svg');
 }
 
-.cart-icn{
+.cart-icn {
     background-image: url('../assets/icons/cart.svg');
 }
 
-.category-icn{
+.category-icn {
     background-image: url('../assets/icons/category.svg');
 }
 
-.dice-icn{
+.dice-icn {
     background-image: url('../assets/icons/dice.svg');
 }
 
-.empty-star-icn{
+.empty-star-icn {
     background-image: url('../assets/icons/empty-star.svg');
 }
 
-.facebook-icn{
+.facebook-icn {
     background-image: url('../assets/icons/facebook.svg');
 }
 
-.full-screen-icn{
+.full-screen-icn {
     background-image: url('../assets/icons/full-screen.svg');
 }
 
-.full-star-icn{
+.full-star-icn {
     background-image: url('../assets/icons/full-star.svg');
 }
 
-.game-icn{
+.game-icn {
     background-image: url('../assets/icons/game.svg');
 }
 
-.gmail-icn{
+.gmail-icn {
     background-image: url('../assets/icons/gmail.svg');
 }
 
-.google-icn{
+.google-icn {
     background-image: url('../assets/icons/google.svg');
 }
 
-.half-star-icn{
+.half-star-icn {
     background-image: url('../assets/icons/half-star.svg');
 }
 
-.hamburger-icn{
+.hamburger-icn {
     background-image: url('../assets/icons/hamburger.svg');
     cursor: pointer;
 }
 
-.info-icn{
+.info-icn {
     background-image: url('../assets/icons/info.svg');
 }
 
-.instagram-icn{
+.instagram-icn {
     background-image: url('../assets/icons/instagram.svg');
 }
 
-.left-arrow-icn{
+.left-arrow-icn {
     background-image: url('../assets/icons/left-arrow.svg');
 }
 
-.log-out-icn{
+.log-out-icn {
     background-image: url('../assets/icons/log-out.svg');
 }
 
-.profile-icn{
+.profile-icn {
     background-image: url('../assets/icons/profile.svg');
 }
 
-.race-icn{
+.race-icn {
     background-image: url('../assets/icons/race.svg');
 }
 
-.right-arrow-icn{
+.right-arrow-icn {
     background-image: url('../assets/icons/right-arrow.svg');
 }
 
-.rpg-icn{
+.rpg-icn {
     background-image: url('../assets/icons/rpg.svg');
 }
 
-.search-icn{
-    background-image: url('../assets/icons/search.svg');
+.search-purple-icn {
+    background-image: url('../assets/icons/search-purple.svg');
 }
 
-.sound-icn{
+.search-white-icn {
+    background-image: url('../assets/icons/search-white.svg');
+}
+
+.sound-icn {
     background-image: url('../assets/icons/sound.svg');
 }
 
-.sport-icn{
+.sport-icn {
     background-image: url('../assets/icons/sport.svg');
 }
 
-.strategy-icn{
+.strategy-icn {
     background-image: url('../assets/icons/strategy.svg');
 }
 
-.tool-icn{
+.tool-icn {
     background-image: url('../assets/icons/tool.svg');
 }
 
-.twitter-icn{
+.twitter-icn {
     background-image: url('../assets/icons/twitter.svg');
 }
 
 .arrow-down-icn {
-  background: url('../assets/icons/flecha-abajo.svg') no-repeat;
+    background: url('../assets/icons/flecha-abajo.svg') no-repeat;
 }
 
 .arrow-up-icn {
-  background: url('../assets/icons/flecha-arriba.svg') no-repeat;
+    background: url('../assets/icons/flecha-arriba.svg') no-repeat;
 }

@@ -7,60 +7,91 @@
   <link rel="stylesheet" type="text/css" href="css/colors.css">
   <link rel="stylesheet" type="text/css" href="css/icons.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
   <link rel="stylesheet" type="text/css" href="css/home.css">
   <title>Home</title>
 </head>
 
 <body>
   <header class="main-color-s1 align-center">
-    <div class="navigation">
-      <nav class="d-flex align-center">
-        <ul class="main-color-s2 side-menu">
-          <li><svg class="icon profile-icn"></svg>
-            <span class="text-center">Mi perfil</span>
-          </li>
-          <li><svg class="icon game-icn"></svg>
-            <span>Mis juegos</span>
-          </li>
-          <li><svg class="icon cart-icn"></svg>
-            <span>Mis compras</span>
-          </li>
-          <li><svg class="icon category-icn"></svg>
-            <button class="nav-btn main-color-s2" id="category-icn">
-              Categorias
-            </button>
-          </li>
-          <li><svg class="icon search-icn"></svg>
-            <span>Buscar juegos</span>
-          </li>
-          <li><svg class="icon dice-icn"></svg>
-            <span>Jugar juego aleatorio</span>
-          </li>
-          <li><svg class="icon tool-icn"></svg>
-            <span>Configuracion</span>
-          </li>
-          <li><svg class="icon log-out-icn"></svg><button class="nav-btn special main-color-s2">
-              Cerrar sesion
-          </li>
-          <li><svg class="icon alert-icn"></svg>
-            <span>Reportar un problema</span></button>
-          </li>
-          <li><svg class="icon info-icn"></svg>
-            <span>Informacion</span>
-          </li>
-        </ul>
-        <ul class="main-color-s1 categories hidden">
-          <li><svg class="icon action-icn"></svg>Acción</li>
-          <li><svg class="icon arcade-icn"></svg>Arcade</li>
-          <li><svg class="icon race-icn"></svg>Carreras</li>
-          <li><svg class="icon sport-icn"></svg>Deportes</li>
-          <li><svg class="icon rpg-icn"></svg>RPG</li>
-          <li><svg class="icon strategy-icn"></svg>Estrategia</li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="d-flex align-center">
+      <ul class="main-color-s2 d-flex-col">
+        <li>
+          <svg class="icon profile-icn"></svg>
+          <span>Mi perfil</span>
+        </li>
+        <li>
+          <svg class="icon game-icn"></svg>
+          <span>Mis juegos</span>
+        </li>
+        <li>
+          <svg class="icon cart-icn"></svg>
+          <span>Mis compras</span>
+        </li>
+        <li>
+          <svg class="icon category-icn"></svg>
+          <button class="primary-btn nav-btn main-color-s2" id="category-icn">
+            Categorías
+          </button>
+        </li>
+        <li>
+          <svg class="icon search-white-icn"></svg>
+          <span>Buscar juegos</span>
+        </li>
+        <li>
+          <svg class="icon dice-icn"></svg>
+          <span>Jugar juego aleatorio</span>
+        </li>
+        <li>
+          <svg class="icon tool-icn"></svg>
+          <span>Configuración</span>
+        </li>
+        <hr>
+        <li>
+          <svg class="icon log-out-icn"></svg>
+          <button class="primary-btn nav-btn main-color-s2">
+            Cerrar sesión
+          </button>
+        </li>
+        <li>
+          <svg class="icon alert-icn"></svg>
+          <span>Reportar un problema</span>
+        </li>
+        <li>
+          <svg class="icon info-icn"></svg>
+          <span>Información</span>
+        </li>
+      </ul>
+    </nav>
+    <ul class="main-color-s1 categories d-none">
+      <li>
+        <svg class="icon action-icn"></svg>
+        <span>Acción</span>
+      </li>
+      <li>
+        <svg class="icon arcade-icn"></svg>
+        <span>Arcade</span>
+      </li>
+      <li>
+        <svg class="icon race-icn"></svg>
+        <span>Carreras</span>
+      </li>
+      <li>
+        <svg class="icon sport-icn"></svg>
+        <span>Deportes</span>
+      </li>
+      <li>
+        <svg class="icon rpg-icn"></svg>
+        <span>RPG</span>
+      </li>
+      <li>
+        <svg class="icon strategy-icn"></svg>
+        <span>Estrategia</span>
+      </li>
+    </ul>
 
-    <button id="burger-btn" class="main-color">
+
+    <button id="burger-btn" class="main-color-s1 d-flex align-center justify-center">
       <svg class="icon hamburger-icn"></svg>
     </button>
 
@@ -68,7 +99,7 @@
     <div class="logo d-flex justify-center align-center">
       <a href="home.html" class="d-flex">
         <svg class="game-icn"></svg>
-        <h1>Juegazos</h1>
+        <h2>Juegazos</h2>
       </a>
     </div>
 
