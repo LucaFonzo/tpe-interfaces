@@ -2,12 +2,20 @@ form {
     font-family: Ruda;
     font-size: 16px;
     height: fit-content;
+    width: 80%;
+    max-width: 491px;
     padding: 65px 100px;
+    border-radius: 40px;
+    margin-top: 5%;
 }
 
 .input-group, form button.primary-btn {
     margin: 6% 2%;
-    width: 100%;
+}
+
+form button.primary-btn {
+    min-width: fit-content;
+    width: 80%;
 }
 
 form div+p{
@@ -40,9 +48,13 @@ button svg {
     width: 4rem;
 }
 
-.header-hero {
-  max-width: 1200px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
+.form-buttons {
+    width: 100%;
+}
+
+.form-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }

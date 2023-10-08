@@ -8,12 +8,14 @@
   <link rel="stylesheet" type="text/css" href="css/icons.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
   <link rel="stylesheet" type="text/css" href="css/home.css">
   <title>Home</title>
 </head>
 
 <body>
   <div class="overlay"></div>
+
   <header class="main-color-s1 align-center">
     <nav class="d-flex align-center">
       <ul class="main-color-s2 d-flex-col">
@@ -50,9 +52,11 @@
         <hr>
         <li>
           <svg class="icon log-out-icn"></svg>
-          <button class="primary-btn nav-btn main-color-s2">
-            Cerrar sesión
-          </button>
+          <a href="index.html">
+            <button class="primary-btn nav-btn main-color-s2" href="index.html">
+              Cerrar sesión
+            </button>
+          </a>
         </li>
         <li>
           <svg class="icon alert-icn"></svg>
@@ -64,7 +68,7 @@
         </li>
       </ul>
     </nav>
-    <ul class="main-color-s1 categories d-none">
+    <ul class="main-color-s1 categories d-flex-col justify-between d-none">
       <li>
         <svg class="icon action-icn"></svg>
         <span>Acción</span>
@@ -91,11 +95,9 @@
       </li>
     </ul>
 
-
     <button id="burger-btn" class="main-color-s1 d-flex align-center justify-center">
       <svg class="icon hamburger-icn"></svg>
     </button>
-
 
     <div class="logo d-flex justify-center align-center">
       <a href="home.html" class="d-flex">
@@ -109,9 +111,10 @@
     <div class="main-menu d-flex justify-between align-center">
       <svg class="desktop icon cart-icn"></svg>
       <img src="assets/img/profile-pic.jpg" alt="profile" class="profile-pic">
-      <svg class="desktop icon log-out-icn"></svg>
+      <a href="index.html"><svg class="desktop icon log-out-icn"></svg></a>
     </div>
   </header>
+
   <main>
     <div class="main-game">
       <img src="assets/img/tom-jerry-fondo.jpg" alt="">

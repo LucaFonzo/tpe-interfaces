@@ -189,12 +189,12 @@ svg {
   display: inline-block;
   white-space: nowrap;
   font-family: Ruda;
+  text-align: center;
   letter-spacing: 2.5px;
   font-size: 16px;
   border-radius: 30px;
-  padding: 10px 18px;
+  padding: 1rem 1.8rem;
   width: fit-content;
-  text-align: center;
 }
 
 .bar {
@@ -211,74 +211,65 @@ main {
   height: 100%;
 }
 
-/*Footer*/
-
-footer {
-  height: auto;
+.overlay {
+  display: none;
+  position: fixed;
+  top: 110px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 1;
 }
 
-@media screen and (min-width: 1024px) {
-  footer {
-    height: 200px;
-  }
-}
-
-footer div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-@media screen and (min-width: 1024px) {
-  footer div {
-    display: flex;
-    flex-direction: row;
-  }
+.overlay.active {
+  display: block;
 }
 
 /*CARD AND CARROUSEL*/
 
 @media screen and (min-width: 1024px) {
   .carousel-container {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  max-width: 840px; /* Adjust the width as needed */
-  margin: 0 auto;
-}
-.carousel {
-  display: flex;
-  transition: transform 0.3s ease;
-}
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 840px;
+    /* Adjust the width as needed */
+    margin: 0 auto;
+  }
 
-.card {
-  max-width: 270px;
-  height: 350px;
-  border-radius: 10px;
-  margin-right: 10px;
-}
+  .carousel {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
 
-.card:hover {
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-}
+  .card {
+    max-width: 270px;
+    height: 350px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
 
-.card-img-top {
-  min-width: 270px;
-  max-height: 150px;
-  border-radius: 10px 10px 0 0;
-}
+  .card:hover {
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  }
 
-.card-body {
-  max-width: 270px;
-  max-height: 190px;
-}
+  .card-img-top {
+    min-width: 270px;
+    max-height: 150px;
+    border-radius: 10px 10px 0 0;
+  }
 
-.carousel-button {
-  background-color: #E1E1E1;
-  border: none;
-  cursor: pointer;
-}
+  .card-body {
+    max-width: 270px;
+    max-height: 190px;
+  }
+
+  .carousel-button {
+    background-color: #E1E1E1;
+    border: none;
+    cursor: pointer;
+  }
 }
 
 .carousel-container {
@@ -287,105 +278,7 @@ footer div {
   width: 100%;
   margin: 0 auto;
 }
+
 .carousel {
   display: flex;
-}
-
-
-
-/*SPINNER*/
-.loader {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #3498db;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 2s linear infinite;
-  transform: translate(-50%, -50%);
-  display: none;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.content {
-  text-align: center;
-}
-
-.container-loader {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-.progress-text span {
-  color: black;
-}
-
-/* Estilos para el desplegable */
-.desplegable {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-
-.desplegable button {
-  font-size: 18px;
-}
-
-.desplegable button span {
-  margin-right: 10px;
-}
-
-.desplegable button svg {
-  margin-left: 10px;
-}
-
-.botonDesplegable {
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-
-.opcionesDesplegable {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-@media screen and (min-width: 1024px) {
-  .opcionesDesplegable {
-    display: block;
-  }
-
-  .arrow-down-icn {
-    display: none;
-  }
-
-  .arrow-up-icn {
-    display: none;
-  }
-}
-
-.opcionesDesplegable li {
-  font-size: 14px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.opcionesDesplegable li:hover {
-  background-color: #341D4C;
-  color: white;
 }

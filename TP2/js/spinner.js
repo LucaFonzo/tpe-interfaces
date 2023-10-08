@@ -1,27 +1,45 @@
-function redirectToAnotherPage() {
-  // Display the loading animation
-  const loader = document.querySelector('.loader');
-  const percentage = document.querySelector('.progress-text span')
-  loader.style.display = 'block';
-  document.querySelector('.container-loader').style.display = 'block';
-  document.querySelector('form').style.visibility = 'hidden';
-  let progress = 0;
-  const interval = setInterval(function () {
-    progress++;
-    percentage.textContent = `${progress}%`;
-
-    if (progress === 100) {
-      clearInterval(interval); // Stop the interval when progress reaches 100%
-      setTimeout(function () {
-        loader.style.display = 'none'; // Hide the loading animation
-        percentage.display = 'none';
-        window.location.href = 'home.html'; // Redirect to another page
-      }, 500); // Delay before redirecting (0.5 seconds in this example)
-    }
-  }, 20); // Adjust the interval and speed as needed
-}
+const overlay = document.querySelector('.overlay');
+const loader = document.querySelector('.loader');
+const percentage = document.querySelector('.progress-text span');
 
 document.querySelector('#btn-login').addEventListener('click', (e) => {
   e.preventDefault();
   redirectToAnotherPage();
 })
+
+
+const redirectToAnotherPage = () => {
+  // Display the loading animation
+  overlay.classList.add('active');
+  overlay.addEventListener('wheel', preventScroll, { passive: false });
+
+  let progress = 0;
+
+  const interval = setInterval(() => {
+    progress++;
+    percentage.innerHTML = `Iniciando sesión...<br>${progress}%`;
+
+    if (progress === 100) {
+  clearInterval(interval);
+
+      redirect();
+    }
+  }, 20);
+}
+
+const redirect = () => {
+  
+  setTimeout(() => {
+    percentage.innerHTML += '<br>Bienvenido, Luca!';
+  }, 1200);
+
+  setTimeout(() => {
+    window.location.href = 'home.html'; // Redirect to another page
+  }, 2000);
+}
+
+const preventScroll = (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  return false;
+}

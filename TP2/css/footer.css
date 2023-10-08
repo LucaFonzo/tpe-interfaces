@@ -1,0 +1,83 @@
+footer {
+    height: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    footer {
+        height: 200px;
+    }
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+    footer div {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* Estilos para el desplegable */
+.desplegable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  
+  .desplegable button {
+    font-size: 18px;
+  }
+  
+  .desplegable button span {
+    margin-right: 10px;
+  }
+  
+  .desplegable button svg {
+    margin-left: 10px;
+  }
+  
+  .botonDesplegable {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  
+  .opcionesDesplegable {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .opcionesDesplegable {
+      display: block;
+    }
+  
+    .arrow-down-icn {
+      display: none;
+    }
+  
+    .arrow-up-icn {
+      display: none;
+    }
+  }
+  
+  .opcionesDesplegable li {
+    font-size: 14px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .opcionesDesplegable li:hover {
+    background-color: #341D4C;
+    color: white;
+  }
