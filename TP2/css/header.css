@@ -138,6 +138,7 @@ nav.active {
     color: #E1E1E1;
     border: solid 4px #E1E1E1;
     margin-left: 15px;
+    padding: 10px 18px;
 }
 
 .nav-btn:hover {
