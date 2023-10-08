@@ -1,83 +1,86 @@
 footer {
-    height: auto;
+  height: auto;
 }
 
 @media screen and (min-width: 1024px) {
-    footer {
-        height: 200px;
-    }
+  footer {
+    height: 200px;
+  }
 }
 
 footer div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 1024px) {
-    footer div {
-        display: flex;
-        flex-direction: row;
-    }
+  footer div {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
-/* Estilos para el desplegable */
-.desplegable {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.dropdown button {
+  font-size: 18px;
+}
+
+.dropdown button span {
+  margin-right: 10px;
+}
+
+.dropdown button svg {
+  margin-left: 10px;
+}
+
+.dropdown-btn {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+.dropdown-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-options li {
+  font-size: 14px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-options li:hover {
+  background-color: #341D4C;
+  color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  .dropdown-options {
+    display: block;
   }
-  
-  
-  .desplegable button {
-    font-size: 18px;
+
+  .arrow-down-icn {
+    display: none;
   }
-  
-  .desplegable button span {
-    margin-right: 10px;
+
+  .arrow-up-icn {
+    display: none;
   }
-  
-  .desplegable button svg {
-    margin-left: 10px;
+
+  .dropdown button span {
+    margin-right: 0;
   }
-  
-  .botonDesplegable {
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  
-  .opcionesDesplegable {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  @media screen and (min-width: 1024px) {
-    .opcionesDesplegable {
-      display: block;
-    }
-  
-    .arrow-down-icn {
-      display: none;
-    }
-  
-    .arrow-up-icn {
-      display: none;
-    }
-  }
-  
-  .opcionesDesplegable li {
-    font-size: 14px;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .opcionesDesplegable li:hover {
-    background-color: #341D4C;
-    color: white;
-  }
+}
