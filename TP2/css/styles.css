@@ -216,16 +216,6 @@ svg {
   width: fit-content;
 }
 
-.bar {
-  position: absolute;
-}
-
-.bar {
-  top: 3px;
-  background: #000;
-  transition: all .3s ease-in;
-}
-
 main {
   height: 100%;
 }
