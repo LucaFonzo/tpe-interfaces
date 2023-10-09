@@ -5,6 +5,7 @@ footer {
   align-items: center;
   height: auto;
   margin-top: 3rem;
+  padding: 2rem 0;
 }
 
 footer .logo {
@@ -73,31 +74,68 @@ footer .logo {
   color: white;
 }
 
+.social-media {
+  margin: 5% 0;
+  font-size: 18px;
+  color: #F2EDED;
+}
 
+.social-media span {
+  display: none;
+}
+
+.social-media ul {
+  display: flex;
+  width:100px;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
 
 @media screen and (min-width: 1024px) {
   footer {
-    height: 200px;
-  }
-
-  footer div {
     display: flex;
     flex-direction: row;
+    align-items: baseline;
+    height: fit-content;
+  }
+
+  footer .logo {
+    width: 17%;
   }
 
   .dropdown ul {
     display: block;
+    max-height: fit-content;
+  }
+
+  .dropdown ul li {
+    transform: translateY(0%);
   }
 
   .arrow-down-icn {
     display: none;
   }
 
-  .arrow-up-icn {
-    display: none;
-  }
-
   .dropdown button span {
     margin-right: 0;
+  }
+
+  .social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
+
+  .social-media span{
+    display: block;
+  }
+
+  .social-media ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
   }
 }
