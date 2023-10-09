@@ -1,24 +1,16 @@
-const btnsDesplegable = document.querySelectorAll('.boton-desplegable');
-const dropdownLists = document.querySelectorAll('.opciones-desplegable');
+const dropdownBtns = document.querySelectorAll('.dropdown button');
+const dropdownLists = document.querySelectorAll('.dropdown ul');
 const arrows = document.querySelectorAll('.arrow-down-icn');
-btnsDesplegable.forEach((btn,index) => {
+
+dropdownBtns.forEach((btn, index) => {
   btn.addEventListener('click', (e) => {
     if (window.innerWidth >= 1024) {
       return;
     }
+
     const arrow = arrows[index];
     const dropdownList = dropdownLists[index];
-    console.log(arrow);
-    if (dropdownList.classList.contains('d-block')) {
-      arrow.classList.remove('arrow-up-icn');
-      arrow.classList.add('arrow-down-icn');
-      dropdownList.classList.remove('d-block');
-      dropdownList.classList.add('d-none');
-    } else {
-      arrow.classList.add('arrow-up-icn')
-      arrow.classList.remove('arrow-down-icn');
-      dropdownList.classList.add('d-block');
-      dropdownList.classList.remove('d-none');
-    }
+    arrow.classList.toggle('active');
+    dropdownList.classList.toggle('active');
   });
-})
+});

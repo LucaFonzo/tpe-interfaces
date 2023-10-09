@@ -182,6 +182,25 @@ svg {
     display: none;
   }
 }
+/*Logo*/
+.logo {
+  grid-area: logo;
+  width: 100%;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo svg {
+  transform: rotate(-30deg);
+  width: 40px;
+  height: 25px;
+  position: relative;
+  top: 6px;
+  margin-right: -25px;
+  left: -18px;
+}
 
 /*Buttons*/
 

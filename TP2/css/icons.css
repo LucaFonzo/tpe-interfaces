@@ -1,10 +1,3 @@
-.icon {
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    fill: #f1f1f1;
-}
-
 .action-icn {
     background-image: url('../assets/icons/action.svg');
 }
@@ -67,7 +60,6 @@
 
 .hamburger-icn {
     background-image: url('../assets/icons/hamburger.svg');
-    cursor: pointer;
 }
 
 .info-icn {
@@ -131,9 +123,16 @@
 }
 
 .arrow-down-icn {
-    background: url('../assets/icons/flecha-abajo.svg') no-repeat;
+    background: url('../assets/icons/flecha-abajo.svg');
 }
 
 .arrow-up-icn {
-    background: url('../assets/icons/flecha-arriba.svg') no-repeat;
+    background: url('../assets/icons/flecha-arriba.svg');
+}
+
+.icon {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    fill: #f1f1f1;
 }

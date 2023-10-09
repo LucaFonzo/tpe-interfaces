@@ -16,31 +16,12 @@ header {
     grid-area: burger;
     height: 30px;
     width: 30px;
+    cursor: pointer;
 }
 
 #burger-btn svg {
     width: 100%;
     height: 100%;
-}
-
-.logo {
-    grid-area: logo;
-    width: 100%;
-    margin-top: 5%;
-}
-
-.logo a {
-    text-decoration: none;
-}
-
-.logo svg {
-    transform: rotate(-30deg);
-    width: 40px;
-    height: 25px;
-    position: relative;
-    left: 8px;
-    top: 6px;
-    text-align: center;
 }
 
 .search-bar {
@@ -77,6 +58,10 @@ header {
 
 .main-menu * {
     cursor: pointer;
+}
+
+header .logo {
+    margin-top: 8%;
 }
 
 .profile-pic {
