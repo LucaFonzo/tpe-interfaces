@@ -18,28 +18,31 @@
 .main-game .background-darkener div{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   height: fit-content;
   max-width: 350px;
 }
 
-.main-game div div p {
+.main-game .background-darkener div p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
   overflow: hidden;
   text-overflow: ellipsis;
   max-height: 83px;
-  margin: 3% 0;
+  margin: 5% 0;
+  width: 100%;
+}
+
+.main-game div div a {
+  width: 100%;
 }
 
 .main-game div div button {
-  width: 50%;
+  width: 55%;
   padding: 15px 20px;
-  margin-top: 2%;
 }
-
-.main-game .background-darkener div button {
-  
-} 
 
 @media screen and (min-width: 1020px) {
   .main-game  {
