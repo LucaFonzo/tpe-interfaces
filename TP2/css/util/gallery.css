@@ -26,10 +26,24 @@
   align-items: center;
 }
 
-.expanded-image {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
+.overlay-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.slide {
+  flex: 0 0 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide img{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .close-button {

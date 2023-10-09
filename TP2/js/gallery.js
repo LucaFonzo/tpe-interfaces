@@ -1,16 +1,23 @@
 const images = document.querySelectorAll('.image');
+const slides = document.querySelectorAll(".slide");
 const overlay = document.querySelector('.overlay');
 const expandedImage = document.querySelector('.expanded-image');
 const closeButton = document.querySelector('.close-button');
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
 
-let currentImageIndex = 0;
+let currentIndex = 0;
 
-function openOverlay(index) {
-  expandedImage.src = images[index].querySelector('img').src;
+function openOverlay() {
   overlay.style.display = 'flex';
-  currentImageIndex = index;
+  showSlide(0);
+}
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    console.log(100 * (i - index));
+    slide.style.transform = `translateX(${100 * (i - index)}%)`;
+  });
 }
 
 function closeOverlay() {
@@ -18,19 +25,13 @@ function closeOverlay() {
 }
 
 function showNextImage() {
-  currentImageIndex++;
-  if (currentImageIndex >= images.length) {
-    currentImageIndex = 0;
-  }
-  openOverlay(currentImageIndex);
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
 }
 
 function showPrevImage() {
-  currentImageIndex--;
-  if (currentImageIndex < 0) {
-    currentImageIndex = images.length - 1;
-  }
-  openOverlay(currentImageIndex);
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(currentIndex);
 }
 
 images.forEach((image, index) => {
