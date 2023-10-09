@@ -9,13 +9,21 @@ form {
     margin-top: 5%;
 }
 
-.input-group, form button.primary-btn {
+.input-group, .form-buttons button {
     margin: 6% 2%;
 }
 
-form button.primary-btn {
+.form-buttons {
+    width: 100%;
+}
+
+.form-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-width: fit-content;
     width: 80%;
+    padding: 1rem 1rem;
 }
 
 form div+p{
@@ -46,15 +54,4 @@ button svg {
 
 .sub-password p {
     width: 4rem;
-}
-
-.form-buttons {
-    width: 100%;
-}
-
-.form-buttons button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
 }

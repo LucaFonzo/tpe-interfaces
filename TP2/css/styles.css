@@ -30,7 +30,12 @@
   color: #F2EDED;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  position: relative;
   background-color: #E1E1E1;
 }
 
@@ -216,9 +221,7 @@ svg {
   letter-spacing: 2.5px;
   font-size: 16px;
   border-radius: 30px;
-  padding: 1rem 0.5rem;
   width: fit-content;
-  flex-wrap: wrap;
 }
 
 main {
@@ -230,12 +233,18 @@ main {
   display: none;
   position: absolute;
   width: 100%;
-  height: calc(100% + 110px);
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  height: calc(100% - 110px);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .overlay.active {
   display: block;
+}
+
+@media screen and (min-width: 1020px) {
+  .overlay {
+    height: calc(100% - 100px);
+  }
 }
 
 /*CARD AND CARROUSEL*/

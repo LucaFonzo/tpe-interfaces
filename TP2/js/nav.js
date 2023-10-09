@@ -9,12 +9,6 @@ const showNav = () => {
   setTimeout(() => {categories.classList.toggle('d-none');}, 500);
 };
 
-const preventScroll = (e) => { 
-  e.preventDefault();
-  e.stopPropagation();
-  return false;
-}
-
 document.querySelector('#burger-btn').addEventListener('click', showNav);
 
 document.querySelector('#category-icn').addEventListener('click', () => {
@@ -22,4 +16,3 @@ document.querySelector('#category-icn').addEventListener('click', () => {
 });
 
 overlay.addEventListener('click', showNav);
-overlay.addEventListener('wheel', preventScroll, {passive: false})
