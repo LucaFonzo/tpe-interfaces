@@ -169,6 +169,10 @@ svg {
   display: block;
 }
 
+.line-through {
+  text-decoration: line-through;
+}
+
 
 @media screen and (max-width: 1020px) {
   .desktop {
@@ -212,8 +216,9 @@ svg {
   letter-spacing: 2.5px;
   font-size: 16px;
   border-radius: 30px;
-  padding: 1rem 1.8rem;
+  padding: 1rem 0.5rem;
   width: fit-content;
+  flex-wrap: wrap;
 }
 
 main {
@@ -236,58 +241,62 @@ main {
 }
 
 /*CARD AND CARROUSEL*/
-
-@media screen and (min-width: 1024px) {
-  .carousel-container {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    max-width: 840px;
-    /* Adjust the width as needed */
-    margin: 0 auto;
-  }
-
-  .carousel {
-    display: flex;
-    transition: transform 0.3s ease;
-  }
-
-  .card {
-    max-width: 270px;
-    height: 350px;
-    border-radius: 10px;
-    margin-right: 10px;
-  }
-
-  .card:hover {
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-  }
-
-  .card-img-top {
-    min-width: 270px;
-    max-height: 150px;
-    border-radius: 10px 10px 0 0;
-  }
-
-  .card-body {
-    max-width: 270px;
-    max-height: 190px;
-  }
-
-  .carousel-button {
-    background-color: #E1E1E1;
-    border: none;
-    cursor: pointer;
-  }
-}
-
 .carousel-container {
   display: flex;
-  overflow-y: auto;
+  overflow: auto;
   width: 100%;
+  max-width: 840px;
+  /* Adjust the width as needed */
   margin: 0 auto;
 }
 
 .carousel {
+  margin-left: 10px;
   display: flex;
+  transition: transform 0.3s ease;
+}
+
+.card {
+  max-width: 270px;
+  height: 350px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card-img-top {
+  min-width: 270px;
+  max-height: 150px;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  max-width: 270px;
+  max-height: 190px;
+}
+
+.carousel-button {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .carousel-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 840px;
+  /* Adjust the width as needed */
+  margin: 0 auto;
+  background-color: #E1E1E1;
+  border: none;
+  cursor: pointer;
+}
+.carousel-button {
+  display: block;
+  background-color: #E1E1E1;
+  border: none;
+  cursor: pointer;
+}
 }

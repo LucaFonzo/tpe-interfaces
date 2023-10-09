@@ -24,7 +24,12 @@ nextBtn.addEventListener('click', () => {
 
 // Función para actualizar la posición del carrusel
 function updateCarousel() {
-  const translateX = -currentIndex * (280 * 3); // 280px es el ancho de cada tarjeta
-  carousel.style.transform = `translateX(${translateX}px)`;
+  if (window.innerWidth < 1024) {
+    const translateX = -currentIndex * 280; // 280px es el ancho de cada tarjeta
+    carousel.style.transform = `translateX(${translateX}px)`;
+  } else {
+    const translateX = -currentIndex * (280 * 3); // 280px es el ancho de cada tarjeta
+    carousel.style.transform = `translateX(${translateX}px)`;
+  }
 }
 
