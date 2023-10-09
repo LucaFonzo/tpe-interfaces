@@ -199,6 +199,7 @@ svg {
     display: none;
   }
 }
+
 /*Logo*/
 .logo {
   grid-area: logo;
@@ -242,7 +243,7 @@ main {
   position: absolute;
   width: 100%;
   height: calc(100% - 110px);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #1c1e2699;
 }
 
 .overlay.active {
