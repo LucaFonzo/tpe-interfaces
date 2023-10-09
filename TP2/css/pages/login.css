@@ -9,12 +9,18 @@ form {
     margin-top: 5%;
 }
 
-.input-group, .form-buttons button {
+form.register {
+    padding: 65px 80px;
+}
+
+form > .input-group,
+.form-buttons button {
+    width: 100%;
     margin: 6% 2%;
 }
 
 .form-buttons {
-    width: 100%;
+    width: fit-content;
 }
 
 .form-buttons button {
@@ -22,11 +28,10 @@ form {
     align-items: center;
     justify-content: center;
     min-width: fit-content;
-    width: 80%;
     padding: 1rem 1rem;
 }
 
-form div+p{
+form div+p {
     margin-top: 1%;
     margin-bottom: 5%;
 }
@@ -42,9 +47,10 @@ button svg {
     letter-spacing: 2.5px;
 }
 
-.input-group > input {
-  color: black;
+.input-group>input {
+    color: black;
     height: 2.3rem;
+    border: 3px solid #64768b00;
 }
 
 .sub-password span {
@@ -55,3 +61,16 @@ button svg {
 .sub-password p {
     width: 4rem;
 }
+
+.register input:valid {
+    border: 3px solid #246115;
+}
+
+.register input:not(:placeholder-shown):invalid {
+    border: 3px solid #D42C2C;
+}
+
+.register input:focus {
+    border: 3px solid #64768B;
+}
+

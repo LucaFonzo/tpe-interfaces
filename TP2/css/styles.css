@@ -82,6 +82,10 @@ svg {
   margin: 0 auto;
 }
 
+.w-100{
+  width: 100%;
+}
+
 .container-800 {
   max-width: 800px;
   display: flex;
@@ -138,6 +142,11 @@ svg {
 .my-10 {
   margin-top: 10%;
   margin-bottom: 10%;
+}
+
+.my-5 {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .mt-10 {
