@@ -241,6 +241,9 @@ svg {
   border-radius: 30px;
   width: fit-content;
 }
+.primary-btn:hover {
+  background-color: #210D36;
+}
 
 main {
   height: 100%;

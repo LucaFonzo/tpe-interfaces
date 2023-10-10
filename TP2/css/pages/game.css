@@ -87,3 +87,14 @@
 .comments-container div {
   margin-top: 10px;
 }
+
+.breadcrumbs {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  
+  margin-bottom: 20px;
+}
+.breadcrumbs p {
+  color: #432F58;
+}

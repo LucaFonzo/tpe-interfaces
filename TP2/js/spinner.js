@@ -28,7 +28,6 @@ const redirectToAnotherPage = () => {
 }
 
 const redirect = () => {
-  
   setTimeout(() => {
     percentage.innerHTML += '<br>Bienvenido, Luca!';
   }, 1200);
