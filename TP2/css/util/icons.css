@@ -129,7 +129,9 @@
 .arrow-up-icn {
     background: url('../../assets/icons/flecha-arriba.svg');
 }
-
+.arrow-breadcrumbs {
+  background-image: url('../../assets/icons/arrow-breadcrumbs.svg');
+}
 .icon {
     background-size: contain;
     background-position: center;

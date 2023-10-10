@@ -5,6 +5,7 @@
   width: 100%;
 }
 .panel-control {
+  border-radius: 10px;
   width: 30%;
   margin-left: 20px;
 }
@@ -14,9 +15,12 @@
 }
 
 .description-container {
-  height: 200px;
+  border-radius: 10px;
+  height: auto;
 }
-
+.about-container {
+  margin: 20px;
+}
 .about-container p {
   margin-top: 10px;
 }
@@ -25,6 +29,10 @@
   display: flex;
   padding: 10px;
   border-radius: 10px;
+}
+
+.comment-container button {
+  padding: 1rem 0.9rem;
 }
 
 .input-comment {
@@ -58,9 +66,9 @@
 }
 
 .comment-info {
+  width: 100%;
   max-width: 80%;
 }
-
 .comment-info p {
   border-radius: 10px;
   padding: 10px;
@@ -74,4 +82,19 @@
 }
 .comment-title h2 {
   color: black;
+}
+
+.comments-container div {
+  margin-top: 10px;
+}
+
+.breadcrumbs {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  
+  margin-bottom: 20px;
+}
+.breadcrumbs p {
+  color: #432F58;
 }

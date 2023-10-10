@@ -71,6 +71,7 @@ footer .logo {
 }
 
 .dropdown ul li:hover {
+  border-radius: 10px;
   background-color: #341D4C;
   color: white;
 }

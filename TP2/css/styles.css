@@ -169,6 +169,10 @@ svg {
   margin-left: 5%;
 }
 
+.br-10 {
+  border-radius: 10px;
+}
+
 
 /*Hidening*/
 .hidden {
@@ -185,6 +189,10 @@ svg {
 
 .line-through {
   text-decoration: line-through;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 
@@ -233,6 +241,9 @@ svg {
   border-radius: 30px;
   width: fit-content;
 }
+.primary-btn:hover {
+  background-color: #210D36;
+}
 
 main {
   height: 100%;
@@ -266,7 +277,10 @@ main {
   /* Adjust the width as needed */
   margin: 0 auto;
 }
-
+.carrousel-title {
+  color: #1C1E26;
+  text-align: left;
+}
 .carousel {
   margin-left: 10px;
   display: flex;
@@ -279,7 +293,9 @@ main {
   border-radius: 10px;
   margin-right: 10px;
 }
-
+.card button {
+  padding: 1rem 0.8rem;
+}
 .card:hover {
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
