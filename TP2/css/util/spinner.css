@@ -4,6 +4,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+}
+
+.overlay.loader-container.active > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20%;
 }
 
 .loader {
@@ -17,8 +27,9 @@
     transform: translate(-50%, -50%);
 }
 
+
 .progress-text span {
-    font-size: 3rem;
+    font-size: 1.5rem;
     color: #FADEDE;
 }
 
