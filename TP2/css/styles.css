@@ -114,6 +114,10 @@ svg {
   justify-content: space-around;
 }
 
+.justify-right {
+  justify-content: right;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -152,7 +156,12 @@ svg {
 .mt-10 {
   margin-top: 10%;
 }
-
+.mr-5 {
+  margin-right: 5%;
+}
+.mr-10 {
+  margin-right: 10%;
+}
 .mt-5 {
   margin-top: 5%;
 }
@@ -244,7 +253,9 @@ svg {
 .primary-btn:hover {
   background-color: #210D36;
 }
-
+.primary-btn:disabled {
+  background-color: #7B678F;
+}
 main {
   height: 100%;
 }
@@ -279,7 +290,6 @@ main {
 }
 .carrousel-title {
   color: #1C1E26;
-  text-align: left;
 }
 .carousel {
   margin-left: 10px;
@@ -301,8 +311,8 @@ main {
 }
 
 .card-img-top {
-  min-width: 270px;
-  max-height: 150px;
+  height: 150px;
+  width: 270px;
   border-radius: 10px 10px 0 0;
 }
 
