@@ -132,6 +132,17 @@
 .arrow-breadcrumbs {
   background-image: url('../../assets/icons/arrow-breadcrumbs.svg');
 }
+
+.space-bar {
+  background-image: url('../../assets/icons/Barra\ espaciadora.svg');
+}
+.left-arrow-keyboard {
+  background-image: url('../../assets/icons/left-arrow.svg');
+}
+.right-arrow-keyboard {
+  size: 50px;
+  background-image: url('../../assets/icons/right-arrow.svg');
+}
 .icon {
     background-size: contain;
     background-position: center;

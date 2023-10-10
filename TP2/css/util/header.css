@@ -18,6 +18,9 @@ header {
     width: 30px;
     cursor: pointer;
 }
+#burger-btn:hover {
+  transform: scale(1.1);
+}
 
 #burger-btn svg {
     width: 100%;
