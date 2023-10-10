@@ -82,7 +82,7 @@ svg {
   margin: 0 auto;
 }
 
-.w-100{
+.w-100 {
   width: 100%;
 }
 
@@ -156,12 +156,15 @@ svg {
 .mt-10 {
   margin-top: 10%;
 }
+
 .mr-5 {
   margin-right: 5%;
 }
+
 .mr-10 {
   margin-right: 10%;
 }
+
 .mt-5 {
   margin-top: 5%;
 }
@@ -242,6 +245,7 @@ svg {
 
 .primary-btn {
   display: inline-block;
+  background-color: #432F58;
   white-space: nowrap;
   font-family: Ruda;
   text-align: center;
@@ -250,12 +254,15 @@ svg {
   border-radius: 30px;
   width: fit-content;
 }
+
 .primary-btn:hover {
   background-color: #210D36;
 }
+
 .primary-btn:disabled {
   background-color: #7B678F;
 }
+
 main {
   height: 100%;
 }
@@ -285,62 +292,41 @@ main {
   overflow: auto;
   width: 100%;
   max-width: 840px;
-  /* Adjust the width as needed */
   margin: 0 auto;
 }
+
 .carrousel-title {
   margin-top: 30px;
   color: #1C1E26;
 }
+
 .carousel {
   margin-left: 10px;
   display: flex;
   transition: transform 0.3s ease;
 }
 
-.card {
-  max-width: 270px;
-  height: 350px;
-  border-radius: 10px;
-  margin-right: 10px;
-}
-.card button {
-  padding: 1rem 0.8rem;
-}
-.card:hover {
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-}
-
-.card-img-top {
-  height: 150px;
-  width: 270px;
-  border-radius: 10px 10px 0 0;
-}
-
-.card-body {
-  max-width: 270px;
-  max-height: 190px;
-}
-
 .carousel-button {
   display: none;
 }
+
 @media screen and (min-width: 1024px) {
   .carousel-container {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  max-width: 840px;
-  /* Adjust the width as needed */
-  margin: 0 auto;
-  background-color: #E1E1E1;
-  border: none;
-  cursor: pointer;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+    background-color: #E1E1E1;
+    border: none;
+    cursor: pointer;
+  }
+
+  .carousel-button {
+    display: block;
+    background-color: #E1E1E1;
+    border: none;
+    cursor: pointer;
+  }
 }
-.carousel-button {
-  display: block;
-  background-color: #E1E1E1;
-  border: none;
-  cursor: pointer;
-}
-}
+

@@ -129,20 +129,24 @@
 .arrow-up-icn {
     background: url('../../assets/icons/flecha-arriba.svg');
 }
+
 .arrow-breadcrumbs {
-  background-image: url('../../assets/icons/arrow-breadcrumbs.svg');
+    background-image: url('../../assets/icons/arrow-breadcrumbs.svg');
 }
 
 .space-bar {
-  background-image: url('../../assets/icons/Barra\ espaciadora.svg');
+    background-image: url('../../assets/icons/Barra\ espaciadora.svg');
 }
+
 .left-arrow-keyboard {
-  background-image: url('../../assets/icons/left-arrow.svg');
+    background-image: url('../../assets/icons/left-arrow.svg');
 }
+
 .right-arrow-keyboard {
-  size: 50px;
-  background-image: url('../../assets/icons/right-arrow.svg');
+    size: 50px;
+    background-image: url('../../assets/icons/right-arrow.svg');
 }
+
 .icon {
     background-size: contain;
     background-position: center;
