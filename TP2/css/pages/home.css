@@ -14,7 +14,7 @@
 
 .main-game .background-darkener {
   min-height: inherit;
-  background-color: #1c1e2678;
+  background-color: #1c1e2680;
   width: 100%;
   padding: 14% 0 0 8%;
 }
@@ -58,21 +58,40 @@
   }
 }
 
-
-.category-card {
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 120px;
-  height: 100px;
-}
-
-.category-card:hover {
-  box-shadow: 0 0 30px rgba(153, 88, 219, 0.7);
-  cursor: pointer;
-}
-
 .container-categories {
   margin: 0 auto;
   overflow: auto;
-  max-width: 800px;
+  max-width: 1000px;
+}
+
+.container-categories > div {
+  width: 100%;
+  padding: 4%;
+}
+
+.container-categories h2 {
+  color: var(--black);
+}
+
+.category-card {
+  margin: 12px calc(15px + 2%);
+  height: 120px;
+  width: 150px;
+  border-radius: 8px;
+  letter-spacing: 2px;
+}
+
+.category-card:hover {
+  margin: 0 2%;
+  height: 144px;
+  width: 180px;
+  box-shadow: 0 0 15px 2px #5F0180;
+  cursor: pointer;
+  font-size: 22px;
+  transition: 0.2s ease;
+}
+
+.category-card:hover svg {
+  width: 40px;
+  height: 40px;
 }

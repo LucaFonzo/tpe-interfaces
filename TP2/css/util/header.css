@@ -142,7 +142,7 @@ nav.active {
     top: 16rem;
     left: -16rem;
     height: auto;
-    border: #5D4675 2px solid;
+    border: var(--main-l1) 2px solid;
     transition: .5s;
     z-index: 98;
 }

@@ -25,7 +25,7 @@ footer .logo {
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  color: #F2EDED;
+  color: var(--white);
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -72,14 +72,14 @@ footer .logo {
 
 .dropdown ul li:hover {
   border-radius: 10px;
-  background-color: #341D4C;
+  background-color: var(--main-s1);
   color: white;
 }
 
 .social-media {
   margin: 5% 0;
   font-size: 18px;
-  color: #F2EDED;
+  color: var(--white);
 }
 
 .social-media span {

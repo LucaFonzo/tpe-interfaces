@@ -17,8 +17,8 @@
 }
 
 .loader {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #432F58;
+    border: 4px solid var(--white);
+    border-top: 4px solid var(--main);
     border-radius: 50%;
     margin: 1.5rem;
     width: 80px;
@@ -30,7 +30,7 @@
 
 .progress-text span {
     font-size: 1.5rem;
-    color: #FADEDE;
+    color: var(--accent);
 }
 
 @keyframes spin {

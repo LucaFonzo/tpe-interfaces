@@ -36,7 +36,7 @@ html {
 
 body {
   position: relative;
-  background-color: #E1E1E1;
+  background-color: var(--gray);
 }
 
 main section {
@@ -138,6 +138,10 @@ svg {
   justify-content: flex-start;
 }
 
+.justify-end {
+  justify-content: end;
+}
+
 .align-center {
   align-items: center;
 }
@@ -175,6 +179,10 @@ svg {
 
 .mb-10 {
   margin-bottom: 10%;
+}
+
+.mb-5 {
+  margin-bottom: 5%;
 }
 
 .ml-10 {
@@ -249,7 +257,7 @@ svg {
 
 .primary-btn {
   display: inline-block;
-  background-color: #432F58;
+  background-color: var(--main);
   white-space: nowrap;
   font-family: Ruda;
   text-align: center;
@@ -260,11 +268,11 @@ svg {
 }
 
 .primary-btn:hover {
-  background-color: #210D36;
+  background-color: var(--main-s2);
 }
 
 .primary-btn:disabled {
-  background-color: #7B678F;
+  background-color: var(--main-l2);
 }
 
 main {

@@ -1,5 +1,5 @@
 .carousel-title {
-    color: #1C1E26;
+    color: var(--black);
     text-align: center;
     margin-bottom: 6%;
 }
@@ -8,11 +8,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100%;    
 }
 
 .carousel>button {
     display: none;
+}
+
+.carousel-body .card:not(:last-child) {
+    margin-right: 5em;
 }
 
 .carousel-body {
@@ -38,7 +42,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #341D4C;
+        background-color: var(--main);
         height: fit-content;
         border-radius: 50%;
         padding: 2%;
@@ -47,22 +51,18 @@
     }
 
     .carousel>button:not(.disabled):hover {
-        background-color: #210D36;
+        background-color: var(--main-s2);
     }
 
     .carousel>button.disabled {
-        background-color: #7B678F;
-        color: #E1E1E1;
+        background-color: var(--main-l2);
+        color: var(--gray);
         cursor: default;
     }
 
     .carousel-body {
         width: calc(270px*3 + 5em*2 + 3%*2);
         padding: 3%;
-    }
-
-    .carousel-body .card:not(:last-child) {
-        margin-right: 5em;
     }
 
     .carousel-body .card {
@@ -92,7 +92,7 @@
         width: 10%;
         justify-content: space-between;
         align-items: center;
-        margin-left: 47.7%;
+        margin: 0 auto;
     }
 
     .radio span {
@@ -100,12 +100,12 @@
         width: 25px;
         height: 25px;
         border-radius: 50%;
-        border: #432F58 6px solid;
-        background-color: #432F58;
+        border: var(--main) 6px solid;
+        background-color: var(--main);
     }
     
     .radio span.active {
-        background-color: #FADEDE;
+        background-color: var(--accent);
     }
 }
 
