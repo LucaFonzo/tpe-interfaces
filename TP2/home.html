@@ -138,15 +138,14 @@
       <h2 class="carousel-title">Recomendados para vos</h2>
 
       <div class="carousel">
-        <button class="previous disabled">
-          <svg class="icon left-arrow-icn"></svg>
+        <button class="previous icon left-arrow-icn disabled">
         </button>
 
         <div class="carousel-body">
           <!--Card 1-->
-          <div class="card sec-color-s2 visible">
+          <div class="card sec-color-s2">
             <div class="card-img">
-              <div class="d-none">
+              <div>
                 <svg class="icon cart-icn"></svg>
               </div>
               <img src="assets/img/tom-jerry-fondo.jpg" alt="Tom & Jerry: 4 en línea!">
@@ -161,9 +160,9 @@
             </div>
           </div>
           <!--Card 2-->
-          <div class="card sec-color-s2 visible">
+          <div class="card sec-color-s2">
             <div class="card-img">
-              <div class="d-none">
+              <div>
                 <svg class="icon cart-icn"></svg>
               </div>
               <img src="assets/img/aoe2-definitive.webp" alt="Age of Empires II: Definitive Edition">
@@ -178,9 +177,9 @@
             </div>
           </div>
           <!--Card 3-->
-          <div class="card sec-color-s2 visible">
+          <div class="card sec-color-s2">
             <div class="card-img">
-              <div class="d-none">
+              <div>
                 <svg class="icon cart-icn"></svg>
               </div>
               <img src="assets/img/valorant.jpg" alt="VALORANT">
@@ -197,7 +196,7 @@
           <!--Card 4-->
           <div class="card sec-color-s2">
             <div class="card-img">
-              <div class="d-none">
+              <div>
                 <svg class="icon cart-icn"></svg>
               </div>
               <img src="assets/img/nfs.jpg" alt="Need for Speed">
@@ -214,7 +213,7 @@
           <!--Card 5-->
           <div class="card sec-color-s2">
             <div class="card-img">
-              <div class="d-none">
+              <div>
                 <svg class="icon cart-icn"></svg>
               </div>
               <img src="assets/img/counter-strike16.webp" alt="Counter Strike 1.6">
@@ -231,7 +230,7 @@
           <!--Card 6-->
           <div class="card sec-color-s2">
             <div class="card-img">
-              <div class="d-none">
+              <div>
                 <svg class="icon cart-icn"></svg>
               </div>
               <img src="assets/img/stellaris.jpg" alt="Stellaris">
@@ -248,7 +247,7 @@
           <!--Card 7-->
           <div class="card sec-color-s2">
             <div class="card-img">
-              <div class="d-none">
+              <div>
                 <svg class="icon cart-icn"></svg>
               </div>
               <img src="assets/img/total-war-rome.jpg" alt="Total War: Rome">
@@ -265,7 +264,7 @@
           <!--Card 8-->
           <div class="card sec-color-s2">
             <div class="card-img">
-              <div class="d-none">
+              <div>
                 <svg class="icon cart-icn"></svg>
               </div>
               <img src="assets/img/digimon-world.jpg" alt="Digimon World">
@@ -282,7 +281,7 @@
           <!--Card 9-->
           <div class="card sec-color-s2">
             <div class="card-img">
-              <div class="d-none">
+              <div>
                 <svg class="icon cart-icn"></svg>
               </div>
               <img src="assets/img/tetris.jpg" alt="Tetris">
@@ -298,10 +297,14 @@
           </div>
         </div>
 
-        <button class="next">
-          <svg class="icon right-arrow-icn"></svg>
+        <button class="next icon right-arrow-icn">
         </button>
       </div>
+      <div class="radio">
+        <span id="radio-0" class="active"></span>
+        <span id="radio-1"></span>
+        <span id="radio-2"></span>
+    </div>
 
     </section>
   </main>
@@ -359,8 +362,8 @@
 
   <script src="js/nav.js"></script>
   <script src="js/footer.js"></script>
-  <script src="js/app.js"></script>
   <script src="js/card.js"></script>
+  <script src="js/carousel.js"></script>
 </body>
 
 </html>

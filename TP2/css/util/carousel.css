@@ -4,14 +4,6 @@
     margin-bottom: 6%;
 }
 
-@media screen and (min-width: 1020px) {
-    .carousel-title {
-        text-align: left;
-        margin-left: 15%;
-        margin-bottom: 0;
-    }
-}
-
 .carousel {
     display: flex;
     justify-content: center;
@@ -23,7 +15,25 @@
     display: none;
 }
 
+.carousel-body {
+    display: flex;
+    width: calc(270px + 10%*2);
+    overflow: hidden;
+    padding: 0 10% 10% 10%;
+}
+
+.radio {
+    display: none;
+}
+
+
 @media screen and (min-width: 1020px) {
+    .carousel-title {
+        text-align: left;
+        margin-left: 15%;
+        margin-bottom: 0;
+    }
+
     .carousel>button {
         display: flex;
         justify-content: center;
@@ -33,6 +43,7 @@
         border-radius: 50%;
         padding: 2%;
         margin: 4%;
+        background-size: 24px 24px;
     }
 
     .carousel>button:not(.disabled):hover {
@@ -44,35 +55,62 @@
         color: #E1E1E1;
         cursor: default;
     }
-}
 
-
-
-.carousel>button svg.icon {
-    width: 30px;
-    height: 30px;
-    fill: #0C1F34;
-}
-
-.carousel-body {
-    display: flex;
-    width: calc(270px + 10%*2);
-    overflow: hidden;
-    padding: 0 10% 10% 10%;
-}
-
-
-@media screen and (min-width: 1020px) {
     .carousel-body {
         width: calc(270px*3 + 5em*2 + 3%*2);
         padding: 3%;
     }
+
+    .carousel-body .card:not(:last-child) {
+        margin-right: 5em;
+    }
+
+    .carousel-body .card {
+        transition: 2s ease;
+    }
+
+    .carousel-body .card.move-left-1 {
+        transform: translateX(-1059.16px);
+        transition: 1.5s ease;
+    }
+
+    .carousel-body .card.move-left-2 {
+        transform: translateX(-2118.32px);
+        transition: 1.5s ease;
+    }
+
+    .radio {
+        display: flex;
+        width: 10%;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 47.7%;
+    }
+
+    .radio {
+        display: flex;
+        width: 10%;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 47.7%;
+    }
+
+    .radio span {
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: #432F58 6px solid;
+        background-color: #432F58;
+    }
+    
+    .radio span.active {
+        background-color: #FADEDE;
+    }
 }
 
 
-.carousel-body .card.visible {
-    margin-right: 5em;
-}
+
 
 /*
 

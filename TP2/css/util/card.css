@@ -21,6 +21,10 @@
   height: 147px;
 }
 
+.card-img div {
+  display: none;
+}
+
 .card-img div.active {
   display: flex;
   justify-content: center;
@@ -30,6 +34,7 @@
   width: 270px;
   border-radius: 20px 20px 0 0;
   background-color: #432f5899;
+  z-index: 95;
 }
 
 .card-img svg {
@@ -42,6 +47,7 @@
   height: 100%;
   border-radius: 20px 20px 0 0;
   border: #64768B solid 1px;
+  filter: saturate(0.8);
 }
 
 .card-body h3, .card-body p {
