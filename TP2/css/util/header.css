@@ -122,6 +122,7 @@ nav.active {
 }
 
 .nav-btn {
+    background-color: transparent;
     border-radius: 40px;
     color: #E1E1E1;
     border: solid 4px #E1E1E1;
