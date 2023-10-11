@@ -59,9 +59,13 @@
 }
 
 .container-categories {
-  margin: 0 auto;
+  padding-top: 2%;
+  margin: 5% auto;
   overflow: auto;
   max-width: 1000px;
+  border-radius: 20px;
+  border: 1px solid var(--black);
+  box-shadow: 0 0 15px 2px var(--accent);
 }
 
 .container-categories > div {
