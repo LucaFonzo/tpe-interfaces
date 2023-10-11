@@ -1,0 +1,160 @@
+.carousel-title {
+    color: #1C1E26;
+    text-align: center;
+    margin-bottom: 6%;
+}
+
+@media screen and (min-width: 1020px) {
+    .carousel-title {
+        text-align: left;
+        margin-left: 15%;
+        margin-bottom: 0;
+    }
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.carousel>button {
+    display: none;
+}
+
+@media screen and (min-width: 1020px) {
+    .carousel>button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #341D4C;
+        height: fit-content;
+        border-radius: 50%;
+        padding: 2%;
+        margin: 4%;
+    }
+
+    .carousel>button:not(.disabled):hover {
+        background-color: #210D36;
+    }
+
+    .carousel>button.disabled {
+        background-color: #7B678F;
+        color: #E1E1E1;
+        cursor: default;
+    }
+}
+
+
+
+.carousel>button svg.icon {
+    width: 30px;
+    height: 30px;
+    fill: #0C1F34;
+}
+
+.carousel-body {
+    display: flex;
+    width: calc(270px + 10%*2);
+    overflow: hidden;
+    padding: 0 10% 10% 10%;
+}
+
+
+@media screen and (min-width: 1020px) {
+    .carousel-body {
+        width: calc(270px*3 + 5em*2 + 3%*2);
+        padding: 3%;
+    }
+}
+
+
+.carousel-body .card.visible {
+    margin-right: 5em;
+}
+
+/*
+
+.carousel-container {
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+
+
+.carousel {
+    margin-left: 10px;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carousel-button {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .carousel-container {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        max-width: 840px;
+        margin: 0 auto;
+        background-color: #E1E1E1;
+        border: none;
+        cursor: pointer;
+    }
+
+    .carousel-button {
+        display: block;
+        background-color: #E1E1E1;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.carousel-container {
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.carrousel-title {
+    margin-top: 30px;
+    color: #1C1E26;
+}
+
+.carousel {
+    margin-left: 10px;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carousel-button {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .carousel-container {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        max-width: 840px;
+        margin: 0 auto;
+        background-color: #E1E1E1;
+        border: none;
+        cursor: pointer;
+    }
+
+    .carousel-button {
+        display: block;
+        background-color: #E1E1E1;
+        border: none;
+        cursor: pointer;
+    }
+}
