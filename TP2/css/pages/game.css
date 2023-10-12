@@ -56,45 +56,100 @@
   width: 20%;
 }
 
-.comment {
-  border-radius: 10px;
-  padding: 10px;
+/*Comment styling*/
+.comments-container {
   display: flex;
+  flex-direction: column;
 }
 
-.comment div {
-  margin-left: 10px;
+.comments-container>h2 {
+  color: var(--black);
+  margin-bottom: 1%;
 }
 
-.img-profile img {
-  border-radius: 40px;
-  width: 60px;
-  height: 60px;
-}
-
-.comment-info {
+.comments-container>span {
+  position: relative;
   width: 100%;
-  max-width: 80%;
+  border-bottom: 1px solid var(--black);
+  margin-bottom: 3%;
 }
 
-.comment-info p {
-  border-radius: 10px;
-  padding: 10px;
-  background-color: #F2EDED;
-  color: black;
+.comments-container .comment:not(:last-child) {
+  margin-bottom: 3%;
 }
 
-.comment-title {
-  border-bottom: 1px solid black;
-  margin-bottom: 10px;
+.comment {
+  display: grid;
+  width: 90%;
+  margin-left: 1%;
+  grid-template-columns: 107px auto 10fr 1fr;
+  grid-template-rows: 45px 30px 4px auto;
+  grid-template-areas:
+    "avatar userdate stars stars"
+    "avatar . . ."
+    "avatar content content ."
+    ". content content .";
+  background-color: var(--sec);
+  border-radius: 20px;
+  padding: 2% 2% 2% 1%;
 }
 
-.comment-title h2 {
-  color: black;
+.comment img {
+  grid-area: avatar;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.comments-container div {
-  margin-top: 10px;
+.comment-userdate {
+  grid-area: userdate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.comment-userdate * {
+  color: var(--accent);
+}
+
+.comment-stars {
+  grid-area: stars;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.comment-stars svg:not(:last-child) {
+  margin-right: 9px;
+}
+
+.comment>p {
+  grid-area: content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 0 1.4vmin 1.4vmin 1.4vmin;
+  padding: 1.6%;
+  width: fit-content;
+}
+
+.comment>p::after {
+  content: '';
+  position: absolute;
+  top: -22px;
+  left: 0;
+  border: 23px solid transparent;
+  border-bottom-color: var(--white);
+  border-top: 0;
+  border-left: 0;
 }
 
 .breadcrumbs {

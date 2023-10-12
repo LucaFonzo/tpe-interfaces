@@ -11,10 +11,10 @@
   <link rel="stylesheet" type="text/css" href="css/util/card.css">
   <link rel="stylesheet" type="text/css" href="css/util/footer.css">
   <link rel="stylesheet" type="text/css" href="css/util/spinner.css">
+  <link rel="stylesheet" type="text/css" href="css/util/carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/util/gallery.css">
   <link rel="stylesheet" type="text/css" href="css/pages/game.css">
-  <link rel="stylesheet" href="css/util/carousel.css">
-  <link rel="stylesheet" href="css/util/gallery.css">
-  <title>Tom & Jerry: 4 en linea</title>
+  <title>Tom & Jerry: 4 en línea</title>
 </head>
 
 <body>
@@ -108,7 +108,7 @@
     <input type="text" placeholder="Buscar juegos..." class="search-bar">
     <div class="main-menu d-flex justify-between align-center">
       <svg class="desktop icon cart-icn"></svg>
-      <img src="assets/img/profile-pic.jpg" alt="profile" class="profile-pic">
+      <img src="assets/img/profile-pictures/profile-pic.jpg" alt="profile" class="profile-pic">
       <a href="index.html"><svg class="desktop icon log-out-icn"></svg></a>
     </div>
   </header>
@@ -117,17 +117,18 @@
     <div class="loader d-none"></div>
   </div>
 
-  <main class="container mt-5">
-    <div class="breadcrumbs">
+  <main class="mt-5">
+    <div class="breadcrumbs mx-10">
       <p>Home</p>
       <svg class="icon arrow-breadcrumbs"></svg>
       <p>Estrategia</p>
       <svg class="icon arrow-breadcrumbs"></svg>
       <p>Tom & Jerry:4 en linea</p>
     </div>
-    <div class="d-flex">
-      <div class="game">
-        <img src="assets/img/tom-jerry-fondo.jpg" alt="">
+
+    <section class="d-flex mx-5">
+      <div class="game d-flex justify-center align-center">
+        <img src="assets/img/tom-jerry-fondo.jpg" alt="Placeholder image">
       </div>
       <div class="panel-control main-color">
         <h3 class="text-center mt-5">CONTROLES</h3>
@@ -135,7 +136,7 @@
           <div class="d-flex align-center justify-center mt-5">
             <img src="./assets/img/Flecha izquierdaflecha-izq-telclado.png" alt="">
             <img src="./assets/img/Flecha derechaflecha-teclado.png" alt="" class="ml-5">
-            <span  class="ml-5">Seleccionar columna</span>
+            <span class="ml-5">Seleccionar columna</span>
           </div>
           <div class="d-flex align-center justify-center mt-5">
             <img src="./assets/img/Barra espaciadora.png" alt="">
@@ -145,25 +146,33 @@
         <div class="instructions mt-10">
           <h3 class="text-center">Instrucciones</h3>
           <p>
-            Dos jugadores se turnan entre sí para colocar una ficha en alguna columna, que cae hasta la primera casilla disponible
-            sin ocupar por otra ficha. El primer jugador que consigue colocar 4 fichas en vertical, horizontal o diagonal gana, y si
+            Dos jugadores se turnan entre sí para colocar una ficha en alguna columna, que cae hasta la primera casilla
+            disponible
+            sin ocupar por otra ficha. El primer jugador que consigue colocar 4 fichas en vertical, horizontal o
+            diagonal gana, y si
             ninguno de los dos lo logra, es un empate.
           </p>
         </div>
       </div>
-    </div>
-    <div class="main-color d-flex justify-around description-container mt-5">
+    </section>
+
+    <section class="main-color d-flex justify-around description-container mt-5 mx-10">
       <div class="about-container">
         <h2>Tom & Jerry:4 en linea</h2>
-        <p>En este juego clásico de estrategia, el caos y la diversión se desatan con los personajes más queridos del mundo de la
-        animación: Tom y Jerry. En este trepidante enfrentamiento, asumirás el papel de uno de los dos personajes: el astuto
-        gato Tom o el escurridizo ratón Jerry. Tu objetivo es simple: ¡conectar cuatro de tus fichas en línea antes que tu
-        oponente para ganar la partida!</p>
+        <p>En este juego clásico de estrategia, el caos y la diversión se desatan con los personajes más queridos del
+          mundo de la
+          animación: Tom y Jerry. En este trepidante enfrentamiento, asumirás el papel de uno de los dos personajes: el
+          astuto
+          gato Tom o el escurridizo ratón Jerry. Tu objetivo es simple: ¡conectar cuatro de tus fichas en línea antes
+          que tu
+          oponente para ganar la partida!</p>
         <p><span class="underline">Desarrollador:</span> Aristóteles</p>
         <p><span class="underline">Valoracion promedio:</span>
-            <svg class="icon full-star-icn"></svg><svg class="icon full-star-icn"></svg><svg class="icon full-star-icn"></svg>
-            <svg class="icon half-star-icn"></svg><svg class="icon empty-star-icn"></svg>
-          <span>(3.7)</span></p>
+          <svg class="icon full-star-icn"></svg><svg class="icon full-star-icn"></svg><svg
+            class="icon full-star-icn"></svg>
+          <svg class="icon half-star-icn"></svg><svg class="icon empty-star-icn"></svg>
+          <span>(3.7)</span>
+        </p>
         <p><span class="underline">Circa:</span> 350 A.C</p>
         <div class="d-flex align-center d-flex-col">
           <h3>Compartilo con tus amigos!</h3>
@@ -198,14 +207,15 @@
         <div class="prev-button">◀</div>
         <div class="next-button">▶</div>
       </div>
-    </div>
+    </section>
+
     <section class="mt-5">
       <h2 class="carousel-title">Acción</h2>
-    
+
       <div class="carousel">
         <button class="previous icon left-arrow-icn disabled">
         </button>
-    
+
         <div class="carousel-body">
           <!--Card 1-->
           <div class="card sec-color-s2">
@@ -213,11 +223,12 @@
               <div>
                 <svg class="icon cart-icn"></svg>
               </div>
-              <img src="assets/img/squad.jpg" alt="SQUAD">
+              <img src="assets/img/games/squad.jpg" alt="SQUAD">
             </div>
             <div class="card-body">
               <h3>SQUAD</h3>
-              <p>Squad es un videojuego de disparos en primera persona táctico militar basado en el realismo desarrollado y
+              <p>Squad es un videojuego de disparos en primera persona táctico militar basado en el realismo
+                desarrollado y
                 publicado por el desarrollador independiente canadiense</p>
             </div>
             <div class="card-footer">
@@ -231,7 +242,7 @@
               <div class="d-none">
                 <svg class="icon cart-icn"></svg>
               </div>
-              <img src="assets/img/gta-sa.jpg" alt="GTA San Andreas">
+              <img src="assets/img/games/gta-sa.jpg" alt="GTA San Andreas">
             </div>
             <div class="card-body">
               <h3>GTA: San Andreas</h3>
@@ -249,7 +260,7 @@
               <div>
                 <svg class="icon cart-icn"></svg>
               </div>
-              <img src="assets/img/valorant.jpg" alt="VALORANT">
+              <img src="assets/img/games/valorant.jpg" alt="VALORANT">
             </div>
             <div class="card-body">
               <h3>VALORANT</h3>
@@ -269,7 +280,7 @@
               <div>
                 <svg class="icon cart-icn"></svg>
               </div>
-              <img src="assets/img/nfs.jpg" alt="Need for Speed">
+              <img src="assets/img/games/nfs.jpg" alt="Need for Speed">
             </div>
             <div class="card-body">
               <h3>Need for Speed</h3>
@@ -287,7 +298,7 @@
               <div>
                 <svg class="icon cart-icn"></svg>
               </div>
-              <img src="assets/img/counter-strike16.webp" alt="Counter Strike 1.6">
+              <img src="assets/img/games/counter-strike16.webp" alt="Counter Strike 1.6">
             </div>
             <div class="card-body">
               <h3>Counter Strike 1.6</h3>
@@ -306,7 +317,7 @@
               <div>
                 <svg class="icon cart-icn"></svg>
               </div>
-              <img src="assets/img/stellaris.jpg" alt="Stellaris">
+              <img src="assets/img/games/stellaris.jpg" alt="Stellaris">
             </div>
             <div class="card-body">
               <h3>Stellaris</h3>
@@ -325,7 +336,7 @@
               <div>
                 <svg class="icon cart-icn"></svg>
               </div>
-              <img src="assets/img/total-war-rome.jpg" alt="Total War: Rome">
+              <img src="assets/img/games/total-war-rome.jpg" alt="Total War: Rome">
             </div>
             <div class="card-body">
               <h3>Total War: Rome</h3>
@@ -344,7 +355,7 @@
               <div>
                 <svg class="icon cart-icn"></svg>
               </div>
-              <img src="assets/img/digimon-world.jpg" alt="Digimon World">
+              <img src="assets/img/games/digimon-world.jpg" alt="Digimon World">
             </div>
             <div class="card-body">
               <h3>Digimon World</h3>
@@ -365,7 +376,7 @@
               <div>
                 <svg class="icon cart-icn"></svg>
               </div>
-              <img src="assets/img/tetris.jpg" alt="Tetris">
+              <img src="assets/img/games/tetris.jpg" alt="Tetris">
             </div>
             <div class="card-body">
               <h3>Tetris</h3>
@@ -379,19 +390,19 @@
             </div>
           </div>
         </div>
-    
+
         <button class="next icon right-arrow-icn">
         </button>
       </div>
-    
+
       <div class="radio">
         <span class="radio-0 active"></span>
         <span class="radio-1"></span>
         <span class="radio-2"></span>
       </div>
     </section>
-    </div>
-    <div class="sec-color-l1 mt-5 comment-container">
+
+    <div class="sec-color-l1 mt-5 comment-container mx-10">
       <div class="input-comment">
         <h2>Contale a la comunidad qué te pareció este juego!</h2>
         <input type="text" placeholder="Escribe tu comentario..." required>
@@ -413,129 +424,114 @@
       </div>
       <div class="warning-comment">
         <span>
-          Atención: aquellos comentarios que infrinjan nuestras normas de convivencia serán eliminados y su autor suspendido por
+          Atención: aquellos comentarios que infrinjan nuestras normas de convivencia serán eliminados y su autor
+          suspendido por
           tiempo indeterminado del uso de nuestra página.
         </span>
       </div>
     </div>
-    <div class="mt-5">
-      <div class="comment-title">
-        <h2>COMENTARIOS</h2>
+
+    <div class="comments-container mx-10 mt-10">
+      <h2>COMENTARIOS</h2>
+      <span></span>
+
+      <div class="comment">
+        <img src="assets/img/profile-pictures/profile-pic.jpg" alt="Profile picture">
+        <div class="comment-userdate">
+          <h3>PanchoKpo1997 (Tú)</h3>
+          <p>en este momento</p>
+        </div>
+        <div class="comment-stars">
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn half-star-icn"></svg>
+        </div>
+        <p>
+          Es un gran juego. Mi teoría principal es que los autores buscaban hacer una crítica a los regímenes
+          comunistas orientales que supieron gobernar los países del Europa del Este durante la Guerra Fría, al mismo
+          tiempo
+          que compone una
+          sátira de las supuestas bondades del capitalismo occidental, en la figura de Tom. Es importante destacar
+          que la teoría
+          marxista es capaz de describir esta clase de elementos, que forman una mezcla homogénea de pensamiento
+          moderno. En fin,
+          muy interesante la propuesta que nos trajeron hoy a Juegazos.com, muchas gracias!
+        </p>
       </div>
-      <div class="comments-container">
-        <div class="comment sec-color">
-          <div class="img-profile">
-            <img src="assets/img/profile-pic.jpg" alt="">
-          </div>
-          <div class="comment-info">
-            <div>
-              <h3>PanchoKpo1997 (Tú)</h3>
-              <span>en este momento</span>
-            </div>
-            <div>
-              <p>Es un gran juego. Mi teoría principal es que los autores buscaban hacer una crítica a los regímenes comunistas
-              orientales que supieron gobernar los países del Europa del Este durante la Guerra Fría, al mismo tiempo que compone una
-              sátira de las supuestas bondades del capitalismo occidental, en la figura de Tom. Es importante destacar que la teoría
-              marxista es capaz de describir esta clase de elementos, que forman una mezcla homogénea de pensamiento moderno. En fin,
-              muy interesante la propuesta que nos trajeron hoy a Juegazos.com, muchas gracias!</p>
-            </div>
-          </div>
-          <div class="comment-stars">
-            <svg class="icn full-star-icn"></svg>
-            <svg class="icn full-star-icn"></svg>
-            <svg class="icn full-star-icn"></svg>
-            <svg class="icn full-star-icn"></svg>
-            <svg class="icn half-star-icn"></svg>
-          </div>
+      <div class="comment">
+        <img src="assets/img/profile-pictures/el-bromas.png" alt="Profile picture">
+        <div class="comment-userdate">
+          <h3>Elbromas123</h3>
+          <p>hace 10 horas</p>
         </div>
-        <div class="comment sec-color">
-          <div class="img-profile">
-            <img src="assets/img/Foto de perfilel-bromas.png" alt="">
-          </div>
-          <div class="comment-info">
-            <div>
-              <h3>Elbromas123</h3>
-              <span>Hace 10 horas</span>
-            </div>
-            <div>
-              <p>Aguante boca</p>
-            </div>
-          </div>
-          <div class="comment-stars">
-            <svg class="icn full-star-icn"></svg>
-            <svg class="icn full-star-icn"></svg>
-            <svg class="icn full-star-icn"></svg>
-            <svg class="icn full-star-icn"></svg>
-            <svg class="icn full-star-icn"></svg>
-          </div>
+        <div class="comment-stars">
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
         </div>
-        <div class="comment sec-color">
-          <div class="img-profile">
-            <img src="assets/img/Foto de perfilmessi.png" alt="">
-          </div>
-          <div class="comment-info">
-            <div>
-              <h3>Messi</h3>
-              <span>Hace 5 dias</span>
-            </div>
-            <div>
-              <p>Muy bueno lo juego con De Paul en las concentraciones</p>
-            </div>
-          </div>
-          <div class="comment-stars">
-            <svg class="icn full-star-icn"></svg>
-            <svg class="icn full-star-icn"></svg>
-            <svg class="icn full-star-icn"></svg>
-            <svg class="icn full-star-icn"></svg>
-            <svg class="icn full-star-icn"></svg>
-          </div>
+        <p>
+          aguante boca
+        </p>
+      </div>
+      <div class="comment">
+        <img src="assets/img/profile-pictures/messi.png" alt="Profile picture">
+        <div class="comment-userdate">
+          <h3>Messi</h3>
+          <p>hace 5 días</p>
         </div>
-        <div class="comment sec-color">
-          <div class="img-profile">
-            <img src="assets/img/Foto de perfilchanchito.png" alt="">
-          </div>
-          <div class="comment-info">
-            <div>
-              <h3>xxDarkBeastxx</h3>
-              <span>Hace 2 meses</span>
-            </div>
-            <div>
-              <p>Hace tres días que intento pasarlo y no puedo, es malísimo. Se me traba todo en el anteúltimo nivel, ya reinicié la pc,
-              no sé qué más hacer. Alguien me ayuda?</p>
-            </div>
-          </div>
-          <div class="comment-stars">
-            <svg class="icn half-star-icn"></svg>
-            <svg class="icn empty-star-icn"></svg>
-            <svg class="icn empty-star-icn"></svg>
-            <svg class="icn empty-star-icn"></svg>
-            <svg class="icn empty-star-icn"></svg>
-          </div>
+        <div class="comment-stars">
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
         </div>
-        <div class="comment sec-color">
-          <div class="img-profile">
-            <img src="assets/img/Foto de perfilaristoteles.png" alt="">
-          </div>
-          <div class="comment-info">
-            <div>
-              <h3>Aristoteles</h3>
-              <span>Hace 2343 años</span>
-            </div>
-            <div>
-              <p>Si tu viejo es zapatero...</p>
-            </div>
-          </div>
-          <div class="comment-stars">
-            <svg class="icn full-star-icn"></svg>
-            <svg class="icn full-star-icn"></svg>
-            <svg class="icn half-star-icn"></svg>
-            <svg class="icn empty-star-icn"></svg>
-            <svg class="icn empty-star-icn"></svg>
-          </div>
+        <p>
+          Muy bueno lo juego con De Paul en las concentraciones
+        </p>
+      </div>
+      <div class="comment">
+        <img src="assets/img/profile-pictures/piglet.png" alt="Profile picture">
+        <div class="comment-userdate">
+          <h3>xXDarkBeastXx</h3>
+          <p>hace 2 meses</p>
         </div>
+        <div class="comment-stars">
+          <svg class="icn half-star-icn"></svg>
+          <svg class="icn empty-star-icn"></svg>
+          <svg class="icn empty-star-icn"></svg>
+          <svg class="icn empty-star-icn"></svg>
+          <svg class="icn empty-star-icn"></svg>
+        </div>
+        <p>
+          Hace tres días que intento pasarlo y no puedo, es malísimo. Se me traba todo en el anteúltimo nivel, ya
+          reinicié la pc, no sé qué más hacer. Alguien me ayuda?
+        </p>
+      </div>
+      <div class="comment">
+        <img src="assets/img/profile-pictures/aristoteles.png" alt="Profile picture">
+        <div class="comment-userdate">
+          <h3>Aristóteles</h3>
+          <p>hace 2343 años</p>
+        </div>
+        <div class="comment-stars">
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn half-star-icn"></svg>
+          <svg class="icn empty-star-icn"></svg>
+          <svg class="icn empty-star-icn"></svg>
+        </div>
+        <p>
+          Si tu viejo es zapatero...
+        </p>
       </div>
     </div>
   </main>
+
   <footer class="main-color-l1">
     <div class="logo d-flex justify-center align-center">
       <a href="home.html" class="d-flex">
@@ -543,7 +539,7 @@
         <h2>Juegazos</h2>
       </a>
     </div>
-  
+
     <div class="dropdown">
       <button class="main-color-l1">
         <span>CONDICIONES DE USO Y PRIVACIDAD</span>
@@ -554,7 +550,7 @@
         <li class="text-center">Privacidad y cookies</li>
       </ul>
     </div>
-  
+
     <div class="dropdown">
       <button class="main-color-l1 d-flex justify-between">
         <span>NOSOTROS</span>
@@ -565,7 +561,7 @@
         <li class="text-center">Contacto</li>
       </ul>
     </div>
-  
+
     <div class="dropdown">
       <button class="main-color-l1 d-flex align-center">
         <span>AYUDA</span>
@@ -585,7 +581,6 @@
       </ul>
     </div>
   </footer>
-  <script src="js/app.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/carousel.js"></script>
   <script src="js/footer.js"></script>

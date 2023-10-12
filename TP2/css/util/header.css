@@ -4,10 +4,10 @@ header {
     grid-template-columns: 3.2% 6.4% 10.13% 57.6% 5.33% 14.4% 5.06%;
     grid-template-rows: 15px 24px 15px 34px;
     grid-template-areas:
-        'empty1 empty1 empty1 empty1 empty1 menu empty2'
-        'empty3 burger empty4 search empty5 menu empty2'
-        'empty6 empty6 empty6 logo empty7 menu empty2'
-        'empty6 empty6 empty6 logo empty9 empty9 empty2';
+        '. . . . . menu .'
+        '. burger . search . menu .'
+        '. . . logo . menu .'
+        '. . . logo . . .';
     height: 110px;
     padding: 10px 5px 10px 5px;
 }
@@ -159,7 +159,7 @@ nav.active {
         grid-template-columns: 1fr 1fr 1fr 2fr 1fr 4fr 4fr 2fr 1fr;
         grid-template-rows: 1fr;
         grid-template-areas:
-            'empty1 burger empty2 logo empty3 search empty4 menu empty5';
+            '. burger . logo . search . menu .';
     }
 
     nav {
