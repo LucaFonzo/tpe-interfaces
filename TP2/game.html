@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="css/util/footer.css">
   <link rel="stylesheet" type="text/css" href="css/util/spinner.css">
   <link rel="stylesheet" type="text/css" href="css/pages/game.css">
+  <link rel="stylesheet" href="css/util/carousel.css">
   <link rel="stylesheet" href="css/util/gallery.css">
   <title>Tom & Jerry: 4 en linea</title>
 </head>
@@ -198,158 +199,197 @@
         <div class="next-button">▶</div>
       </div>
     </div>
-    <div>
-      <h2 class="text-center carrousel-title">Juegos recomendados para vos</h2>
-      <div class="d-flex justify-evenly">
-        <button id="prev-btn" class="carousel-button"><svg class="icon" width="24" height="24" viewBox="0 0 24 24"
-            fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.77 3.77L16 2L6 12L16 22L17.77 20.23L9.54 12L17.77 3.77Z" fill="#F2EDED" />
-          </svg>
+    <section class="mt-5">
+      <h2 class="carousel-title">Acción</h2>
+    
+      <div class="carousel">
+        <button class="previous icon left-arrow-icn disabled">
         </button>
-        <div class="carousel-container">
-          <div class="carousel">
-            <div class="card sec-color-s1">
-              <img class="card-img-top" src="assets/img/tom-jerry-fondo.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Tom & Jerry: 4 en linea</h3>
-                <p class="ml-5">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-                <div class="d-flex justify-around mt-10">
-                  <p class="mt-5">$50</p>
-                  <button class="primary-btn main-color d-flex align-center justify-center">Agregar al
-                    carrito</button>
-                </div>
+    
+        <div class="carousel-body">
+          <!--Card 1-->
+          <div class="card sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
               </div>
+              <img src="assets/img/squad.jpg" alt="SQUAD">
             </div>
-            <div class="card sec-color-s1">
-              <img class="card-img-top" src="assets/img/aoe2-definitive.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Age of Empires II</h3>
-                <p class="ml-5">Age of Empires II: Definitive Edition es un videojuego de estrategia en tiempo real
-                  desarrollado por Forgotten Empire.
-                </p>
-                <div class="d-flex justify-around mt-10">
-                  <div class="d-flex align-center">
-                    <p class="mt-5 special-price">$25</p>
-                    <p class="mt-5 ml-10 line-through">$50</p>
-                  </div>
-                  <button class="primary-btn main-color d-flex align-center justify-center">Agregar al
-                    carrito</button>
-                </div>
+            <div class="card-body">
+              <h3>SQUAD</h3>
+              <p>Squad es un videojuego de disparos en primera persona táctico militar basado en el realismo desarrollado y
+                publicado por el desarrollador independiente canadiense</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 2-->
+          <div class="card sec-color-s2">
+            <div class="card-img">
+              <div class="d-none">
+                <svg class="icon cart-icn"></svg>
               </div>
+              <img src="assets/img/gta-sa.jpg" alt="GTA San Andreas">
             </div>
-            <div class="card sec-color-s1">
-              <img class="card-img-top" src="assets/img/valorant.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">VALORANT</h3>
-                <p class="ml-5">Valorant es un hero shooter en primera persona multijugador gratuito desarrollado y
-                  publicado por Riot Games. El juego
-                  se anunc...
-                </p>
-                <div class="d-flex justify-right mt-10">
-                  <button class="primary-btn main-color d-flex align-center justify-center mr-5">Jugar</button>
-                </div>
+            <div class="card-body">
+              <h3>GTA: San Andreas</h3>
+              <p>Grand Theft Auto: San Andreas es un videojuego de acción-aventura de mundo abierto desarrollado por
+                Rockstar North y publicado por Rockstar Games.</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 3-->
+          <div class="card sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
               </div>
+              <img src="assets/img/valorant.jpg" alt="VALORANT">
             </div>
-            <div class="card sec-color-s1">
-              <img class="card-img-top" src="assets/img/nfs.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Need for Speed</h3>
-                <p class="ml-5">Need for Speed: Underground es un videojuego de carreras de automóviles desarrollado y
-                  lanzado por Electronic Arts en el
-                  2
-                </p>
-                <div class="d-flex justify-right mt-10">
-                  <button class="primary-btn main-color d-flex align-center justify-center mr-5" disabled>Jugar</button>
-                </div>
+            <div class="card-body">
+              <h3>VALORANT</h3>
+              <p>Valorant es un hero shooter en primera persona multijugador gratuito desarrollado y publicado por Riot
+                Games. El juego se anunció por primera vez con el nombre en clave Project A en octubre de 2019. Fue
+                lanzado para Microsoft Windows el 2 de junio de 2020 después de su beta cerrada lanzada el 7 de abril de
+                2020.</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 4-->
+          <div class="card sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
               </div>
+              <img src="assets/img/nfs.jpg" alt="Need for Speed">
             </div>
-            <div class="card sec-color-s1">
-              <img class="card-img-top" src="assets/img/counter-strike16.webp" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Counter Strike 1.6</h3>
-                <p class="ml-5">Counter Strike 1.6: Half Life Mod es un juego de disparos en primera persona donde un equipo
-                  de terroristas se
-                  enfrentará a un equ
-                </p>
-                <div class="d-flex justify-right mt-10">
-                  <button class="primary-btn main-color d-flex align-center justify-center mr-5">Jugar</button>
-                </div>
+            <div class="card-body">
+              <h3>Need for Speed</h3>
+              <p>Need for Speed: Underground es un videojuego de carreras de automóviles desarrollado y lanzado por
+                Electronic Arts en el 2003. Todas las carreras toman lugar en una ciudad de noche.</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 5-->
+          <div class="card sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
               </div>
+              <img src="assets/img/counter-strike16.webp" alt="Counter Strike 1.6">
             </div>
-            <div class="card sec-color-s1">
-              <img class="card-img-top" src="assets/img/stellaris.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Stellaris</h3>
-                <p class="ml-5">Stellaris es un videojuego de gran estrategia 4X desarrollado y publicado por Paradox
-                  Interactive. El juego gira en
-                  torno a la explora
-                </p>
-                <div class="d-flex justify-around mt-10">
-                  <div class="d-flex align-center">
-                    <p class="mt-5 special-price">$25</p>
-                    <p class="mt-5 ml-10 line-through">$50</p>
-                  </div>
-                  <button class="primary-btn main-color d-flex align-center justify-center">Agregar al
-                    carrito</button>
-                </div>
+            <div class="card-body">
+              <h3>Counter Strike 1.6</h3>
+              <p>Counter Strike 1.6: Half Life Mod es un juego de disparos en primera persona donde un equipo de
+                terroristas se enfrentará a un equipo de antiterroristas. Ganará la partida el equipo que cumpla todos
+                los objetivos de victoria o elimine a todos los jugadores del equipo contrario.</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 6-->
+          <div class="card sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
               </div>
+              <img src="assets/img/stellaris.jpg" alt="Stellaris">
             </div>
-            <div class="card sec-color-s1">
-              <img class="card-img-top" src="assets/img/rome-remaster.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Total War: Rome</h3>
-                <p class="ml-5">Rome: Total War es un videojuego de estrategia en tiempo real de la desarrolladora británica
-                  Creative Assembly,
-                  perteneciente a la seri
-                </p>
-                <div class="d-flex justify-around mt-10">
-                  <p class="mt-5">$50</p>
-                  <button class="primary-btn main-color d-flex align-center justify-center">Agregar al
-                    carrito</button>
-                </div>
+            <div class="card-body">
+              <h3>Stellaris</h3>
+              <p>Stellaris es un videojuego de gran estrategia 4X desarrollado y publicado por Paradox Interactive. El
+                juego gira en torno a la exploración del espacio, la gestión de un imperio, la diplomacia y la guerra
+                con otras civilizaciones interplanetarias.</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 7-->
+          <div class="card sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
               </div>
+              <img src="assets/img/total-war-rome.jpg" alt="Total War: Rome">
             </div>
-            <div class="card sec-color-s1">
-              <img class="card-img-top" src="assets/img/digimon-world.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Digimon World</h3>
-                <p class="ml-5">Digimon World es un videojuego lanzado por Bandai en 1999, basado en los V-Pets. El juego
-                  consiste en criar a un Digimon
-                  de
-                </p>
-                <div class="d-flex justify-around mt-10">
-                  <p class="mt-5">$50</p>
-                  <button class="primary-btn main-color d-flex align-center justify-center">Agregar al
-                    carrito</button>
-                </div>
+            <div class="card-body">
+              <h3>Total War: Rome</h3>
+              <p>Rome: Total War es un videojuego de estrategia en tiempo real de la desarrolladora británica Creative
+                Assembly, perteneciente a la serie de videojuegos Total War, de esta misma empresa, publicado en 2004.
+                El juego trata sobre los principios del aumento del poder de Roma, en el 270 a.c.</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 8-->
+          <div class="card sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
               </div>
+              <img src="assets/img/digimon-world.jpg" alt="Digimon World">
             </div>
-            <div class="card sec-color-s1">
-              <img class="card-img-top" src="assets/img/tetris.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h3 class="text-center">Tetris</h3>
-                <p class="ml-5">Tetris es un videojuego de lógica originalmente diseñado y programado por Alekséi Pázhitnov
-                  en la Unión Soviética. Se
-                  publicó
-                <div class="d-flex justify-around mt-10">
-                  <p class="mt-5">$50</p>
-                  <button class="primary-btn main-color d-flex align-center justify-center">Agregar al
-                    carrito</button>
-                </div>
+            <div class="card-body">
+              <h3>Digimon World</h3>
+              <p>Digimon World es un videojuego lanzado por Bandai en 1999, basado en los V-Pets. El juego consiste en
+                criar a un Digimon desde su etapa bebé hasta hacerlo evolucionar a su forma más poderosa. El Digimon
+                morirá con la edad, revirtiéndose a un Digihuevo y renaciendo de nuevo. Para criar un Digimon, el
+                jugador deberá entrenarlo, recompensarlo o regañarlo según la ocasión, darle de comer, llevarlo al baño,
+                dejarlo descansar, etc.</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 9-->
+          <div class="card sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
               </div>
+              <img src="assets/img/tetris.jpg" alt="Tetris">
             </div>
-            <!-- Add more cards as needed -->
+            <div class="card-body">
+              <h3>Tetris</h3>
+              <p>Tetris es un videojuego de lógica originalmente diseñado y programado por Alekséi Pázhitnov en la Unión
+                Soviética. Se publicó el 6 de junio de 1984, ​ mientras trabajaba para el Centro de Computación
+                Dorodnitsyn de la Academia de Ciencias de la Unión Soviética en Moscú, RSFS de Rusia.​</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
           </div>
         </div>
-        <button id="next-btn" class="carousel-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.22998 20.23L7.99998 22L18 12L7.99998 2L6.22998 3.77L14.46 12L6.22998 20.23Z" fill="#F2EDED" />
-          </svg>
+    
+        <button class="next icon right-arrow-icn">
         </button>
       </div>
-    </div>
+    
+      <div class="radio">
+        <span class="radio-0 active"></span>
+        <span class="radio-1"></span>
+        <span class="radio-2"></span>
+      </div>
+    </section>
     </div>
     <div class="sec-color-l1 mt-5 comment-container">
       <div class="input-comment">
@@ -536,6 +576,7 @@
   </footer>
   <script src="js/app.js"></script>
   <script src="js/nav.js"></script>
+  <script src="js/carousel.js"></script>
   <script src="js/footer.js"></script>
   <script src="js/gallery.js"></script>
 </body>
