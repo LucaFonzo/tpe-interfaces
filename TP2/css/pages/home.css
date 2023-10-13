@@ -64,13 +64,28 @@ main>button {
 }
 
 .container-categories {
-  padding-top: 2%;
-  margin: 5% auto;
+  padding: 2%;
+  margin: 5% 5%;
   overflow: auto;
   max-width: 1000px;
   border-radius: 20px;
   border: 1px solid var(--black);
   box-shadow: 0 0 15px 2px var(--accent);
+}
+
+.container-categories div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5% auto;
+}
+
+@media screen and (min-width: 1020px){
+  .container-categories div {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .container-categories > div {

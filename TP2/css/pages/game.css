@@ -48,7 +48,7 @@
 
 /*New comment box*/
 .new-comment {
-  margin: 10% 15% 0 15%;
+  margin: 10% 15% 0 10%;
   padding: 4%;
 }
 
@@ -92,7 +92,6 @@
 }
 
 .new-comment-footer p {
-  color: var(--accent);
   font-size: 1.2rem;
   letter-spacing: 2px;
   margin-right: 2vmin;
