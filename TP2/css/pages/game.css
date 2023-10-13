@@ -205,3 +205,18 @@
   border-top: 0;
   border-left: 0;
 }
+
+@keyframes append-comment {
+	from {
+		transform: translateY(-400px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0px);
+		opacity: 1;	
+	}
+}
+
+.created-comment {
+  animation: append-comment 2s ease;
+}

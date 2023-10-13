@@ -49,7 +49,7 @@ function init() {
     function submitComment(e) {
         let newComment = textArea.value;
         const comment = document.createElement('div');
-        comment.classList.add('comment');
+        comment.classList.add('comment', 'created-comment');
         comment.innerHTML = 
         `<img src="assets/img/profile-pictures/profile-pic.jpg" alt="Profile picture">
         <div class="comment-userdate">
