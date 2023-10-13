@@ -229,9 +229,27 @@ nav.active {
 
   .cart-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 10px;
+  justify-content: space-around;
+  width: 100%;
+  }
+  .cart-item * {
+    width: calc(33.33% - 10px);
+    margin: 5px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .cart-item svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .total-elements {
+    padding: 5px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .total-elements span{
+    margin-bottom: 10px;
   }
 }
 

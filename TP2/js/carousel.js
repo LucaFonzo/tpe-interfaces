@@ -69,7 +69,11 @@ function moveBackward(e){
 
 document.querySelector('#cart-icon').addEventListener('click', (e) => {
   const cartItems = document.querySelector('.cart-items');
-  cartItems.classList.toggle('d-none');
+  if (cartItems.style.display == 'none') {
+    cartItems.style.display = 'flex';
+  } else {
+    cartItems.style.display = 'none'
+  }
 })
 
 let cart = [];
@@ -78,17 +82,17 @@ document.querySelectorAll('.card button').forEach(button => {
   button.addEventListener('click', (e) => {
     if (button.innerHTML == 'Agregar<br>al carrito') {
       const overlay = button.parentElement.parentElement.firstElementChild.firstElementChild;
-      console.log(parseFloat(e.target.parentElement.firstChild.nextElementSibling.textContent.slice(1)));
       cart.push({
         "name": e.target.closest('.card.sec-color-s2').querySelector('h3').textContent,
         "price": parseFloat(e.target.parentElement.firstChild.nextElementSibling.textContent.slice(1))
       })
-      console.log(cart);
       updateCart();
       overlay.classList.add('active');
       button.innerHTML = 'Quitar<br>del carrito';
     } else {
       const overlay = button.parentElement.parentElement.firstElementChild.firstElementChild;
+      cart = cart.filter(i => i.name != e.target.closest('.card.sec-color-s2').querySelector('h3').textContent);
+      updateCart();
       overlay.classList.remove('active');
       button.innerHTML = 'Agregar<br>al carrito';
     }
@@ -110,7 +114,8 @@ function updateCart() {
       return;
     }
     const divCant = document.createElement('div');
-    divCant.innerHTML = `<span>Cantidad de elementos: ${cart.length} </span>`;
+    divCant.classList.add('total-elements')
+    divCant.innerHTML = `<span> ${cart.length} elementos en el carrito </span>`;
     cartItems.append(divCant);
     cart.forEach(i => {
       const name = document.createElement('span');
@@ -132,7 +137,7 @@ function updateCart() {
     const priceHTML = document.createElement('div');
     priceHTML.classList.add('total-price');
     const span = document.createElement('span');
-    span.textContent = `Precio total: ${totalPrice}`;
+    span.textContent = `Precio total: $${totalPrice}`;
     priceHTML.appendChild(span);
     cartItems.appendChild(priceHTML);
   } catch (error) {
@@ -143,6 +148,19 @@ function updateCart() {
 function removeFromCart(e) {
   try {
     const name = e.target.parentElement.firstChild;
+    const titles = document.querySelectorAll('h3');
+    let elem = [];
+    titles.forEach(e => {
+      if (e.textContent == name.textContent) {
+        elem.push(e);
+      }
+    });
+    elem.forEach(elemnt => {
+      const overlay = elemnt.parentElement.parentElement.firstChild.nextSibling.firstChild.nextElementSibling;
+      const button = elemnt.parentElement.nextElementSibling.childNodes[2].nextElementSibling;
+      button.innerHTML = 'Agregar<br>al carrito';
+      overlay.classList.remove('active');
+    });
     cart = cart.filter(i => i.name != name.textContent);
     updateCart();
   } catch (error) {
