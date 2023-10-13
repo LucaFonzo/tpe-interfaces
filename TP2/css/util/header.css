@@ -111,7 +111,7 @@ nav ul li, ul.categories li {
 
 nav ul li span, ul.categories li span {
     font-family: Ruda;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
     margin-left: 33px;
     white-space: nowrap;
     cursor: pointer;

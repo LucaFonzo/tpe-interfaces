@@ -71,6 +71,6 @@ button svg {
 }
 
 .register input:focus {
-    border: 3px solid #64768B;
+    border: 3px solid var(--sec-l2);
 }
 

@@ -1,3 +1,14 @@
+.breadcrumbs {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs p {
+  color: #432F58;
+}
+
 .game {
   width: 70%;
 }
@@ -6,8 +17,15 @@
   width: 100%;
 }
 
+.panel-control,
+.description-container,
+.new-comment,
+.new-comment-body textarea,
+.comment {
+  border-radius: 1.4vmin;
+}
+
 .panel-control {
-  border-radius: 10px;
   width: 30%;
   margin-left: 20px;
 }
@@ -17,7 +35,6 @@
 }
 
 .description-container {
-  border-radius: 10px;
   height: auto;
 }
 
@@ -29,31 +46,67 @@
   margin-top: 10px;
 }
 
-.comment-container {
-  display: flex;
-  padding: 10px;
-  border-radius: 10px;
+/*New comment box*/
+.new-comment {
+  margin: 10% 15% 0 15%;
+  padding: 4%;
 }
 
-.comment-container button {
-  padding: 1rem 0.9rem;
+.new-comment h2 {
+  max-width: 80%;
+  margin-bottom: 1%;
 }
 
-.input-comment {
+.new-comment-body textarea {
+  color: var(--black);
+  background-color: var(--white);
+  min-height: 10rem;
+  padding: 1%;
   width: 80%;
+  margin-right: 2.5%;
 }
 
-.input-comment input {
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  width: 80%;
-}
-
-.warning-comment {
-  margin-left: 10px;
+.new-comment-body div {
+  margin-left: 2.5%;
   width: 20%;
+}
+
+.new-comment-body div p{
+  text-align: center;
+  background-color: var(--sec-l2);
+  border: solid 1px var(--danger);
+  border-radius: 2vmin;
+  padding: 10%;
+}
+
+.new-comment-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin-top: 2%;
+}
+
+.new-comment-footer span {
+  margin-left: 2.5%;
+}
+
+.new-comment-footer p {
+  color: var(--accent);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-right: 2vmin;
+}
+
+.new-comment-footer svg {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
+.new-comment-footer button {
+  padding: 1rem;
+  width: 8rem;
 }
 
 /*Comment styling*/
@@ -150,16 +203,4 @@
   border-bottom-color: var(--white);
   border-top: 0;
   border-left: 0;
-}
-
-.breadcrumbs {
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-
-  margin-bottom: 20px;
-}
-
-.breadcrumbs p {
-  color: #432F58;
 }
