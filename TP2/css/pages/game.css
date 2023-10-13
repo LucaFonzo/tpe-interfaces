@@ -116,16 +116,18 @@
   flex-direction: column;
 }
 
-.comments-container>h2 {
-  color: var(--black);
-  margin-bottom: 1%;
-}
-
-.comments-container>span {
-  position: relative;
+.comments-container>span{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   border-bottom: 1px solid var(--black);
   margin-bottom: 3%;
+  padding-bottom: 1%
+}
+
+.comments-container>span h2, .comments-container>span h3 {
+  color: var(--black);
 }
 
 .comments-container .comment:not(:last-child) {

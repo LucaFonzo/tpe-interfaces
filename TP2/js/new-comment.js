@@ -5,10 +5,16 @@ function init() {
     const stars = Array.from(document.querySelectorAll('.new-comment-footer svg'));
     const group = stars[0].parentElement;
 
-    stars.forEach(star => star.addEventListener('mousemove', starHover));
-    group.addEventListener('mouseenter', () => { group.addEventListener('mouseleave', reset) });
-    stars.forEach(star => star.addEventListener('click', () => { group.removeEventListener('mouseleave', reset) }));
+    group.addEventListener('mouseenter', () => { 
+        group.addEventListener('mouseleave', reset) 
+        stars.forEach(star => star.addEventListener('mousemove', starHover));
+    });
+    stars.forEach(star => star.addEventListener('click', () => { 
+        group.removeEventListener('mouseleave', reset) 
+        stars.forEach(star => star.removeEventListener('mousemove', starHover));
+    }));
     
+    updateValoration();
 
     function starHover(e) {
         const starRectangle = e.target.getBoundingClientRect();
@@ -67,6 +73,29 @@ function init() {
         commentText.innerText = newComment;
         comment.appendChild(commentText);
         const commentsContainer = document.querySelector('.comments-container');
-        commentsContainer.insertBefore(comment, commentsContainer.firstChild.nextElementSibling.nextElementSibling.nextElementSibling);
+        commentsContainer.insertBefore(comment, commentsContainer.firstChild.nextElementSibling.nextElementSibling);
+
+        updateValoration();
     }
+
+    function updateValoration() {
+        const valoration = document.querySelector('.comments-container>span h3');
+        valoration.innerText = `Valoración promedio: ${Math.round(calculateMeanValoration()*10)/10}`;
+    }
+
+    function calculateMeanValoration(){
+        const stars = Array.from(document.querySelectorAll('.comment-stars svg'));
+        const comments = Array.from(document.querySelectorAll('.comment'));
+        let count = 0;
+        stars.forEach(star => {
+            if (star.classList.contains('full-star-icn')) {
+                count++;
+            } else if (star.classList.contains('half-star-icn')) {
+                count += 0.5;
+            }
+        });
+        return count/comments.length;
+    }
+
+
 }
