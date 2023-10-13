@@ -112,7 +112,12 @@
     <input type="text" placeholder="Buscar juegos..." class="search-bar">
 
     <div class="main-menu d-flex justify-between align-center">
-      <svg class="desktop icon cart-icn" id="cart-icon"></svg>
+      <div class="cart-dropdown"> <!-- Nueva div para el desplegable del carrito -->
+        <svg class="icon cart-icn" id="cart-icon"></svg>
+        <div class="cart-items main-color-s1 d-none">
+          
+        </div>
+      </div>
       <img src="assets/img/profile-pictures/profile-pic.jpg" alt="profile" class="profile-pic">
       <a href="index.html"><svg class="desktop icon log-out-icn"></svg></a>
     </div>
@@ -783,7 +788,6 @@
 
   <script src="js/nav.js"></script>
   <script src="js/footer.js"></script>
-  <script src="js/card.js"></script>
   <script src="js/carousel.js"></script>
 </body>
 

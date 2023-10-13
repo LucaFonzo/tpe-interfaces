@@ -190,3 +190,48 @@ nav.active {
         left: 21rem;
     }
 }
+/* Estilos para el desplegable del carrito */
+.cart-dropdown {
+  display: none;
+}
+@media screen and (min-width: 1020px) {
+  #cart-icon {
+    display: block;
+  }
+  .cart-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .cart-items {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 100%;
+    border: 1px solid #7B678F;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+    min-width: 300px;
+    width: auto;
+    max-height: 300px;
+    z-index: 1; /* Asegura que esté en la parte superior de otros elementos */
+  }
+
+  .cart-items::-webkit-scrollbar-thumb {
+    background: #432F58; /* Color del fondo */
+    border-radius: 8px;
+  }
+
+  .cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  }
+}
+

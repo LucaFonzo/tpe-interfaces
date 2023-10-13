@@ -147,6 +147,10 @@
     background-image: url('../../assets/icons/right-arrow.svg');
 }
 
+.cross-icon {
+  background-image: url('../../assets/icons/cross.svg');
+}
+
 .icon {
     background-size: contain;
     background-position: center;
