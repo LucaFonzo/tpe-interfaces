@@ -283,6 +283,7 @@ svg {
 
 .primary-btn:disabled {
   background-color: var(--main-l2);
+  cursor: not-allowed;
 }
 
 main {

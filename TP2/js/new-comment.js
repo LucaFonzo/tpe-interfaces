@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
+    /*Star behaviour*/
     const stars = Array.from(document.querySelectorAll('.new-comment-footer svg'));
     const group = stars[0].parentElement;
 
@@ -39,4 +40,33 @@ function init() {
         });
     }
 
+    /*Comment submit*/
+    const textArea = document.querySelector('.new-comment-body textarea');
+    const submit = document.querySelector('.new-comment-footer button');
+    textArea.addEventListener('input', () => { submit.disabled = textArea.value.length <= 10 });
+    submit.addEventListener('click', submitComment);
+
+    function submitComment(e) {
+        let newComment = textArea.value;
+        const comment = document.createElement('div');
+        comment.classList.add('comment');
+        comment.innerHTML = 
+        `<img src="assets/img/profile-pictures/profile-pic.jpg" alt="Profile picture">
+        <div class="comment-userdate">
+          <h3>PanchoKpo1997 (Tú)</h3>
+          <p>en este momento</p>
+        </div>`;
+        const starsBox = document.createElement('div');
+        starsBox.classList.add('comment-stars');
+        stars.forEach(star => {
+            const starClone = star.cloneNode(true);
+            starsBox.appendChild(starClone);
+        });
+        comment.appendChild(starsBox);
+        const commentText = document.createElement('p');
+        commentText.innerText = newComment;
+        comment.appendChild(commentText);
+        const commentsContainer = document.querySelector('.comments-container');
+        commentsContainer.insertBefore(comment, commentsContainer.firstChild.nextElementSibling.nextElementSibling.nextElementSibling);
+    }
 }
