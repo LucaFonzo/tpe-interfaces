@@ -1,8 +1,3 @@
-main>button {
-  margin: 6% 46.3% 0 46.2%;
-  padding: 10px 20px;	
-}
-
 .main-game {
   background-image: url('../../assets/img/tom-jerry-fondo.jpg');
   background-position: center;
@@ -53,16 +48,6 @@ main>button {
   padding: 15px 20px;
 }
 
-@media screen and (min-width: 1020px) {
-  .main-game {
-    background-size: cover;
-  }
-
-  .main-game .background-darkener {
-    padding: 3.3% 0 0 19%;
-  }
-}
-
 .container-categories {
   padding: 2%;
   margin: 5% 5%;
@@ -73,19 +58,12 @@ main>button {
   box-shadow: 0 0 15px 2px var(--accent);
 }
 
-.container-categories div {
+.container-categories>div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 5% auto;
-}
-
-@media screen and (min-width: 1020px){
-  .container-categories div {
-    display: flex;
-    flex-direction: row;
-  }
 }
 
 .container-categories > div {
@@ -119,4 +97,33 @@ main>button {
   width: 40px;
   height: 40px;
   transition: 0.2s ease;
+}
+
+main>button {
+  margin: 6% 34%;
+  padding: 10px 20px;	
+}
+
+@media screen and (min-width: 1020px) {
+  .main-game {
+    background-size: cover;
+  }
+
+  .main-game .background-darkener {
+    padding: 3.3% 0 0 19%;
+  }
+
+  .container-categories {
+    margin: 5% 18%; 
+  }
+
+  .container-categories>div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main>button {
+    margin: 6% 46.3% 0 46.2%;
+    padding: 10px 20px;	
+  }
 }

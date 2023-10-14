@@ -32,9 +32,24 @@
 
 html {
   height: 100%;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--main);
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: var(--accent);
 }
 
 body {
+  overflow-x: hidden;
   position: relative;
   background-color: var(--gray);
 }
