@@ -32,6 +32,24 @@
         </div>
     </div>
 
+    <div class="card promo sec-color-s2 my-10 ml-10">
+        <div class="card-img">
+            <div class="d-none">
+                <svg class="icon cart-icn"></svg>
+            </div>
+            <img src="assets/img/games/gta-sa.jpg" alt="GTA San Andreas">
+        </div>
+        <div class="card-body">
+            <h3>GTA: San Andreas</h3>
+            <p>Grand Theft Auto: San Andreas es un videojuego de acción-aventura de mundo abierto desarrollado por
+                Rockstar North y publicado por Rockstar Games.</p>
+        </div>
+        <div class="card-footer">
+            <h3>$25</h3>
+            <button class="primary-btn">Agregar<br>al carrito</button>
+        </div>
+    </div>
+
 
     <div class="comment">
         <img src="assets/img/profile-pictures/profile-pic.jpg" alt="Profile picture">
@@ -60,6 +78,13 @@
     </div>
 </body>
 
-<script src="js/card.js"></script>
+<script>
+    document.querySelectorAll('.card.promo .card-footer').forEach(footer => {
+        const h3 = footer.firstElementChild;
+        const p = document.createElement('p');
+        p.innerHTML = `$${parseInt(h3.textContent.substring(1)) * 0.5}`;
+        footer.insertBefore(p, h3.nextElementSibling);
+    });
+</script>
 
 </html>

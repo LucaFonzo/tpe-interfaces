@@ -1,4 +1,3 @@
-
 .card {
   display: flex;
   flex-direction: column;
@@ -7,12 +6,12 @@
   height: 350px;
   min-height: 350px;
   border-radius: 20px;
-  transition: all 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
-  box-shadow: 10px 10px 25px 3px rgba(0, 0, 0, 0.35);
-  transition: all 0.3s ease;
+  box-shadow: 10px 10px 25px 3px rgba(0, 0, 0, 0.65);
+  transition: box-shadow 0.3s ease;
 }
 
 .card-img {
@@ -50,7 +49,8 @@
   filter: saturate(0.8);
 }
 
-.card-body h3, .card-body p {
+.card-body h3,
+.card-body p {
   overflow: hidden;
   text-overflow: ellipsis;
   margin: .6rem .8rem 0;
@@ -84,52 +84,69 @@
   width: 129px;
   white-space: pre-wrap;
   padding: 6px 5px;
+  min-height: 47px;
 }
 
-.card-footer text {
-  width: fit-content;
-}
-
-/*
-.ribbon {
-  position: absolute;
-  background: #341D4C;
-  color: #E1E1E1;
-  font-size: 14px;
-  padding: 5px 10px;
-  transform: rotate(-45deg);
-  top: 10px;
-  left: 10px;
-}
-
-.image-container {
+/*PROMO CARD*/
+.card.promo, .card.free, .card.unavailable {
+  overflow: hidden;
   position: relative;
+  z-index: 93;
 }
 
-.image-container img {
-  opacity: 0.6;
-}
-
-.cart-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
-}
-
-.cart-container svg {
-  width: 79px;
-  height: 79px;
-}
-
-.special-price {
+.card.promo .card-img::before, .card.free .card-img::before, .card.unavailable .card-img::before {
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
-  border-radius: 0.3rem;
-  padding: 0.3rem;
-  background-color: green;
+  font-family: MPLUS2;
+  color: var(--gray);
   text-align: center;
+  font-size: 14px;
+  font-weight: 250;
+  position: absolute;
+  top: 1rem;
+  left: -4.5rem;
+  transform: rotate(-41deg);
+  width: 3rem;
+  padding: 0 5rem;
+  z-index: 94;
 }
 
+.card.promo .card-img::before{
+  height: 2.8rem;
+  content: "50% OFF";
+  background-color: var(--main-s1);
+}
+
+.card.promo .card-footer h3 {
+  background-color: var(--success);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.card.promo .card-footer p {
+  text-decoration: line-through;
+  color: var(--gray);
+}
+
+/*FREE CARD*/
+.card.free .card-img::before {
+  height: 2rem;
+  content: "GRATIS!";
+  background-color: var(--success);
+}
+
+.card.free .card-footer h3, .card.unavailable .card-footer h3 {
+  visibility: hidden;
+}
+
+.card.free a {
+  text-decoration: none;
+}
+
+/*UNAVAILABLE CARD*/
+.card.unavailable .card-img::before {
+  top: 2rem;
+  left: -4.5rem;
+  content: "NO DISPONIBLE";
+  background-color: var(--danger);
+}

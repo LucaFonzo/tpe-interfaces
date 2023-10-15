@@ -67,17 +67,17 @@
     }
 
     .carousel-body .card {
-        transition: 2s ease;
+        transition: transform 2s ease, box-shadow 0.3s ease;
     }
 
     .carousel-body .card.move-left-1 {
         transform: translateX(-1059.16px);
-        transition: 1.5s ease;
+        transition: transform 2s ease, box-shadow 0.3s ease;
     }
 
     .carousel-body .card.move-left-2 {
         transform: translateX(-2118.32px);
-        transition: 1.5s ease;
+        transition: transform 2s ease, box-shadow 0.3s ease;
     }
 
     .radio {

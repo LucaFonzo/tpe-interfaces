@@ -80,7 +80,7 @@ document.querySelectorAll('#cart-icon, #cart-icon ~ span').forEach(elem => {
 let cart = [];
 const cartItems = document.querySelector('.cart-items');
 
-document.querySelectorAll('.card button').forEach(button => {
+document.querySelectorAll('.card button:not(.card.free button').forEach(button => {
   button.addEventListener('click', (e) => {
 
     const overlay = button.parentElement.parentElement.firstElementChild.firstElementChild;
@@ -171,3 +171,24 @@ function removeFromCart(e) {
 }
 
 updateCart();
+
+document.querySelectorAll('.card.promo .card-footer').forEach(footer => {
+  const h3 = footer.firstElementChild;
+  const p = document.createElement('p');
+  p.innerHTML = `$${parseInt(h3.textContent.substring(1)) * 2}`;
+  footer.insertBefore(p, h3.nextElementSibling);
+});
+
+document.querySelectorAll('.card.free .card-footer').forEach(footer => {
+  const btn = footer.querySelector('button');
+  btn.innerHTML = 'Jugar';
+  const a = document.createElement('a');
+  a.href = 'game.html';
+  a.appendChild(btn);
+  footer.appendChild(a);
+});
+
+document.querySelectorAll('.card.unavailable button').forEach(button => {
+  button.disabled = true;
+  button.innerHTML = 'Jugar';
+});
