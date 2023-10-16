@@ -128,7 +128,7 @@ function updateCart() {
     const price = document.createElement('span');
     price.textContent = `$${i.price}`;
     const cross = document.createElement('svg');
-    cross.classList.add('cross-icon');
+    cross.classList.add('cross-icn');
     cross.classList.add('icon');
     cross.addEventListener('click', removeFromCart);
     const div = document.createElement('div');

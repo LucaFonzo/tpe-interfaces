@@ -130,25 +130,28 @@
     background: url('../../assets/icons/flecha-arriba.svg');
 }
 
-.arrow-breadcrumbs {
+.arrow-breadcrumbs-icn {
     background-image: url('../../assets/icons/arrow-breadcrumbs.svg');
 }
 
-.space-bar {
-    background-image: url('../../assets/icons/Barra\ espaciadora.svg');
+.space-bar-icn {
+    background-image: url('../../assets/icons/space-bar.svg');
 }
 
-.left-arrow-keyboard {
-    background-image: url('../../assets/icons/left-arrow.svg');
+.left-arrow-keyboard-icn {
+    background-image: url('../../assets/icons/keyboard-left-arrow.svg');
 }
 
-.right-arrow-keyboard {
-    size: 50px;
-    background-image: url('../../assets/icons/right-arrow.svg');
+.right-arrow-keyboard-icn {
+    background-image: url('../../assets/icons/keyboard-right-arrow.svg');
 }
 
-.cross-icon {
-  background-image: url('../../assets/icons/cross.svg');
+.cross-icn {
+    background-image: url('../../assets/icons/cross.svg');
+}
+
+.circle-icn {
+    background-image: url('../../assets/icons/circle.svg');
 }
 
 .icon {

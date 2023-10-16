@@ -6,18 +6,16 @@
 }
 
 .breadcrumbs p {
-  color: #432F58;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: var(--main);
 }
 
-.game {
-  width: 70%;
+.breadcrumbs *:not(:last-child){
+  margin-right: 12px;
 }
 
-.game img {
-  width: 100%;
-}
-
-.panel-control,
+.help-panel,
 .description-container,
 .new-comment,
 .new-comment-body textarea,
@@ -25,9 +23,121 @@
   border-radius: 1.4vmin;
 }
 
-.panel-control {
+.game {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5%;
+  max-height: 650px;
+}
+
+/*Game screen*/
+
+.game-screen {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: fit-content;
+  max-width: 75%;
+}
+
+.game-screen::after{
+  content: "";
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  background: url("../../assets/icons/sound.svg") no-repeat center;
+  background-size: contain;
+  top: 2%;
+  left: 2%;
+}
+
+.game-screen img {
+  object-fit: cover;
+  height: 92%;
+}
+
+.game-screen div {
+  display: flex;
+  justify-content: end;
+  background-color: var(--sec-s2);
+  padding: 1%;
+  height: 48px;
+}
+
+.game-screen div svg {
+  margin: 0 10px;
+}
+
+/*Help panel*/
+
+.help-panel {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  grid-template-rows: 40px 1fr 1fr 40px;
+  grid-template-areas: 
+    "circ1 . circ2"
+    ". controls ."
+    ". instructions ."
+    "circ3 . circ4";
+  width: 20%;
+  max-width: 293px;
+  margin-left: 5%;
+  padding: 1%;
+}
+
+.help-panel > svg {
+  justify-self: center;
+  align-self: center;
+}
+
+.help-panel > svg:nth-child(1){
+  grid-area: circ1;
+}
+
+.help-panel > svg:nth-child(2){
+  grid-area: circ2;
+}
+
+.help-panel > svg:nth-child(3){
+  grid-area: circ3;
+}
+
+.help-panel > svg:nth-child(4){
+  grid-area: circ4;
+}
+
+.help-panel .controls {
+  grid-area: controls;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.controls > *:not(:last-child) {
+  margin-bottom: 10%;
+}
+
+.controls div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls div div, .controls>div>svg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 30%;
-  margin-left: 20px;
+}
+
+.controls div p {
+  text-align: center;
+  width: 50%;
+  margin-left: 20%;
+}
+
+.help-panel .instructions {
+  grid-area: instructions;
 }
 
 .instructions p {
