@@ -155,7 +155,13 @@ nav.active {
 
 .categories.active {
     z-index: 100;
-    left: 9rem;
+    left: 20.6rem;
+}
+@media screen and (min-width: 1020px){
+  .categories.active {
+    z-index: 100;
+    left: 16rem;
+}
 }
 
 @media screen and (min-width: 1020px) {
