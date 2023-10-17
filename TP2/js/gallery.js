@@ -10,13 +10,12 @@ let currentIndexGallery = 0;
 
 function openOverlay() {
   overlayGallery.style.display = 'flex';
-  showSlide(0);
+  showSlide();
 }
-
-function showSlide(index) {
+function showSlide() {
   slides.forEach((slide, i) => {
-    console.log(100 * (i - index));
-    slide.style.transform = `translateX(${100 * (i - index)}%)`;
+    console.log(slide.style.transform);
+    slide.style.transform = `translateX(${600 * i}px)`;
   });
 }
 
@@ -25,13 +24,15 @@ function closeOverlay() {
 }
 
 function showNextImage() {
-  currentIndexGallery = (currentIndexGallery + 1) % slides.length;
-  showSlide(currentIndexGallery);
+  slides.forEach((slide, i) => {
+    slide.style.transform = `translateX(${-600}px)`;
+  });
 }
 
 function showPrevImage() {
-  currentIndexGallery = (currentIndexGallery - 1 + slides.length) % slides.length;
-  showSlide(currentIndexGallery);
+  slides.forEach((slide, i) => {
+    slide.style.transform = `translateX(${0}px)`;
+  });
 }
 
 images.forEach((image, index) => {
