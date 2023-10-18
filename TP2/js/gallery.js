@@ -1,44 +1,35 @@
-const images = document.querySelectorAll('.image');
-const slides = document.querySelectorAll(".slide");
+
+const slides = Array.from(document.querySelectorAll(".slide"));
 const overlayGallery = document.querySelector('.overlay-gallery-container');
-const expandedImage = document.querySelector('.expanded-image');
-const closeButton = document.querySelector('.close-button');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
 
 let currentIndexGallery = 0;
 
-function openOverlay() {
-  overlayGallery.style.display = 'flex';
-  showSlide();
-}
-function showSlide() {
-  slides.forEach((slide, i) => {
-    console.log(slide.style.transform);
-    slide.style.transform = `translateX(${600 * i}px)`;
-  });
-}
-
-function closeOverlay() {
-  overlayGallery.style.display = 'none';
+function showPrevImage() {
+  currentIndexGallery--;
+  if(currentIndexGallery < 0) currentIndexGallery = slides.length - 1;
+  moveImages();
 }
 
 function showNextImage() {
-  slides.forEach((slide, i) => {
-    slide.style.transform = `translateX(${-600}px)`;
-  });
+  currentIndexGallery = currentIndexGallery + 1;
+  if(currentIndexGallery >= slides.length) currentIndexGallery = 0;
+  moveImages();
 }
 
-function showPrevImage() {
-  slides.forEach((slide, i) => {
-    slide.style.transform = `translateX(${0}px)`;
-  });
+function moveImages(){
+  for(let slide of slides){
+    slide.style.transform = `translateX(-${currentIndexGallery * 105}%)`;
+  }
 }
 
-images.forEach((image, index) => {
-  image.addEventListener('click', () => openOverlay(index));
+document.querySelector('.overlay-gallery-container button.previous').addEventListener('click', showPrevImage);
+
+document.querySelector('.overlay-gallery-container button.next').addEventListener('click', showNextImage);
+
+document.querySelector('.image').addEventListener('click', () => overlayGallery.classList.add('active'));
+
+document.querySelector('.close-button').addEventListener('click', () => {
+  overlayGallery.classList.remove('active');
+  currentIndexGallery = 0;
+  moveImages();
 });
-
-closeButton.addEventListener('click', closeOverlay);
-prevButton.addEventListener('click', showPrevImage);
-nextButton.addEventListener('click', showNextImage);

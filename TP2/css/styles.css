@@ -301,6 +301,28 @@ svg {
   cursor: not-allowed;
 }
 
+.carousel-btn {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main);
+  height: fit-content;
+  border-radius: 50%;
+  padding: 2%;
+  margin: 4%;
+  background-size: 24px 24px;
+}
+
+.carousel-btn:not(.disabled):hover {
+  background-color: var(--main-s2);
+}
+
+.carousel-btn.disabled {
+  background-color: var(--main-l2);
+  color: var(--gray);
+  cursor: default;
+}
+
 main {
   height: 100%;
 }
@@ -321,5 +343,9 @@ main {
 @media screen and (min-width: 1020px) {
   .overlay {
     height: calc(100% - 100px);
+  }
+
+  .carousel-btn {
+    display: flex;
   }
 }

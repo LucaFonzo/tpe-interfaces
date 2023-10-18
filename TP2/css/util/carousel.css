@@ -11,10 +11,6 @@
     width: 100%;    
 }
 
-.carousel>button {
-    display: none;
-}
-
 .carousel-body .card:not(:last-child) {
     margin-right: 5em;
 }
@@ -36,28 +32,6 @@
         text-align: left;
         margin-left: 16%;
         margin-bottom: 0;
-    }
-
-    .carousel>button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--main);
-        height: fit-content;
-        border-radius: 50%;
-        padding: 2%;
-        margin: 4%;
-        background-size: 24px 24px;
-    }
-
-    .carousel>button:not(.disabled):hover {
-        background-color: var(--main-s2);
-    }
-
-    .carousel>button.disabled {
-        background-color: var(--main-l2);
-        color: var(--gray);
-        cursor: default;
     }
 
     .carousel-body {
