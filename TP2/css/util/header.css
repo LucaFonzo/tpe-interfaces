@@ -30,12 +30,12 @@ header {
 
 .search-bar {
     grid-area: search;
-    color: #1C1E26;
+    color: var(--black);
     background: linear-gradient(to right,
             transparent 0%,
             transparent calc(100% - 1px),
-            #E1E1E1 0%,
-            #E1E1E1 100%) no-repeat,
+            var(--gray) 0%,
+            var(--gray) 100%) no-repeat,
         url('../../assets/icons/search-purple.svg') no-repeat;
     background-position:
         right 1.8rem center,
@@ -43,7 +43,7 @@ header {
     background-size:
         1px 34px,
         16px 16px;
-    background-color: #f1f1f1;
+    background-color: var(--white);
     width: 100%;
     height: 30px;
     border-radius: 12px;
@@ -52,7 +52,7 @@ header {
 }
 
 .search-bar:focus {
-    border: #7B678F solid 2px;
+    border: var(--main-l2) solid 2px;
 }
 
 .main-menu {
@@ -60,7 +60,8 @@ header {
     height: fit-content;
 }
 
-.main-menu svg, .main-menu img {
+.main-menu svg,
+.main-menu img {
     cursor: pointer;
 }
 
@@ -93,7 +94,7 @@ nav {
 
 nav hr {
     height: 1px;
-    background-color: #FADEDE;
+    background-color: var(--accent);
     width: 60%;
     margin: 0.7rem 2.5rem 0.7rem 1rem;
 }
@@ -101,7 +102,7 @@ nav hr {
 nav ul,
 ul.categories {
     padding: 0.8rem 0.5rem;
-    border: #5D4675 2px solid;
+    border: var(--main-l1) 2px solid;
 }
 
 nav ul {
@@ -124,6 +125,7 @@ ul.categories li span {
     margin-left: 33px;
     white-space: nowrap;
     cursor: pointer;
+    background-size: 0% 2px;
 }
 
 nav.active {
@@ -133,17 +135,27 @@ nav.active {
 .nav-btn {
     background-color: transparent;
     border-radius: 40px;
-    color: #E1E1E1;
-    border: solid 4px #E1E1E1;
+    color: var(--gray);
+    border: solid 4px var(--gray);
     margin-left: 15px;
     padding: 10px 18px;
 }
 
 .nav-btn:hover {
-    color: #1C1E26;
-    border-color: #FADEDE;
-    background-color: #FADEDE;
+    color: var(--black);
+    border-color: var(--accent);
+    background-color: var(--accent);
     transition: .4s;
+}
+
+nav ul li span:hover,
+ul.categories li span:hover {
+    
+    background-image: linear-gradient(var(--accent) 0 0);
+    background-position: left bottom;
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s;
 }
 
 .categories {
@@ -210,7 +222,7 @@ nav.active {
         position: relative;
     }
 
-    .cart-dropdown > span {
+    .cart-dropdown>span {
         position: absolute;
         top: 10px;
         left: 15px;
