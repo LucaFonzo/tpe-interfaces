@@ -1,0 +1,143 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  margin-top: 3rem;
+  padding: 2rem 0;
+}
+
+footer .logo {
+  margin: 5% 0;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: .5rem 0;
+}
+
+.dropdown button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown button span {
+  margin-right: 1rem;
+}
+
+.dropdown button svg {
+  transition: .5s;
+}
+
+.dropdown button svg.active {
+  transform: scaleY(-1);
+  transition: .5s;
+}
+
+.dropdown ul {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.dropdown ul.active {
+  max-height: 100px;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.dropdown ul li {
+  font-size: 14px;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out;
+  border-radius: 10px;
+}
+
+.dropdown ul.active li {
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.dropdown ul li:hover {
+  border-radius: 10px;
+  background-color: var(--main-s1);
+  color: white;
+}
+
+.social-media {
+  margin: 5% 0;
+  font-size: 18px;
+  color: var(--white);
+}
+
+.social-media span {
+  display: none;
+}
+
+.social-media ul {
+  display: flex;
+  width:100px;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    height: fit-content;
+  }
+
+  footer .logo {
+    width: 17%;
+  }
+
+  .dropdown ul {
+    display: block;
+    max-height: fit-content;
+  }
+
+  .dropdown ul li {
+    transform: translateY(0%);
+  }
+
+  .arrow-down-icn {
+    display: none;
+  }
+
+  .dropdown button span {
+    margin-right: 0;
+  }
+
+  .social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
+
+  .social-media span{
+    display: block;
+  }
+
+  .social-media ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+  }
+}

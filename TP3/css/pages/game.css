@@ -1,0 +1,397 @@
+.breadcrumbs {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs p {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: var(--main);
+}
+
+.breadcrumbs *:not(:last-child){
+  margin-right: 12px;
+}
+
+.help-panel,
+.description,
+.new-comment,
+.new-comment-body textarea,
+.comment {
+  border-radius: 1.4vmin;
+}
+
+.game {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5%;
+  max-height: 650px;
+}
+
+/*Game screen*/
+
+.game-screen {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: fit-content;
+  max-width: 75%;
+}
+
+.game-screen::after{
+  content: "";
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  background: url("../../assets/icons/sound.svg") no-repeat center;
+  background-size: contain;
+  top: 2%;
+  left: 2%;
+}
+
+.game-screen img {
+  object-fit: cover;
+  height: 92%;
+}
+
+.game-screen div {
+  display: flex;
+  justify-content: end;
+  background-color: var(--sec-s2);
+  padding: 1%;
+  height: 48px;
+}
+
+.game-screen div svg {
+  margin: 0 10px;
+}
+
+/*Help panel*/
+
+.help-panel {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  grid-template-rows: 40px 1fr 1fr 40px;
+  grid-template-areas: 
+    "circ1 . circ2"
+    ". controls ."
+    ". instructions ."
+    "circ3 . circ4";
+  width: 20%;
+  max-width: 293px;
+  margin-left: 5%;
+  padding: 1%;
+}
+
+.help-panel > svg {
+  justify-self: center;
+  align-self: center;
+}
+
+.help-panel > svg:nth-child(1){
+  grid-area: circ1;
+}
+
+.help-panel > svg:nth-child(2){
+  grid-area: circ2;
+}
+
+.help-panel > svg:nth-child(3){
+  grid-area: circ3;
+}
+
+.help-panel > svg:nth-child(4){
+  grid-area: circ4;
+}
+
+.help-panel .controls {
+  grid-area: controls;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.controls > *:not(:last-child) {
+  margin-bottom: 10%;
+}
+
+.controls div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls div div, .controls>div>svg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+
+.controls div p {
+  text-align: center;
+  width: 50%;
+  margin-left: 20%;
+}
+
+.help-panel .instructions {
+  grid-area: instructions;
+}
+
+.instructions p {
+  margin: 10px;
+}
+
+/*Description*/
+
+.description {
+  display: grid;
+  padding: 4% 4% 3% 4%;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 35px 1fr 1fr 1fr;
+  grid-template-areas: 
+    "title title title"
+    "desc . gallery"
+    "info . gallery"
+    "social social gallery";
+  height: auto;
+}
+
+.description h2{
+  grid-area: title;
+}
+
+.description > p {
+  grid-area: desc;
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+
+.description > div:first-of-type {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+}
+
+.description > div:first-of-type p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.description > div:first-of-type p svg {
+  margin-left: 9px;
+}
+
+.description .social {
+  grid-area: social;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.description .social div {
+  margin-top: 2%;
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery {
+  grid-area: gallery;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gallery .image {
+  cursor: zoom-in;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*New comment box*/
+.new-comment {
+  margin: 10% 15% 0 10%;
+  padding: 4%;
+}
+
+.new-comment h2 {
+  max-width: 80%;
+  margin-bottom: 1%;
+}
+
+.new-comment-body textarea {
+  color: var(--black);
+  background-color: var(--white);
+  min-height: 10rem;
+  padding: 1%;
+  width: 80%;
+  margin-right: 2.5%;
+}
+
+.new-comment-body div {
+  margin-left: 2.5%;
+  width: 20%;
+}
+
+.new-comment-body div p{
+  text-align: center;
+  background-color: var(--sec-l2);
+  border: solid 1px var(--danger);
+  border-radius: 2vmin;
+  padding: 10%;
+}
+
+.new-comment-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin-top: 2%;
+}
+
+.new-comment-footer span {
+  margin-left: 2.5%;
+}
+
+.new-comment-footer p {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-right: 2vmin;
+}
+
+.new-comment-footer svg {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.new-comment-footer button {
+  padding: 1rem;
+  width: 8rem;
+}
+
+/*Comment styling*/
+.comments-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments-container>span{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid var(--black);
+  margin-bottom: 3%;
+  padding-bottom: 1%
+}
+
+.comments-container>span h2, .comments-container>span h3 {
+  color: var(--black);
+}
+
+.comments-container .comment:not(:last-child) {
+  margin-bottom: 3%;
+}
+
+.comment {
+  display: grid;
+  width: 90%;
+  margin-left: 1%;
+  grid-template-columns: 107px auto 10fr 1fr;
+  grid-template-rows: 45px 30px 4px auto;
+  grid-template-areas:
+    "avatar userdate stars stars"
+    "avatar . . ."
+    "avatar content content ."
+    ". content content .";
+  background-color: var(--sec);
+  border-radius: 20px;
+  padding: 2% 2% 2% 1%;
+}
+
+.comment img {
+  grid-area: avatar;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment-userdate {
+  grid-area: userdate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.comment-userdate * {
+  color: var(--accent);
+}
+
+.comment-stars {
+  grid-area: stars;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.comment-stars svg:not(:last-child) {
+  margin-right: 9px;
+}
+
+.comment>p {
+  grid-area: content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 0 1.4vmin 1.4vmin 1.4vmin;
+  padding: 1.6%;
+  width: fit-content;
+}
+
+.comment>p::after {
+  content: '';
+  position: absolute;
+  top: -22px;
+  left: 0;
+  border: 23px solid transparent;
+  border-bottom-color: var(--white);
+  border-top: 0;
+  border-left: 0;
+}
+
+@keyframes append-comment {
+	from {
+		transform: translateY(-400px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0px);
+		opacity: 1;	
+	}
+}
+
+.created-comment {
+  animation: append-comment 2s ease;
+}

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/colors.css">
+  <link rel="stylesheet" type="text/css" href="css/util/icons.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/util/header.css">
+  <link rel="stylesheet" type="text/css" href="css/util/card.css">
+  <link rel="stylesheet" type="text/css" href="css/util/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/util/spinner.css">
+  <link rel="stylesheet" type="text/css" href="css/util/carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/util/gallery.css">
+  <link rel="stylesheet" type="text/css" href="css/pages/game.css">
+  <title>Tom & Jerry: 4 en línea</title>
+</head>
+
+<body>
+  <header class="main-color-s1 align-center">
+    <nav class="d-flex align-center">
+      <ul class="main-color-s2 d-flex-col">
+        <li>
+          <svg class="icon profile-icn"></svg>
+          <span>Mi perfil</span>
+        </li>
+        <li>
+          <svg class="icon game-icn"></svg>
+          <span>Mis juegos</span>
+        </li>
+        <li>
+          <svg class="icon cart-icn"></svg>
+          <span>Mis compras</span>
+        </li>
+        <li>
+          <svg class="icon category-icn"></svg>
+          <button class="primary-btn nav-btn main-color-s2" id="category-icn">
+            Categorías
+          </button>
+        </li>
+        <li>
+          <svg class="icon search-white-icn"></svg>
+          <span>Buscar juegos</span>
+        </li>
+        <li>
+          <svg class="icon dice-icn"></svg>
+          <span>Jugar juego aleatorio</span>
+        </li>
+        <li>
+          <svg class="icon tool-icn"></svg>
+          <span>Configuración</span>
+        </li>
+        <hr>
+        <li>
+          <svg class="icon log-out-icn"></svg>
+          <a href="index.html">
+            <button class="primary-btn nav-btn main-color-s2" href="index.html">
+              Cerrar sesión
+            </button>
+          </a>
+        </li>
+        <li>
+          <svg class="icon alert-icn"></svg>
+          <span>Reportar un problema</span>
+        </li>
+        <li>
+          <svg class="icon info-icn"></svg>
+          <span>Información</span>
+        </li>
+      </ul>
+    </nav>
+    <ul class="main-color-s1 categories d-flex-col justify-between d-none">
+      <li>
+        <svg class="icon action-icn"></svg>
+        <span>Acción</span>
+      </li>
+      <li>
+        <svg class="icon arcade-icn"></svg>
+        <span>Arcade</span>
+      </li>
+      <li>
+        <svg class="icon race-icn"></svg>
+        <span>Carreras</span>
+      </li>
+      <li>
+        <svg class="icon sport-icn"></svg>
+        <span>Deportes</span>
+      </li>
+      <li>
+        <svg class="icon rpg-icn"></svg>
+        <span>RPG</span>
+      </li>
+      <li>
+        <svg class="icon strategy-icn"></svg>
+        <span>Estrategia</span>
+      </li>
+    </ul>
+    <button id="burger-btn" class="main-color-s1 d-flex align-center justify-center">
+      <svg class="icon hamburger-icn"></svg>
+    </button>
+    <div class="logo d-flex justify-center align-center">
+      <a href="home.html" class="d-flex">
+        <svg class="game-icn"></svg>
+        <h2>Juegazos</h2>
+      </a>
+    </div>
+    <input type="text" placeholder="Buscar juegos..." class="search-bar">
+    <div class="main-menu d-flex justify-between align-center">
+      <div class="cart-dropdown"> <!-- Nueva div para el desplegable del carrito -->
+        <svg class="icon cart-icn" id="cart-icon"></svg>
+        <span class="hidden text-center"></span>
+        <div class="cart-items main-color-s1 d-none">
+
+        </div>
+      </div>
+      <img src="assets/img/profile-pictures/profile-pic.jpg" alt="profile" class="profile-pic">
+      <a href="index.html"><svg class="desktop icon log-out-icn"></svg></a>
+    </div>
+  </header>
+
+  <div class="overlay">
+    <div class="loader d-none"></div>
+  </div>
+
+  <main class="mt-5">
+    <div class="breadcrumbs ml-5">
+      <a href="home.html">
+        <p>Home</p>
+      </a>
+
+      <svg class="icon arrow-breadcrumbs-icn"></svg>
+      <p>Estrategia</p>
+      <svg class="icon arrow-breadcrumbs-icn"></svg>
+      <p>Tom & Jerry:4 en linea</p>
+    </div>
+
+    <section class="game">
+      <div class="game-screen">
+        <img src="assets/img/tom-jerry-fondo.jpg" alt="Placeholder image">
+        <div>
+          <svg class="icon tool-icn"></svg>
+          <svg class="icon full-screen-icn"></svg>
+        </div>
+      </div>
+      <div class="help-panel main-color">
+        <svg class="icon circle-icn"></svg>
+        <svg class="icon circle-icn"></svg>
+        <svg class="icon circle-icn"></svg>
+        <svg class="icon circle-icn"></svg>
+        <div class="controls">
+          <h3 class="text-center">CONTROLES</h3>
+          <div>
+            <div>
+              <svg class="icon left-arrow-keyboard-icn"></svg>
+              <svg class="icon right-arrow-keyboard-icn"></svg>
+            </div>
+            <p>Seleccionar columna</p>
+          </div>
+          <div>
+            <svg class="icon space-bar-icn"></svg>
+            <p>Confirmar</p>
+          </div>
+        </div>
+
+        <div class="instructions">
+          <h3 class="text-center">INSTRUCCIONES</h3>
+          <p>
+            Dos jugadores se turnan entre sí para colocar una ficha en alguna columna, que cae hasta la primera casilla
+            disponible
+            sin ocupar por otra ficha. El primer jugador que consigue colocar 4 fichas en vertical, horizontal o
+            diagonal gana, y si
+            ninguno de los dos lo logra, es un empate.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-color d-flex justify-around description mt-5 mx-10">
+      <h2>Tom & Jerry: 4 en línea!</h2>
+      <p>En este juego clásico de estrategia, el caos y la diversión se desatan con los personajes más queridos del
+        mundo de la
+        animación: Tom y Jerry. En este trepidante enfrentamiento, asumirás el papel de uno de los dos personajes: el
+        astuto
+        gato Tom o el escurridizo ratón Jerry. Tu objetivo es simple: ¡conectar cuatro de tus fichas en línea antes
+        que tu
+        oponente para ganar la partida!</p>
+      <div>
+        <p><span class="underline">Desarrollador</span>: Aristóteles</p>
+        <p><span class="underline">Valoración promedio</span>:
+          <span class="mr-5">
+            <svg class="icon full-star-icn"></svg>
+            <svg class="icon full-star-icn"></svg>
+            <svg class="icon full-star-icn"></svg>
+            <svg class="icon half-star-icn"></svg>
+            <svg class="icon empty-star-icn"></svg>
+          </span>
+          (3.5)
+        </p>
+        <p><span class="underline">Lanzamiento</span>: Circa 350 A.C</p>
+      </div>
+
+      <div class="social">
+        <h3>Compartilo con tus amigos!</h3>
+        <div>
+          <svg class="icon facebook-icn"></svg>
+          <svg class="icon twitter-icn"></svg>
+          <svg class="icon instagram-icn"></svg>
+          <svg class="icon gmail-icn"></svg>
+        </div>
+      </div>
+      <div class="gallery">
+        <div>
+          <img src="assets/img/video-placeholder.png" alt="Video placeholder">
+        </div>
+        <div class="image">
+          <img src="assets/img/gallery/game-execution-placeholder.png" alt="Imagen">
+        </div>
+      </div>
+      <div class="overlay-gallery-container">
+        <span class="close-button"><svg class="icon cross-icn"></svg></span>
+        <button class="carousel-btn previous icon left-arrow-icn"></button>
+        <div class="overlay-gallery">
+          <div class="slide">
+            <img src="assets/img/gallery/game-execution-placeholder.png">
+          </div>
+          <div class="slide">
+            <img src="assets/img/tom-jerry-fondo.jpg">
+          </div>
+          <div class="slide">
+            <img src="assets/img/gallery/gallery2.jpg">
+          </div>
+        </div>
+        <button class="carousel-btn next icon right-arrow-icn"></button>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="carousel-title">Otros juegos que podrían gustarte...</h2>
+
+      <div class="carousel">
+        <button class="carousel-btn previous icon left-arrow-icn disabled">
+        </button>
+
+        <div class="carousel-body">
+          <!--Card 1-->
+          <div class="card promo sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
+              </div>
+              <img src="assets/img/games/squad.jpg" alt="SQUAD">
+            </div>
+            <div class="card-body">
+              <h3>SQUAD</h3>
+              <p>Squad es un videojuego de disparos en primera persona táctico militar basado en el realismo
+                desarrollado y publicado por el desarrollador independiente canadiense</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 2-->
+          <div class="card sec-color-s2">
+            <div class="card-img">
+              <div class="d-none">
+                <svg class="icon cart-icn"></svg>
+              </div>
+              <img src="assets/img/games/gta-sa.jpg" alt="GTA San Andreas">
+            </div>
+            <div class="card-body">
+              <h3>GTA: San Andreas</h3>
+              <p>Grand Theft Auto: San Andreas es un videojuego de acción-aventura de mundo abierto desarrollado por
+                Rockstar North y publicado por Rockstar Games.</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 3-->
+          <div class="card free sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
+              </div>
+              <img src="assets/img/games/valorant.jpg" alt="VALORANT">
+            </div>
+            <div class="card-body">
+              <h3>VALORANT</h3>
+              <p>Valorant es un hero shooter en primera persona multijugador gratuito desarrollado y publicado por Riot
+                Games. El juego se anunció por primera vez con el nombre en clave Project A en octubre de 2019. Fue
+                lanzado para Microsoft Windows el 2 de junio de 2020 después de su beta cerrada lanzada el 7 de abril de
+                2020.</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 4-->
+          <div class="card unavailable sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
+              </div>
+              <img src="assets/img/games/nfs.jpg" alt="Need for Speed">
+            </div>
+            <div class="card-body">
+              <h3>Need for Speed</h3>
+              <p>Need for Speed: Underground es un videojuego de carreras de automóviles desarrollado y lanzado por
+                Electronic Arts en el 2003. Todas las carreras toman lugar en una ciudad de noche.</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 5-->
+          <div class="card free sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
+              </div>
+              <img src="assets/img/games/counter-strike16.webp" alt="Counter Strike 1.6">
+            </div>
+            <div class="card-body">
+              <h3>Counter Strike 1.6</h3>
+              <p>Counter Strike 1.6: Half Life Mod es un juego de disparos en primera persona donde un equipo de
+                terroristas se enfrentará a un equipo de antiterroristas. Ganará la partida el equipo que cumpla todos
+                los objetivos de victoria o elimine a todos los jugadores del equipo contrario.</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 6-->
+          <div class="card promo sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
+              </div>
+              <img src="assets/img/games/stellaris.jpg" alt="Stellaris">
+            </div>
+            <div class="card-body">
+              <h3>Stellaris</h3>
+              <p>Stellaris es un videojuego de gran estrategia 4X desarrollado y publicado por Paradox Interactive. El
+                juego gira en torno a la exploración del espacio, la gestión de un imperio, la diplomacia y la guerra
+                con otras civilizaciones interplanetarias.</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 7-->
+          <div class="card promo sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
+              </div>
+              <img src="assets/img/games/total-war-rome.jpg" alt="Total War: Rome">
+            </div>
+            <div class="card-body">
+              <h3>Total War: Rome</h3>
+              <p>Rome: Total War es un videojuego de estrategia en tiempo real de la desarrolladora británica Creative
+                Assembly, perteneciente a la serie de videojuegos Total War, de esta misma empresa, publicado en 2004.
+                El juego trata sobre los principios del aumento del poder de Roma, en el 270 a.c.</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 8-->
+          <div class="card free sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
+              </div>
+              <img src="assets/img/games/digimon-world.jpg" alt="Digimon World">
+            </div>
+            <div class="card-body">
+              <h3>Digimon World</h3>
+              <p>Digimon World es un videojuego lanzado por Bandai en 1999, basado en los V-Pets. El juego consiste en
+                criar a un Digimon desde su etapa bebé hasta hacerlo evolucionar a su forma más poderosa. El Digimon
+                morirá con la edad, revirtiéndose a un Digihuevo y renaciendo de nuevo. Para criar un Digimon, el
+                jugador deberá entrenarlo, recompensarlo o regañarlo según la ocasión, darle de comer, llevarlo al baño,
+                dejarlo descansar, etc.</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+          <!--Card 9-->
+          <div class="card promo sec-color-s2">
+            <div class="card-img">
+              <div>
+                <svg class="icon cart-icn"></svg>
+              </div>
+              <img src="assets/img/games/tetris.jpg" alt="Tetris">
+            </div>
+            <div class="card-body">
+              <h3>Tetris</h3>
+              <p>Tetris es un videojuego de lógica originalmente diseñado y programado por Alekséi Pázhitnov en la Unión
+                Soviética. Se publicó el 6 de junio de 1984, ​ mientras trabajaba para el Centro de Computación
+                Dorodnitsyn de la Academia de Ciencias de la Unión Soviética en Moscú, RSFS de Rusia.​</p>
+            </div>
+            <div class="card-footer">
+              <h3>$50</h3>
+              <button class="primary-btn">Agregar<br>al carrito</button>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-btn next icon right-arrow-icn">
+        </button>
+      </div>
+
+      <div class="radio">
+        <span class="radio-0 active"></span>
+        <span class="radio-1"></span>
+        <span class="radio-2"></span>
+      </div>
+    </section>
+
+    <div class="sec-color-l1 mt-5 mx-10 d-flex-col justify-center align-start new-comment">
+      <h2>Contale a la comunidad qué te pareció este juego!</h2>
+      <div class="new-comment-body d-flex ">
+        <textarea placeholder="Escribe tu comentario..." required></textarea>
+        <div>
+          <p>
+            Atención: aquellos comentarios que infrinjan nuestras <a href="">normas de convivencia</a> serán eliminados
+            y su autor
+            suspendido por
+            tiempo indeterminado del uso de nuestra página.
+          </p>
+        </div>
+      </div>
+
+      <div class="new-comment-footer">
+        <span class="d-flex align-center">
+          <p>Valorá el juego:</p>
+          <div>
+            <svg class="icon empty-star-icn"></svg>
+            <svg class="icon empty-star-icn"></svg>
+            <svg class="icon empty-star-icn"></svg>
+            <svg class="icon empty-star-icn"></svg>
+            <svg class="icon empty-star-icn"></svg>
+          </div>
+        </span>
+        <button class="main-color primary-btn" disabled="true">Enviar</button>
+      </div>
+    </div>
+
+    <div class="comments-container mx-10 mt-5">
+      <span>
+        <h2>COMENTARIOS</h2>
+        <h3>(Valoración promedio: 4.2)</h3>
+      </span>
+
+      <div class="comment">
+        <img src="assets/img/profile-pictures/profile-pic.jpg" alt="Profile picture">
+        <div class="comment-userdate">
+          <h3>PanchoKpo1997 (Tú)</h3>
+          <p>en este momento</p>
+        </div>
+        <div class="comment-stars">
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn half-star-icn"></svg>
+        </div>
+        <p>
+          Es un gran juego. Mi teoría principal es que los autores buscaban hacer una crítica a los regímenes
+          comunistas orientales que supieron gobernar los países del Europa del Este durante la Guerra Fría, al mismo
+          tiempo
+          que compone una
+          sátira de las supuestas bondades del capitalismo occidental, en la figura de Tom. Es importante destacar
+          que la teoría
+          marxista es capaz de describir esta clase de elementos, que forman una mezcla homogénea de pensamiento
+          moderno. En fin,
+          muy interesante la propuesta que nos trajeron hoy a Juegazos.com, muchas gracias!
+        </p>
+      </div>
+      <div class="comment">
+        <img src="assets/img/profile-pictures/el-bromas.png" alt="Profile picture">
+        <div class="comment-userdate">
+          <h3>Elbromas123</h3>
+          <p>hace 10 horas</p>
+        </div>
+        <div class="comment-stars">
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+        </div>
+        <p>
+          aguante boca
+        </p>
+      </div>
+      <div class="comment">
+        <img src="assets/img/profile-pictures/messi.png" alt="Profile picture">
+        <div class="comment-userdate">
+          <h3>Messi</h3>
+          <p>hace 5 días</p>
+        </div>
+        <div class="comment-stars">
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+        </div>
+        <p>
+          Muy bueno lo juego con De Paul en las concentraciones
+        </p>
+      </div>
+      <div class="comment">
+        <img src="assets/img/profile-pictures/piglet.png" alt="Profile picture">
+        <div class="comment-userdate">
+          <h3>xXDarkBeastXx</h3>
+          <p>hace 2 meses</p>
+        </div>
+        <div class="comment-stars">
+          <svg class="icn half-star-icn"></svg>
+          <svg class="icn empty-star-icn"></svg>
+          <svg class="icn empty-star-icn"></svg>
+          <svg class="icn empty-star-icn"></svg>
+          <svg class="icn empty-star-icn"></svg>
+        </div>
+        <p>
+          Hace tres días que intento pasarlo y no puedo, es malísimo. Se me traba todo en el anteúltimo nivel, ya
+          reinicié la pc, no sé qué más hacer. Alguien me ayuda?
+        </p>
+      </div>
+      <div class="comment">
+        <img src="assets/img/profile-pictures/aristoteles.png" alt="Profile picture">
+        <div class="comment-userdate">
+          <h3>Aristóteles</h3>
+          <p>hace 2343 años</p>
+        </div>
+        <div class="comment-stars">
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn full-star-icn"></svg>
+          <svg class="icn half-star-icn"></svg>
+          <svg class="icn empty-star-icn"></svg>
+          <svg class="icn empty-star-icn"></svg>
+        </div>
+        <p>
+          Si tu viejo es zapatero...
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-color-l1">
+    <div class="logo d-flex justify-center align-center">
+      <a href="home.html" class="d-flex">
+        <svg class="game-icn"></svg>
+        <h2>Juegazos</h2>
+      </a>
+    </div>
+
+    <div class="dropdown">
+      <button class="main-color-l1">
+        <span>CONDICIONES DE USO Y PRIVACIDAD</span>
+        <svg class="arrow-down-icn icon"></svg>
+      </button>
+      <ul>
+        <li class="text-center">Términos y condiciones</li>
+        <li class="text-center">Privacidad y cookies</li>
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <button class="main-color-l1 d-flex justify-between">
+        <span>NOSOTROS</span>
+        <svg class="arrow-down-icn icon"></svg>
+      </button>
+      <ul>
+        <li class="text-center">Quiénes somos</li>
+        <li class="text-center">Contacto</li>
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <button class="main-color-l1 d-flex align-center">
+        <span>AYUDA</span>
+        <svg class="arrow-down-icn icon"></svg>
+      </button>
+      <ul>
+        <li class="text-center">Reembolsos</li>
+        <li class="text-center">Seguridad</li>
+      </ul>
+    </div>
+    <div class="social-media">
+      <span>REDES SOCIALES</span>
+      <ul>
+        <li><svg class="icn instagram-icn"></svg></li>
+        <li><svg class="icn twitter-icn"></svg></li>
+        <li><svg class="icn facebook-icn"></svg></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/nav.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/new-comment.js"></script>
+</body>
+
+</html>

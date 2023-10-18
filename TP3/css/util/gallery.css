@@ -1,0 +1,63 @@
+.overlay-gallery-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(154, 137, 155, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.overlay-gallery-container.active {
+  display: flex;
+}
+
+.overlay-gallery-container>button {
+  margin: 2%;
+}
+
+.overlay-gallery {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 900px;
+  width: 1200px;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 900px;
+  min-width: 1200px;
+  transition: transform 1.2s ease-in-out;
+}
+
+.slide:not(:last-child) {
+  margin-right: 5%;
+}
+
+.slide img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  border-radius: 40px;
+  border: var(--main-s1) solid 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--main);
+}

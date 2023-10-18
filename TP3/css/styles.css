@@ -1,0 +1,351 @@
+/*Fonts*/
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Slab.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'MPLUS2';
+  src: url('../assets/fonts/MPLUS2.ttf');
+}
+
+@font-face {
+  font-family: 'Ruda';
+  src: url('../assets/fonts/Ruda.ttf');
+  font-weight: 200;
+}
+
+/*Browser stylesheet reset*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: Ruda;
+  font-weight: normal;
+  color: #F2EDED;
+}
+
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--main);
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: var(--accent);
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  background-color: var(--gray);
+}
+
+main {
+  min-height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Roboto;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+p {
+  font-size: 14px;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+svg {
+  height: 24px;
+  width: 24px;
+}
+
+/* Generic layout classes */
+/*Flexbox*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.container-800 {
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-right {
+  justify-content: right;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+/*Margins*/
+.my-10 {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.my-5 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.mx-10 {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.mx-5 {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.mt-10 {
+  margin-top: 10%;
+}
+
+.mr-5 {
+  margin-right: 5%;
+}
+
+.mr-10 {
+  margin-right: 10%;
+}
+
+.mt-5 {
+  margin-top: 5%;
+}
+
+.mb-10 {
+  margin-bottom: 10%;
+}
+
+.mb-5 {
+  margin-bottom: 5%;
+}
+
+.ml-10 {
+  margin-left: 10%;
+}
+
+.ml-5 {
+  margin-left: 5%;
+}
+
+.br-10 {
+  border-radius: 10px;
+}
+
+
+/*Hidening*/
+.hidden {
+  visibility: hidden;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width: 1020px) {
+  .desktop {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 1020px) {
+  .mobile {
+    display: none;
+  }
+}
+
+/*Logo*/
+.logo {
+  grid-area: logo;
+  width: 100%;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo svg {
+  transform: rotate(-30deg);
+  width: 40px;
+  height: 25px;
+  position: relative;
+  top: 6px;
+  margin-right: -25px;
+  left: -18px;
+}
+
+/*Buttons*/
+
+.primary-btn {
+  display: inline-block;
+  background-color: var(--main);
+  white-space: nowrap;
+  font-family: Ruda;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 16px;
+  border-radius: 30px;
+  width: fit-content;
+}
+
+.primary-btn:hover {
+  background-color: var(--main-s2);
+}
+
+.primary-btn:disabled {
+  background-color: var(--main-l2);
+  cursor: not-allowed;
+}
+
+.carousel-btn {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main);
+  height: fit-content;
+  border-radius: 50%;
+  padding: 2%;
+  margin: 4%;
+  background-size: 24px 24px;
+}
+
+.carousel-btn:not(.disabled):hover {
+  background-color: var(--main-s2);
+}
+
+.carousel-btn.disabled {
+  background-color: var(--main-l2);
+  color: var(--gray);
+  cursor: default;
+}
+
+main {
+  height: 100%;
+}
+
+.overlay {
+  z-index: 97;
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 110px);
+  background-color: #1c1e2699;
+}
+
+.overlay.active {
+  display: block;
+}
+
+@media screen and (min-width: 1020px) {
+  .overlay {
+    height: calc(100% - 100px);
+  }
+
+  .carousel-btn {
+    display: flex;
+  }
+}

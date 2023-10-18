@@ -1,0 +1,64 @@
+:root {
+    --main: #432F58;
+    --main-s1: #341D4C;
+    --main-s2: #210D36;
+    --main-l1: #5D4675;
+    --main-l2: #7B678F;
+    --sec: #2E4055;
+    --sec-s1: #1C314A;
+    --sec-s2: #0C1F34;
+    --sec-l1: #445871;
+    --sec-l2: #64768B;
+    --accent: #FADEDE;
+    --black: #1C1E26;
+    --white: #F2EDED;
+    --gray: #E1E1E1;
+    --success: #246115;
+    --danger: #D42C2C;
+}
+
+
+.main-color {
+    background-color: var(--main);
+}
+
+.main-color-s1 {
+    background-color: var(--main-s1);
+}
+
+.main-color-s2 {
+    background-color: var(--main-s2);  
+}
+
+.main-color-l1 {
+    background-color: var(--main-l1);
+}
+
+.main-color-l2 {
+    background-color: var(--main-l2);
+}
+
+.sec-color {
+    background-color: var(--sec);
+}
+
+.sec-color-s1 {
+    background-color: var(--sec-s1);
+}
+
+.sec-color-s2 {
+    background-color: var(--sec-s2);
+}
+
+.sec-color-l1 {
+    background-color: var(--sec-l1);
+}
+
+.sec-color-l2 {
+    background-color: var(--sec-l2);
+}
+
+.accent-color {
+    background-color: var(--accent);
+}
+

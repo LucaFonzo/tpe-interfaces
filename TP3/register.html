@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/colors.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/util/icons.css">
+  <link rel="stylesheet" type="text/css" href="css/util/header.css">
+  <link rel="stylesheet" type="text/css" href="css/util/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/util/spinner.css">
+  <link rel="stylesheet" type="text/css" href="css/pages/login.css">
+  <title>Registrarse</title>
+</head>
+
+<body>
+  <div class="overlay loader-container">
+    <div>
+      <div class="loader d-none"></div>
+      <div class="text-center progress-text d-none"><span>0%</span></div>
+    </div>
+  </div>
+
+  <header class="main-color-s1 align-center">
+    <div class="logo d-flex justify-center align-center">
+      <a href="home.html" class="d-flex">
+        <svg class="game-icn"></svg>
+        <h2>Juegazos</h2>
+      </a>
+    </div>
+  </header>
+
+  <main class="d-flex-col justify-center align-center">
+    <form class="d-flex-col justify-center align-center main-color-s1 register">
+
+      <h2 class="text-center mb-10">Regístrate! Es gratis.</h2>
+      <div class="d-flex justify-between w-100 my-5">
+
+        <div class="input-group d-flex-col">
+          <label for="name">Nombre*</label>
+          <input type="text" name="name" id="name" required placeholder="">
+        </div>
+
+        <div class="input-group d-flex-col">
+          <label for="surname">Apellido*</label>
+          <input type="text" name="surname" id="surname" required placeholder="">
+        </div>
+      </div>
+
+      <div class="input-group d-flex-col">
+        <label for="username">Nombre de usuario*</label>
+        <input type="text" name="username" id="username" required placeholder="">
+      </div>
+
+      <div class="input-group d-flex-col">
+        <label for="email">Email*</label>
+        <input type="email" name="email" id="email" required placeholder="">
+      </div>
+
+      <div class="input-group d-flex-col">
+        <label for="password">Contraseña*</label>
+        <input type="password" name="password" id="password" required placeholder="">
+      </div>
+
+      <div class="input-group d-flex-col">
+        <label for="password-2">Repetir contraseña*</label>
+        <input type="password" name="password-2" id="password-2" required placeholder="">
+      </div>
+
+      <div class="d-flex justify-around">
+        <span>
+          <input type="checkbox" name="terms" id="terms">
+          <label for="terms">Acepto términos y condiciones</label>
+        </span>
+      </div>
+
+      <div class="form-buttons d-flex-col justify-center align-center">
+        <button type="button" id="btn-login" class="primary-btn main-color">Registrarse</button>
+
+        <p class="text-center">o</p>
+
+        <button class="primary-btn main-color">Registrarse con <svg class="icon facebook-icn">F</svg></button>
+        <button class="primary-btn main-color">Registrarse con <svg class="icon google-icn">G</svg></button>
+      </div>
+
+      <p class="text-center">¿Ya tenés una cuenta? <a href="index.html">Iniciá sesión</a></p>
+    </form>
+  </main>
+
+  <footer class="main-color-l1">
+    <div class="logo d-flex justify-center align-center">
+      <a href="home.html" class="d-flex">
+        <svg class="game-icn"></svg>
+        <h2>Juegazos</h2>
+      </a>
+    </div>
+
+    <div class="dropdown">
+      <button class="main-color-l1">
+        <span>CONDICIONES DE USO Y PRIVACIDAD</span>
+        <svg class="arrow-down-icn icon"></svg>
+      </button>
+      <ul>
+        <li class="text-center">Términos y condiciones</li>
+        <li class="text-center">Privacidad y cookies</li>
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <button class="main-color-l1 d-flex justify-between">
+        <span>NOSOTROS</span>
+        <svg class="arrow-down-icn icon"></svg>
+      </button>
+      <ul>
+        <li class="text-center">Quiénes somos</li>
+        <li class="text-center">Contacto</li>
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <button class="main-color-l1 d-flex align-center">
+        <span>AYUDA</span>
+        <svg class="arrow-down-icn icon"></svg>
+      </button>
+      <ul>
+        <li class="text-center">Reembolsos</li>
+        <li class="text-center">Seguridad</li>
+      </ul>
+    </div>
+
+    <div class="social-media">
+      <span>REDES SOCIALES</span>
+      <ul>
+        <li><svg class="icn instagram-icn"></svg></li>
+        <li><svg class="icn twitter-icn"></svg></li>
+        <li><svg class="icn facebook-icn"></svg></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/login.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+
+</html>
