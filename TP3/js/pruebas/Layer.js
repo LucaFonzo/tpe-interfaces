@@ -1,5 +1,6 @@
 class Layer {
-    constructor() {
+    constructor(context) {
+        this.ctx = context;
         this.circles = [];
     }
 
@@ -7,29 +8,50 @@ class Layer {
         this.circles.push(circle);
     }
 
+    clearCanvas() {
+        this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
+    }
+
     draw() {
         this.circles.forEach(circle => circle.draw());
     }
 
-    check(e) {
+    changeColor(e) {
+        let circle = this.identify(e);
+        if (circle) {
+            if (circle.color == 'green') {
+                circle.color = 'red';
+            }
+            else {
+                circle.color = 'green';
+            }
+
+            this.draw();
+        }
+    }
+
+    drag(e) {
+        if (e.ctrlKey) {
+            let circle = this.identify(e);
+            if (circle) {
+                circle.move(e.movementX, e.movementY)
+                this.clearCanvas();
+                this.draw();
+            }
+        }
+    }
+
+    identify(e) {
         const x = e.offsetX;
         const y = e.offsetY;
-        
-        this.circles.forEach(circle => {
-            const dx = circle.x - x;
-            const dy = circle.y - y;
+        for (let c of this.circles) {
+            const dx = c.x - x;
+            const dy = c.y - y;
             const distance = Math.sqrt(dx * dx + dy * dy);
-            if (distance <= circle.radius) {
-                if(circle.color == 'green'){
-                    circle.color = 'red';
-                }
-                else{
-                    circle.color = 'green';
-                }
+            if (distance <= c.radius) {
+                return c;
             }
-        });
-
-        this.draw();
+        }
     }
 }
 

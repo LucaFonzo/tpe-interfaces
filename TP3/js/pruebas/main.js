@@ -11,9 +11,11 @@ canvas.height = height;
 
 //------------------------------------
 
-const layer = new Layer();
-canvas.addEventListener('click', layer.check.bind(layer));
+const layer = new Layer(ctx);
 
 layer.addCircle(new Circle(100, 100, 50, 'red', ctx));
 layer.addCircle(new Circle(200, 200, 50, 'green', ctx));
 layer.draw();
+
+canvas.addEventListener('click', layer.changeColor.bind(layer));
+canvas.addEventListener('mousemove', layer.drag.bind(layer));
