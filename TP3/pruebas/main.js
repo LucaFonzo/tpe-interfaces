@@ -46,6 +46,7 @@ class Pencil {
             this.ctx.arc(x, y, 30, 0, 2 * Math.PI);
             this.ctx.fillStyle = '#E1E1E1';
             this.ctx.fill();
+            this.ctx.closePath();
             this.ctx.fillStyle = this.color;
             return;
         }
@@ -102,5 +103,9 @@ document.addEventListener('DOMContentLoaded', e => {
 
     document.querySelector('#color').addEventListener('change', e => {
         pencil.setColor(e.target.value);
+    });
+
+    document.querySelector('#width').addEventListener('change', e => {
+        pencil.setWidth(e.target.value);
     });
 });

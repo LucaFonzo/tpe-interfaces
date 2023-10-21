@@ -45,5 +45,13 @@ button.active {
 }
 
 canvas.active {
-    cursor:grab;
+    cursor: url('cursor.png') 25 25, auto;
+}
+
+#width {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+    background-color: var(--sec-l1);
+    border-radius: 10px;
 }
