@@ -13,9 +13,27 @@
 
 <body>
     <h1 class="text-center">Press the control key and use the mouse to move around. Click to change colour.</h1>
-    <canvas>
-        
+    <canvas id="c1">
+
     </canvas>
+    <div class="d-flex align-center">
+        <div class="inputs d-flex-col justify-center align-center ml-5">
+            <div>
+                <h2>Color</h2>
+                <button><input type="color" id="color"></button>
+            </div>
+            <div>
+                <h2>Borrador</h2>
+                <button id="eraser">
+                    <img src="https://cdn-icons-png.flaticon.com/512/979/979773.png" alt="eraser">
+                </button>
+            </div>
+        </div>
+        <canvas id="c2">
+
+        </canvas>
+    </div>
+
     <script type="module" src="./js/pruebas/main.js"></script>
 </body>
 
