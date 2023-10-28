@@ -12,20 +12,11 @@ const height = canvas.height;
 
 //let game = new Game(ctx);
 
-let disk = new Disk(50, 50, 10, "red");
+let disk = new Disk(50, 50, 25, "red");
 
-let tiles = [];
-
-for (let i = 0; i < 6; i++) {
-    tiles.push(new Tile(300, 150 + i*60, 60, null));
-}
-
-for(let tile of tiles){
-    tile.draw(ctx);
-}
+let board = new Board(6, 7);
+board.draw(ctx);
 
 document.querySelector('button').addEventListener('click', async () => {
-    for(let tile of tiles){
-        await tile.animateFall(ctx, disk, 5);
-    }
+    await board.animateFall(ctx, disk, 10, 3);
 });

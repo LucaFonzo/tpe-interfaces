@@ -12,7 +12,7 @@ class Disk {
     }
 
     getPosition() {
-        return {x: this.x, y: this.y};
+        return { x: this.x, y: this.y };
     }
 
     getRadius() {
