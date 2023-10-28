@@ -1,7 +1,8 @@
 class Tile {
-    constructor (x, y, img) {
+    constructor (x, y, size, img) {
         this.x = x;
         this.y = y;
+        this.size = size;
         this.image = img;
         this.disk = null;
     }
@@ -19,16 +20,20 @@ class Tile {
     }
 
     draw (ctx) {
-        ctx.rect(this.x, this.y, 60, 60);
         ctx.fillStyle = "#000000";
-        ctx.fill();
+        ctx.fillRect(this.x, this.y, this.size, this.size);
         ctx.save();
-        ctx.beginPath();
-	    ctx.arc(this.x + 30, this.y + 30, 18, 0, 2*Math.PI);
-	    ctx.clip();
-	    ctx.clearRect(this.x, this.y, 60, 60);
+        this.generateHole(ctx);
+        ctx.clearRect(this.x, this.y, this.size, this.size);
         ctx.restore();
         //ctx.drawImage(this.image, this.x, this.y, 50, 50);
+    }
+
+    generateHole (ctx) {
+        ctx.beginPath();
+	    ctx.arc(this.x + this.size/2, this.y + this.size/2, 18, 0, 2*Math.PI);
+        ctx.closePath();
+	    ctx.clip();
     }
 
     putDisk (ctx, disk) {
@@ -42,26 +47,20 @@ class Tile {
         //ctx.drawImage(this.disk.image, this.x, this.y, 60, 60);
     }
 
-    animateFall(ctx, disk, x, y, speed) {
-        let radius = disk.getRadius();
-        let color = disk.getColor();
-        let dx = (x - this.x) / speed;
-        let dy = (y - this.y) / speed;
+    async animateFall(ctx, disk, speed) {
+        ctx.save();
+        let dy = 0;
         let i = 0;
-        let interval = setInterval(() => {
-            ctx.clearRect(this.x, this.y, 60, 60);
-            ctx.beginPath();
-            ctx.arc(this.x + radius/2, this.y + radius/2, radius, 0, 2 * Math.PI);
-            ctx.fillStyle = color;
-            ctx.fill();
-            //ctx.drawImage(this.disk.image, this.x, this.y, 60, 60);
-            this.x += dx;
-            this.y += dy;
+        this.generateHole(ctx);
+        while(dy <= this.size + disk.getRadius()){
+            dy = i * speed;
+            ctx.clearRect(this.x, this.y, this.size, this.size);
+            disk.move(this.x + this.size/2, this.y + dy);
+            disk.draw(ctx);
             i++;
-            if (i === speed) {
-                clearInterval(interval);
-            }
-        }, 10);
+            await new Promise((resolve) => setTimeout(resolve, 10));
+        }
+        ctx.restore();
     }
 }
 
