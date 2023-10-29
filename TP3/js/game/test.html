@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/colors.css">
+    <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="test.css">
     <title>Document</title>
 </head>
+
 <body>
+    <div>
+        <span>Board size (pixels of each tile):</span>
+        <input type="range" min="1" max="100" value="90">
+        <button id="start" class="main-color primary-btn">Start!</button>
+        <script type="module" src="main.js"></script>
+        <button id="put" class="primary-btn" disabled="true">Put disk!</button>
+    </div>
     <canvas width="1000" height="700">
-        
+
     </canvas>
-    <button>Press me!</button>
-    <script type="module" src="main.js"></script>
+
 </body>
+
 </html>
