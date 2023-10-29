@@ -4,6 +4,17 @@ body {
 }
 
 canvas {
-    border: 1px solid black;
+    border: 5px solid rgb(204, 164, 32);
     background-color: darkgrey;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    background-color: var(--main);
+    border: 2px solid var(--black);
+    height: 500px;
 }

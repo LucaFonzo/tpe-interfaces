@@ -31,7 +31,7 @@ class Tile {
 
     generateHole(ctx) {
         ctx.beginPath();
-        ctx.arc(this.x + this.size / 2, this.y + this.size / 2, 18, 0, 2 * Math.PI);
+        ctx.arc(this.x + this.size / 2, this.y + this.size / 2, this.size/3, 0, 2 * Math.PI);
         ctx.closePath();
         ctx.clip();
     }

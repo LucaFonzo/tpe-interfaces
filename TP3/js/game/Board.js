@@ -1,7 +1,10 @@
 import Tile from "./Tile.js";
 
 class Board {
-    constructor(rows, cols) {
+    constructor(x, y, tileSize, rows, cols) {
+        this.x = x;
+        this.y = y;
+        this.tileSize = tileSize;
         this.rows = rows;
         this.cols = cols;
         this.tiles = [];
@@ -12,7 +15,7 @@ class Board {
         for (let i = 0; i < this.rows; i++) {
             this[i] = [];
             for (let j = 0; j < this.cols; j++) {
-                this[i][j] = new Tile(300 + j * 60, 150 + i * 60, 60, null);
+                this[i][j] = new Tile(this.x + j * this.tileSize, this.y + i * this.tileSize, this.tileSize, null);
             }
         }
     }
