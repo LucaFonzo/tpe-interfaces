@@ -11,17 +11,44 @@
 </head>
 
 <body>
-    <div>
-        <span>Board size (pixels of each tile):</span>
-        <input type="range" min="1" max="100" value="90">
+    <div class="config">
+        <span>Board size (pixels of each tile): <input class="ml-5" type="range" min="1" max="100" value="90"></span>
+
+        <div class="d-flex justify-center align-center">
+            <span>Board sizes (amount of tiles):</span>
+            <form class="ml-5">
+                <span><input type="radio" value="4x5" name="size"> 4x5</span>
+                <span><input type="radio" value="5x6" name="size"> 5x6</span>
+                <span><input type="radio" value="6x7" name="size" checked> 6x7</span>
+                <span><input type="radio" value="7x8" name="size"> 7x8</span>
+            </form>
+        </div>
+        <div class="d-flex justify-around player-config">
+
+            <div class="d-flex-col justify-center align-center">
+                <span>Player 1 name:</span>
+                <input type="text" id="player1-name" value="Player 1">
+                <span>Player 1 color:</span>
+                <input type="color" id="player1-color" value="#ff0000">
+            </div>
+
+            <div class="d-flex-col justify-center align-center">
+                <span>Player 2 name:</span>
+                <input type="text" id="player2-name" value="Player 2">
+                <span>Player 2 color:</span>
+                <input type="color" id="player2-color" value="#0000ff">
+            </div>
+        </div>
         <button id="start" class="main-color primary-btn">Start!</button>
-        <script type="module" src="main.js"></script>
         <button id="put" class="primary-btn" disabled="true">Put disk!</button>
     </div>
-    <canvas width="1000" height="700">
+    <div class="game-canvas">
+        <canvas width="1300" height="650">
 
-    </canvas>
+        </canvas>
+    </div>
 
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>

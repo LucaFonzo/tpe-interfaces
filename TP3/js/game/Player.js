@@ -1,11 +1,12 @@
 class Player {
-    constructor (playerNumber, name, color, character) {
+    constructor (playerNumber, name, color, character, image, totalDisks) {
         this.playerNumber = playerNumber;
         this.name = name;
         this.character = character;
+        this.image = image;
         this.color = color;
         this.score = 0;
-        this.totalDisks = 10;
+        this.totalDisks = totalDisks;
     }
 
     getName() {
@@ -20,39 +21,24 @@ class Player {
         return this.score;
     }
 
-    getCharacter() {
-        return this.character;
-    }
-
-    setName(name) {
-        this.name = name;
-    }
-
     setColor(color) {
         this.color = color;
-    }
-
-    setCharacter(character) {
-        this.character = character;
     }
 
     incrementScore() {
         this.score++;
     }
 
-    drawCharacterInfo(ctx, x, y) {
+    displayPlayerInfo(ctx, playerNumber) {
+        let canvas = ctx.canvas;
         let div = document.createElement('div');
-        div.classList.add('player');
-        div.style.left = `${x}px`;
-        div.style.top = `${y}px`;
+        div.classList.add('player-info', `p${playerNumber}`);
         div.innerHTML = `
-            <div class="character">
-                <span>${this.name}</span>
-                <span>Total score ${this.score}</span>
-            </div>
-            <div style="background-color: ${this.color}"></div>
+            <img src="${this.image}" alt="${this.name}">
+            <span>${this.name}</span>
+            <span>${this.score}</span>
         `;
-        ctx.canvas.appendChil(div);
+        canvas.parentElement.appendChild(div);
     }
 
 }
