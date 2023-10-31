@@ -6,6 +6,10 @@ class Disk {
         this.color = color;
     }
 
+    makeCopy(){
+        return new Disk(0, 0, this.radius, this.color);
+    }
+
     move(x, y) {
         this.x = x;
         this.y = y;
