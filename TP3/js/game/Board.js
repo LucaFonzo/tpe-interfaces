@@ -29,6 +29,7 @@ class Board {
     }
 
     async putDisk(ctx, disk, speed, col) {
+        if(col == null) return false;
         let tiles = this.getEmptyTiles(col);
         if (tiles == null) return false;
         for (let i = 0; i < tiles.length - 1; i++) {

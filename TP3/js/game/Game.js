@@ -29,20 +29,56 @@ class Game {
         //Creates a temporary canvas to move the disk
         let tempCanvas = this.initMoveDiskCanvas();
 
-        this.pile1.addEventListener('mousedown', (e) => {
+        this.pile1.addEventListener('mousedown', async (e) => {
             if (this.currentPlayer !== this.players.player1) return;
+             
             this.currentPlayer.consumeDisk();
             this.currentPlayer.updateDiskPile();
             this.ctx.canvas.parentElement.appendChild(tempCanvas);
-        }
-        );
+        });
+
         this.pile2.addEventListener('mousedown', (e) => {
             if (this.currentPlayer !== this.players.player2) return;
+
             this.currentPlayer.consumeDisk();
             this.currentPlayer.updateDiskPile();
             this.ctx.canvas.parentElement.appendChild(tempCanvas);
-        }
-        );
+        });
+    }
+
+    initMoveDiskCanvas() {
+        let tempCanvas = document.createElement('canvas');
+        tempCanvas.width = this.config.width;
+        tempCanvas.height = this.config.height;
+        tempCanvas.classList.add('temporal-canvas');
+        let tempCtx = tempCanvas.getContext('2d');
+        const moveDisk = (e) => this.moveDisk(e, tempCtx);
+        tempCanvas.addEventListener('mousemove', moveDisk);
+        tempCanvas.addEventListener('mouseup', async (e) => {
+            let col = this.getColumn();
+            tempCtx.clearRect(0, 0, this.config.width, this.config.height);
+            tempCanvas.removeEventListener('mousemove', moveDisk);
+            tempCanvas.classList.add('dying');
+            let success = await this.board.putDisk(this.ctx, this.currentPlayer.disk.makeCopy(), this.config.tileSize / 8, col);
+            if (success) {
+                this.switchTurns();
+            }
+            else {
+                this.currentPlayer.restoreDisk();
+                this.currentPlayer.updateDiskPile();
+            }
+            this.ctx.canvas.parentElement.removeChild(tempCanvas);
+            tempCanvas.addEventListener('mousemove', moveDisk);
+            tempCanvas.classList.remove('dying');
+        });
+        tempCanvas.addEventListener('mouseleave', (e) => {
+            tempCtx.clearRect(0, 0, this.config.width, this.config.height);
+            this.currentPlayer.restoreDisk();
+            this.currentPlayer.updateDiskPile();
+            this.ctx.canvas.parentElement.removeChild(tempCanvas);
+        });
+
+        return tempCanvas;
     }
 
     moveDisk(e, tempCtx) {
@@ -59,38 +95,10 @@ class Game {
     getColumn() {
         let x = this.currentPlayer.getDisk().getPosition().x;
         let col = Math.floor((x - this.board.x) / this.config.tileSize);
-        return col;
-    }
-
-    getBoard() {
-        return this.board;
-    }
-
-    initMoveDiskCanvas() {
-        let tempCanvas = document.createElement('canvas');
-        tempCanvas.width = this.config.width;
-        tempCanvas.height = this.config.height;
-        tempCanvas.classList.add('temporal-canvas');
-        let tempCtx = tempCanvas.getContext('2d');
-        tempCanvas.addEventListener('mousemove', (e) => this.moveDisk(e, tempCtx));
-        tempCanvas.addEventListener('mouseup', (e) => {
-            let col = this.getColumn();
-            let success = this.board.putDisk(this.ctx, this.currentPlayer.disk.makeCopy(), this.config.tileSize / 8, col);
-            if (success) {
-                this.switchTurns();
-            }
-            else {
-                this.currentPlayer.restoreDisk();
-                this.currentPlayer.updateDiskPile();
-            }
-            tempCtx.clearRect(0, 0, this.config.width, this.config.height);
-            this.ctx.canvas.parentElement.removeChild(tempCanvas);
-        });
-        return tempCanvas;
-    }
-
-    isTurnOfPlayerOne() {
-        return this.currentPlayer === this.players.player1;
+        if(col >= 0 && col < this.config.cols){
+            return col;
+        }
+        return null;
     }
 
     switchTurns() {

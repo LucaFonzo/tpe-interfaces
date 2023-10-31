@@ -114,3 +114,7 @@ div button {
     z-index: 2;
     cursor: grabbing;
 }
+
+.temporal-canvas.dying {
+    cursor: not-allowed;
+}
