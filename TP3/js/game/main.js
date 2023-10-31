@@ -1,7 +1,3 @@
-import Board from './Board.js';
-import Player from './Player.js';
-import Disk from './Disk.js';
-import Tile from './Tile.js';
 import Game from './Game.js';
 
 const canvas = document.querySelector('canvas');
@@ -10,8 +6,6 @@ const ctx = canvas.getContext('2d');
 
 let config;
 let game;
-let disk1;
-let disk2;
 
 const slider = document.querySelector('input[type=range]');
 const p1Name = document.querySelector('#player1-name');
@@ -47,12 +41,8 @@ const setConfig = (e) => {
 
 const start = () => {
     setConfig();
-    disk1 = new Disk(50, 50, config.tileSize / 3, config.players[0].color);
-    disk2 = new Disk(50, 50, config.tileSize / 3, config.players[1].color);
     game = new Game(ctx, config);
     game.initGame();
-    document.querySelector('#put').addEventListener('click', put);
-    document.querySelector('#put').disabled = false;
 }
 
 document.querySelector('#start').addEventListener('click', start);
