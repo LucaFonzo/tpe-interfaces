@@ -45,17 +45,6 @@ const setConfig = (e) => {
     };
 }; 
 
-const put = async (e) => {
-    e.target.removeEventListener('click', put);
-    e.target.disabled = true;
-    let disk = game.isTurnOfPlayerOne() ? disk1 : disk2;
-    let putInColumn = Math.floor((Math.random() * config.cols));
-    await game.getBoard().animateFall(ctx, disk, config.tileSize/8, putInColumn);
-    e.target.addEventListener('click', put);
-    e.target.disabled = false;
-    game.switchTurns();
-}
-
 const start = () => {
     setConfig();
     disk1 = new Disk(50, 50, config.tileSize / 3, config.players[0].color);
@@ -65,6 +54,5 @@ const start = () => {
     document.querySelector('#put').addEventListener('click', put);
     document.querySelector('#put').disabled = false;
 }
-
 
 document.querySelector('#start').addEventListener('click', start);
