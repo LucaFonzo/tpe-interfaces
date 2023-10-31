@@ -20,6 +20,9 @@ class Game {
         this.ctx.clearRect(0, 0, this.config.width, this.config.height);
         this.ctx.canvas.parentElement.querySelector('.player-info.p1')?.remove();
         this.ctx.canvas.parentElement.querySelector('.player-info.p2')?.remove();
+        this.ctx.canvas.parentElement.querySelector('.winner')?.remove();
+        this.players.player1.fillDisks(this.config.totalDisks);
+        this.players.player2.fillDisks(this.config.totalDisks);
         //Draws new board
         this.board.draw(this.ctx);
         this.players.player1.displayPlayerInfo(this.ctx, 1);
@@ -61,6 +64,7 @@ class Game {
             tempCanvas.classList.add('dying');
             let success = await this.board.putDisk(this.ctx, this.currentPlayer.disk.makeCopy(), this.config.tileSize / 8, col);
             if (success) {
+                this.checkWin(success[1], success[2]);
                 this.switchTurns();
             }
             else {
@@ -103,6 +107,97 @@ class Game {
 
     switchTurns() {
         this.currentPlayer = this.currentPlayer === this.players.player1 ? this.players.player2 : this.players.player1;
+    }
+
+    checkWin(row, col) {
+        let disk = this.board[row][col].getDisk();
+        if (this.checkHorizontal(row, col, disk) || this.checkVertical(row, col, disk) || this.checkDiagonal(row, col, disk)) {
+            this.currentPlayer.incrementScore();
+            let winner = document.createElement('div');
+            winner.classList.add('winner');
+            winner.innerHTML = `
+                <div>
+                    <h1>${this.currentPlayer.getName()} wins!</h1>
+                    <button class="primary-btn">Play again</button>
+                </div>
+            `;
+            winner.height = this.config.height;
+            winner.width = this.config.width;
+            winner.querySelector('button').addEventListener('click', () => {
+                this.initGame();
+                this.currentPlayer = this.players.player1;
+            });
+            this.ctx.canvas.parentElement.appendChild(winner);
+        }
+    }
+
+    checkHorizontal(row, col, disk) {
+        let count = 1;
+        let i = col - 1;
+        while (i >= 0 && this.board[row][i].getDisk()?.getColor() === disk.getColor()) {
+            count++;
+            i--;
+            if(count >= 4) return true;
+        }
+        i = col + 1;
+        while (i < this.config.cols && this.board[row][i].getDisk()?.getColor() === disk.getColor()) {
+            count++;
+            i++;
+            if(count >= 4) return true;
+        }
+    }
+
+    checkVertical(row, col, disk) {
+        let count = 1;
+        let i = row - 1;
+        while (i >= 0 && this.board[i][col].getDisk()?.getColor() === disk.getColor()) {
+            count++;
+            i--;
+            if(count >= 4) return true;
+        }
+        i = row + 1;
+        while (i < this.config.rows && this.board[i][col].getDisk()?.getColor() === disk.getColor()) {
+            count++;
+            i++;
+            if(count >= 4) return true;
+        }
+    }
+
+    checkDiagonal(row, col, disk) {
+        let count = 1;
+        let i = row - 1;
+        let j = col - 1;
+        while (i >= 0 && j >= 0 && this.board[i][j].getDisk()?.getColor() === disk.getColor()) {
+            count++;
+            i--;
+            j--;
+            if(count >= 4) return true;
+        }
+        i = row + 1;
+        j = col + 1;
+        while (i < this.config.rows && j < this.config.cols && this.board[i][j].getDisk()?.getColor() === disk.getColor()) {
+            count++;
+            i++;
+            j++;
+            if(count >= 4) return true;
+        }
+        count = 1;
+        i = row - 1;
+        j = col + 1;
+        while (i >= 0 && j < this.config.cols && this.board[i][j].getDisk()?.getColor() === disk.getColor()) {
+            count++;
+            i--;
+            j++;
+            if(count >= 4) return true;
+        }
+        i = row + 1;
+        j = col - 1;
+        while (i < this.config.rows && j >= 0 && this.board[i][j].getDisk()?.getColor() === disk.getColor()) {
+            count++;
+            i++;
+            j--;
+            if(count >= 4) return true;
+        }
     }
 
 

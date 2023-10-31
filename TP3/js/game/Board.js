@@ -36,7 +36,7 @@ class Board {
             await tiles[i].animateFall(ctx, disk, speed, true);
         }
         await tiles[tiles.length - 1].putDisk(ctx, disk, speed, false);
-        return true;
+        return [true, tiles.length - 1, col];
     }
 
     getEmptyTiles(col) {

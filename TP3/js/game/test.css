@@ -118,3 +118,17 @@ div button {
 .temporal-canvas.dying {
     cursor: not-allowed;
 }
+
+.winner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgba(19, 80, 19, 0.523);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}

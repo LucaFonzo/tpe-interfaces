@@ -39,6 +39,10 @@ class Player {
         this.totalDisks++;
     }
 
+    fillDisks(totalDisks) {
+        this.totalDisks = totalDisks;
+    }
+
     getDisk() {
         return this.disk;
     }
