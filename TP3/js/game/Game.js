@@ -8,24 +8,22 @@ class Game {
         this.auxCtx = null;
         this.config = config;
         this.players = {
-            player1: new Player(1, config.players[0].name, config.players[0].color, config.players[0].character, config.players[0].img, config.totalDisks, new Disk(0, 0, config.tileSize / 3, config.players[0].color)),
-            player2: new Player(2, config.players[1].name, config.players[1].color, config.players[1].character, config.players[1].img, config.totalDisks, new Disk(0, 0, config.tileSize / 3, config.players[1].color))
+            player1: new Player(config.players[0].name, config.players[0].color, config.players[0].character, config.players[0].img, config.totalDisks, new Disk(0, 0, config.tileSize / 3, config.players[0].color)),
+            player2: new Player(config.players[1].name, config.players[1].color, config.players[1].character, config.players[1].img, config.totalDisks, new Disk(0, 0, config.tileSize / 3, config.players[1].color))
         };
         this.board = null;
         this.currentPlayer = this.players.player1;
         this.winNumber = config.winNumber;
         this.speed = config.speed;
-        this.pile1 = null;
-        this.pile2 = null;
     }
 
     initGame() {
-        this.board = 
-        new Board(this.config.width / 2 - this.config.cols / 2 * this.config.tileSize, 
-        this.config.height / 2 - this.config.rows / 2 * this.config.tileSize, 
-        this.config.tileSize, 
-        this.config.rows, 
-        this.config.cols);
+        this.board =
+            new Board(this.config.width / 2 - this.config.cols / 2 * this.config.tileSize,
+                this.config.height / 2 - this.config.rows / 2 * this.config.tileSize,
+                this.config.tileSize,
+                this.config.rows,
+                this.config.cols);
 
         this.initScreen();
         //Creates a temporary canvas to move the disk
@@ -153,8 +151,11 @@ class Game {
         winner.height = this.config.height;
         winner.width = this.config.width;
         winner.querySelector('button').addEventListener('click', () => {
-            this.initGame();
+            let aux = this.players.player1;
+            this.players.player1 = this.players.player2;
+            this.players.player2 = aux;
             this.currentPlayer = this.players.player1;
+            this.initGame();
         });
         this.ctx.canvas.parentElement.appendChild(winner);
     }
@@ -165,14 +166,13 @@ class Game {
         while (i >= 0 && this.board[row][i].getDisk()?.getColor() === disk.getColor()) {
             count++;
             i--;
-            if (count >= this.winNumber) return true;
         }
         i = col + 1;
         while (i < this.config.cols && this.board[row][i].getDisk()?.getColor() === disk.getColor()) {
             count++;
             i++;
-            if (count >= this.winNumber) return true;
         }
+        if (count >= this.winNumber) return true;
     }
 
     checkVertical(row, col, disk) {
@@ -181,14 +181,13 @@ class Game {
         while (i >= 0 && this.board[i][col].getDisk()?.getColor() === disk.getColor()) {
             count++;
             i--;
-            if (count >= this.winNumber) return true;
         }
         i = row + 1;
         while (i < this.config.rows && this.board[i][col].getDisk()?.getColor() === disk.getColor()) {
             count++;
             i++;
-            if (count >= this.winNumber) return true;
         }
+        if (count >= this.winNumber) return true;
     }
 
     checkDiagonal(row, col, disk) {
@@ -199,7 +198,6 @@ class Game {
             count++;
             i--;
             j--;
-            if (count >= this.winNumber) return true;
         }
         i = row + 1;
         j = col + 1;
@@ -207,8 +205,9 @@ class Game {
             count++;
             i++;
             j++;
-            if (count >= this.winNumber) return true;
         }
+        if (count >= this.winNumber) return true;
+
         count = 1;
         i = row - 1;
         j = col + 1;
@@ -216,7 +215,6 @@ class Game {
             count++;
             i--;
             j++;
-            if (count >= this.winNumber) return true;
         }
         i = row + 1;
         j = col - 1;
@@ -224,8 +222,8 @@ class Game {
             count++;
             i++;
             j--;
-            if (count >= this.winNumber) return true;
         }
+        if (count >= this.winNumber) return true;
     }
 }
 
