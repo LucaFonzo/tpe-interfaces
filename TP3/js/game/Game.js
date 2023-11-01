@@ -11,7 +11,7 @@ class Game {
             player1: new Player(1, config.players[0].name, config.players[0].color, config.players[0].character, config.players[0].img, config.totalDisks, new Disk(0, 0, config.tileSize / 3, config.players[0].color)),
             player2: new Player(2, config.players[1].name, config.players[1].color, config.players[1].character, config.players[1].img, config.totalDisks, new Disk(0, 0, config.tileSize / 3, config.players[1].color))
         };
-        this.board = new Board(config.width / 2 - config.cols / 2 * config.tileSize, config.height / 2 - config.rows / 2 * config.tileSize, config.tileSize, config.rows, config.cols);
+        this.board = null;
         this.currentPlayer = this.players.player1;
         this.winNumber = config.winNumber;
         this.speed = config.speed;
@@ -20,6 +20,13 @@ class Game {
     }
 
     initGame() {
+        this.board = 
+        new Board(this.config.width / 2 - this.config.cols / 2 * this.config.tileSize, 
+        this.config.height / 2 - this.config.rows / 2 * this.config.tileSize, 
+        this.config.tileSize, 
+        this.config.rows, 
+        this.config.cols);
+
         this.initScreen();
         //Creates a temporary canvas to move the disk
         this.initSecondaryCanvas();
