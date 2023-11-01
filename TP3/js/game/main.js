@@ -35,7 +35,9 @@ const setConfig = (e) => {
                 img: "../../assets/img/profile-pictures/messi.png"
             }
         ],
-        totalDisks: 10
+        totalDisks: 10,
+        winNumber: 4,
+        speed: 10
     };
 }; 
 

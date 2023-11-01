@@ -29,9 +29,9 @@ class Board {
     }
 
     async putDisk(ctx, disk, speed, col) {
-        if(col == null) return false;
+        if(col == null) return [false, null, null];
         let tiles = this.getEmptyTiles(col);
-        if (tiles == null) return false;
+        if (tiles == null) return [false, null, null];
         for (let i = 0; i < tiles.length - 1; i++) {
             await tiles[i].animateFall(ctx, disk, speed, true);
         }
