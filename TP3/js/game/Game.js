@@ -145,7 +145,7 @@ class Game {
         let winner = document.createElement('div');
         winner.classList.add('winner');
         winner.innerHTML = `
-            <div>
+            <div class="d-flex-col align-center">
                 <h1>${this.currentPlayer.getName()} wins!</h1>
                 <button class="primary-btn">Play again</button>
             </div>

@@ -46,7 +46,7 @@ div button {
     user-select: none;
     border-radius: 30px;
     border: 5px solid var(--main-s2);
-    background-color: var(--sec-l2);
+    background: url('../../assets/img/tom-jerry-fondo.jpg') center;
 }
 
 .game-canvas canvas:not(.temporal-canvas) {
