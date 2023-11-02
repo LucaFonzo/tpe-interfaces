@@ -18,12 +18,12 @@ class Game {
     }
 
     initGame() {
-        this.board =
-            new Board(this.config.width / 2 - this.config.cols / 2 * this.config.tileSize,
-                this.config.height / 2 - this.config.rows / 2 * this.config.tileSize,
-                this.config.tileSize,
-                this.config.rows,
-                this.config.cols);
+        this.board = new Board(
+            this.config.width / 2 - this.config.cols / 2 * this.config.tileSize,
+            this.config.height / 2 - this.config.rows / 2 * this.config.tileSize,
+            this.config.tileSize,
+            this.config.rows,
+            this.config.cols);
 
         this.initScreen();
         //Creates a temporary canvas to move the disk
