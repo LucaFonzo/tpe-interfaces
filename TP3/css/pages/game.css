@@ -11,7 +11,7 @@
   color: var(--main);
 }
 
-.breadcrumbs *:not(:last-child){
+.breadcrumbs *:not(:last-child) {
   margin-right: 12px;
 }
 
@@ -33,39 +33,9 @@
 /*Game screen*/
 
 .game-screen {
-  display: flex;
-  flex-direction: column;
   position: relative;
-  width: fit-content;
-  max-width: 75%;
-}
-
-.game-screen::after{
-  content: "";
-  height: 32px;
-  width: 32px;
-  position: absolute;
-  background: url("../../assets/icons/sound.svg") no-repeat center;
-  background-size: contain;
-  top: 2%;
-  left: 2%;
-}
-
-.game-screen img {
-  object-fit: cover;
-  height: 92%;
-}
-
-.game-screen div {
-  display: flex;
-  justify-content: end;
-  background-color: var(--sec-s2);
-  padding: 1%;
-  height: 48px;
-}
-
-.game-screen div svg {
-  margin: 0 10px;
+  width: 1010px;
+  height: 650px;
 }
 
 /*Help panel*/
@@ -74,35 +44,34 @@
   display: grid;
   grid-template-columns: 40px 1fr 40px;
   grid-template-rows: 40px 1fr 1fr 40px;
-  grid-template-areas: 
+  grid-template-areas:
     "circ1 . circ2"
     ". controls ."
     ". instructions ."
     "circ3 . circ4";
-  width: 20%;
   max-width: 293px;
   margin-left: 5%;
   padding: 1%;
 }
 
-.help-panel > svg {
+.help-panel>svg {
   justify-self: center;
   align-self: center;
 }
 
-.help-panel > svg:nth-child(1){
+.help-panel>svg:nth-child(1) {
   grid-area: circ1;
 }
 
-.help-panel > svg:nth-child(2){
+.help-panel>svg:nth-child(2) {
   grid-area: circ2;
 }
 
-.help-panel > svg:nth-child(3){
+.help-panel>svg:nth-child(3) {
   grid-area: circ3;
 }
 
-.help-panel > svg:nth-child(4){
+.help-panel>svg:nth-child(4) {
   grid-area: circ4;
 }
 
@@ -113,7 +82,7 @@
   width: 100%;
 }
 
-.controls > *:not(:last-child) {
+.controls>*:not(:last-child) {
   margin-bottom: 10%;
 }
 
@@ -123,7 +92,8 @@
   align-items: center;
 }
 
-.controls div div, .controls>div>svg {
+.controls div div,
+.controls>div>svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -151,7 +121,7 @@
   padding: 4% 4% 3% 4%;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 35px 1fr 1fr 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "title title title"
     "desc . gallery"
     "info . gallery"
@@ -159,29 +129,29 @@
   height: auto;
 }
 
-.description h2{
+.description h2 {
   grid-area: title;
 }
 
-.description > p {
+.description>p {
   grid-area: desc;
   margin-top: 2%;
   margin-bottom: 4%;
 }
 
-.description > div:first-of-type {
+.description>div:first-of-type {
   grid-area: info;
   display: flex;
   flex-direction: column;
 }
 
-.description > div:first-of-type p {
+.description>div:first-of-type p {
   display: flex;
   align-items: center;
   margin: 10px 0;
 }
 
-.description > div:first-of-type p svg {
+.description>div:first-of-type p svg {
   margin-left: 9px;
 }
 
@@ -245,7 +215,7 @@
   width: 20%;
 }
 
-.new-comment-body div p{
+.new-comment-body div p {
   text-align: center;
   background-color: var(--sec-l2);
   border: solid 1px var(--danger);
@@ -289,7 +259,7 @@
   flex-direction: column;
 }
 
-.comments-container>span{
+.comments-container>span {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -299,7 +269,8 @@
   padding-bottom: 1%
 }
 
-.comments-container>span h2, .comments-container>span h3 {
+.comments-container>span h2,
+.comments-container>span h3 {
   color: var(--black);
 }
 
@@ -382,14 +353,15 @@
 }
 
 @keyframes append-comment {
-	from {
-		transform: translateY(-400px);
-		opacity: 0;
-	}
-	to {
-		transform: translateY(0px);
-		opacity: 1;	
-	}
+  from {
+    transform: translateY(-400px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .created-comment {
