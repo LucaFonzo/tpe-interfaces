@@ -1,6 +1,5 @@
 class Player {
-    constructor(playerNumber, name, color, character, image, totalDisks, disk) {
-        this.playerNumber = playerNumber;
+    constructor(name, color, character, image, totalDisks, disk) {
         this.name = name;
         this.character = character;
         this.image = image;
