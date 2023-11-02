@@ -63,9 +63,10 @@ class Game {
         this.tempCtx = this.tempCanvas.getContext('2d');
 
         const moveDisk = (e) => this.moveDisk(e);
+        const dropDisk = async (e) => await this.dropDisk(e, moveDisk, dropDisk);
 
         this.tempCanvas.addEventListener('mousemove', moveDisk);
-        this.tempCanvas.addEventListener('mouseup', async (e) => { await this.dropDisk(e, moveDisk) });
+        this.tempCanvas.addEventListener('mouseup', dropDisk);
         this.tempCanvas.addEventListener('mouseleave', () => { this.cancelMove() });
     }
 
@@ -88,9 +89,10 @@ class Game {
         }
     }
 
-    async dropDisk(e, moveDiskFunction) {
+    async dropDisk(e, moveDiskFunction, dropDiskFunction) {
         this.tempCtx.clearRect(0, 0, this.config.width, this.config.height);
         this.tempCanvas.removeEventListener('mousemove', moveDiskFunction);
+        this.tempCanvas.removeEventListener('mouseup', dropDiskFunction);
         this.tempCanvas.classList.add('dying');
 
         let col = this.getColumn();
@@ -108,6 +110,7 @@ class Game {
 
         this.ctx.canvas.parentElement.removeChild(this.tempCanvas);
         this.tempCanvas.addEventListener('mousemove', moveDiskFunction);
+        this.tempCanvas.addEventListener('mouseup', dropDiskFunction);
         this.tempCanvas.classList.remove('dying');
     }
 
