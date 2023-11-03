@@ -12,6 +12,8 @@
     background-image: url(../../assets/img/tom-jerry-fondo.jpg);
     background-size: cover;
     background-position-y: -90px;
+    border-radius: 10px;
+    border: 6px solid var(--main);
     z-index: 1;
 }
 
@@ -22,15 +24,15 @@
     margin: 12.5px 55px;
     display: grid;
     grid-template-rows: 1fr 8fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 3fr 3fr 2fr 1fr;
     grid-template-areas:
-        "title title title"
-        "p1 settings p2"
-        "type type start";
+        "title title title title"
+        "p1 settings p2 p2"
+        "type type type start";
     padding: 18px 28px;
     background-color: #1c1e26d5;
     border-radius: 25px;
-    border: 6px solid #2B2986;
+    border: 6px solid rgb(124, 40, 41);
     z-index: 2;
 }
 
@@ -47,7 +49,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid #E18B8B;
+    border: 2px solid rgb(162, 29, 107);
     border-radius: 25px;
     margin-top: 15px;
     padding: 5px 35px;
@@ -70,7 +72,8 @@
 
 .start .player input {
     color: var(--black);
-    font-size: 40px;
+    font-family: 'Ruda';
+    font-size: 24px;
     width: 185px;
     height: 45px;
     padding-left: 10px;
@@ -78,7 +81,7 @@
 }
 
 .start .player input::placeholder {
-    font-size: 40px;
+    font-size: 24px;
 }
 
 .start .player input:focus {
@@ -89,7 +92,8 @@
     font-size: 30px;
 }
 
-.start .color-select, .start .char-select {
+.start .color-select,
+.start .char-select {
     display: block;
     width: 50px;
     height: 50px;
@@ -111,14 +115,14 @@
     grid-area: p1;
 }
 
-.game-screen .settings {
+.start .settings {
     grid-area: settings;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.game-screen .settings #background {
+.start .settings #background {
     cursor: pointer;
     width: 150px;
     height: 100px;
@@ -127,7 +131,7 @@
     background-size: cover;
 }
 
-.game-screen .settings #board-style {
+.start .settings #board-style {
     cursor: pointer;
     width: 105px;
     height: 100px;
@@ -136,4 +140,49 @@
 
 .p2 {
     grid-area: p2;
+}
+
+.start .game-type {
+    grid-area: type;
+    display: flex;
+    align-items: last baseline;
+    font-size: 40px;
+}
+
+.start .game-type div span {
+    display: flex;
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+.start .radio {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 6px solid #B21E21;
+    background-color: var(--white);
+    margin-right: 10px;
+}
+
+.start .radio.checked {
+    background-image: radial-gradient(circle, var(--sec-s1) 45%, var(--white) 50%);
+}
+
+.start .play {
+    font-size: 40px;
+    grid-area: start;
+    display: flex;
+    align-self: last baseline;
+    justify-self: start;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.start .play:hover {
+    transform: scale(1.1);
+    background-image: linear-gradient(var(--white) 0 0);
+    background-position: left bottom;
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s;
 }
