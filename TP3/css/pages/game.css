@@ -26,8 +26,8 @@
 .game {
   display: flex;
   justify-content: space-between;
-  margin: 0 5%;
-  max-height: 650px;
+  margin: 0 10%;
+  height: 712px;
 }
 
 /*Game screen*/
