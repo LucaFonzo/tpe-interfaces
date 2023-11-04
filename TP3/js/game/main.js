@@ -11,9 +11,10 @@ function initialize() {
     startBtn.addEventListener("click", (e) => {
         startScreen.classList.add("d-none");
 
-        const configuration = setConfiguration();
-        const game = new Game(configuration);
-        game.initGame(configuration);
+      const configuration = setConfiguration();
+      console.log(configuration);
+      const game = new Game(configuration);
+      game.initGame(configuration);
     });
 
 
@@ -177,13 +178,13 @@ function setConfiguration() {
                 name: document.querySelector('input[name="p1-name"]').value,
                 color: colorP1,
                 character: charP1,
-                img: "../../assets/img/profile-pictures/profile-pic.png"
+            img: document.querySelector(".player.p1 img").src
             },
             {
                 name: document.querySelector('input[name="p2-name"]').value,
                 color: colorP2,
                 character: charP2,
-                img: "../../assets/img/profile-pictures/messi.png"
+              img: document.querySelector(".player.p2 img").src
             }
         ],
         totalDisks: disks,
