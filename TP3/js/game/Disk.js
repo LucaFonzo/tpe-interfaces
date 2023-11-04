@@ -30,9 +30,17 @@ class Disk {
 
   draw(ctx) {
     ctx.beginPath();
+    const imageColor = new Image();
+    const imageCharacter = new Image();
     ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-    ctx.fillStyle = "red";
-    ctx.fill();
+    imageCharacter.src = this.character;
+    imageColor.src = this.color;
+    imageCharacter.onload = () => {
+      ctx.drawImage(imageCharacter, this.x - 25, this.y - 22, 50, 50);
+    };
+    imageColor.onload = () => {
+      ctx.drawImage(imageColor, this.x - 25, this.y - 22, 50, 50);
+    };
     ctx.closePath();
   }
 }

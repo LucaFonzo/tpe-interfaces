@@ -200,11 +200,11 @@ function setConfiguration() {
 function getColor(color) {
     switch (color) {
         case 'red':
-            return "../../assets/game/disk-r.png";
+            return "assets/game/disk-r.png";
         case 'blue':
-            return "../../assets/game/disk-b.png";
+            return "assets/game/disk-b.png";
         case 'yellow':
-            return "../../assets/game/disk-y.png";
+            return "assets/game/disk-y.png";
         default:
             return null;
     }
@@ -213,11 +213,11 @@ function getColor(color) {
 function getCharacter(character) {
     switch (character) {
         case 'tom':
-            return "../../assets/game/tom.png";
+            return "assets/game/tom.png";
         case 'jerry':
-            return "../../assets/game/jerry.png";
+            return "assets/game/jerry.png";
         case 'spike':
-            return "../../assets/game/spike.png";
+            return "assets/game/spike.png";
         default:
             return null;
     }
