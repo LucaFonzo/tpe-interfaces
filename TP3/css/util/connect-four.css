@@ -6,8 +6,7 @@
 .game-screen * {
     font-family: 'Handjet', cursive;
 }
-
-.game-screen canvas {
+.background-tom {
     position: absolute;
     background-image: url(../../assets/img/tom-jerry-fondo.jpg);
     background-size:cover;

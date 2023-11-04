@@ -12,7 +12,7 @@ function initialize() {
         startScreen.classList.add("d-none");
 
       const configuration = setConfiguration();
-      console.log(configuration);
+      console.log(configuration.players);
       const game = new Game(configuration);
       game.initGame(configuration);
     });
