@@ -150,7 +150,6 @@ nav.active {
 
 nav ul li span:hover,
 ul.categories li span:hover {
-    
     background-image: linear-gradient(var(--accent) 0 0);
     background-position: left bottom;
     background-size: 100% 2px;
