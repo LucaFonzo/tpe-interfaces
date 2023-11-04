@@ -2,8 +2,8 @@ import Player from './Player.js';
 import Board from './Board.js';
 import Disk from './Disk.js';
 class Game {
-    constructor(ctx, config) {
-        this.ctx = ctx
+    constructor(config) {
+        this.ctx = config.context;
         this.auxCanvas = null;
         this.auxCtx = null;
         this.config = config;
