@@ -179,13 +179,13 @@ function setConfiguration(container) {
                 name: document.querySelector('input[name="p1-name"]').value,
                 color: colorP1,
                 character: charP1,
-                img: "../../assets/img/profile-pictures/profile-pic.png"
+            img: document.querySelector(".player.p1 img").src
             },
             {
                 name: document.querySelector('input[name="p2-name"]').value,
                 color: colorP2,
                 character: charP2,
-                img: "../../assets/img/profile-pictures/messi.png"
+              img: document.querySelector(".player.p2 img").src
             }
         ],
         totalDisks: disks,
@@ -201,11 +201,11 @@ function setConfiguration(container) {
 function getColor(color) {
     switch (color) {
         case 'red':
-            return "../../assets/game/disk-r.png";
+            return "assets/game/disk-r.png";
         case 'blue':
-            return "../../assets/game/disk-b.png";
+            return "assets/game/disk-b.png";
         case 'yellow':
-            return "../../assets/game/disk-y.png";
+            return "assets/game/disk-y.png";
         default:
             return null;
     }
@@ -214,11 +214,11 @@ function getColor(color) {
 function getCharacter(character) {
     switch (character) {
         case 'tom':
-            return "../../assets/game/tom.png";
+            return "assets/game/tom.png";
         case 'jerry':
-            return "../../assets/game/jerry.png";
+            return "assets/game/jerry.png";
         case 'spike':
-            return "../../assets/game/spike.png";
+            return "assets/game/spike.png";
         default:
             return null;
     }

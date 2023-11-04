@@ -8,8 +8,8 @@ class Game {
         this.auxCtx = null;
         this.config = config;
         this.players = {
-            player1: new Player(config.players[0].name, config.players[0].color, config.players[0].character, config.players[0].img, config.totalDisks, new Disk(0, 0, config.tileSize / 3, config.players[0].color)),
-            player2: new Player(config.players[1].name, config.players[1].color, config.players[1].character, config.players[1].img, config.totalDisks, new Disk(0, 0, config.tileSize / 3, config.players[1].color))
+            player1: new Player(config.players[0].name, config.players[0].color, config.players[0].character, config.players[0].img, config.totalDisks, new Disk(0, 0, config.tileSize / 3, config.players[0].color,config.players[0].character)),
+          player2: new Player(config.players[1].name, config.players[1].color, config.players[1].character, config.players[1].img, config.totalDisks, new Disk(0, 0, config.tileSize / 3, config.players[1].color, config.players[1].character))
         };
         this.board = null;
         this.currentPlayer = this.players.player1;
@@ -150,7 +150,7 @@ class Game {
         let winner = document.createElement('div');
         winner.classList.add('winner');
         winner.innerHTML = `
-            <div>
+            <div class="d-flex-col align-center">
                 <h1>${this.currentPlayer.getName()} wins!</h1>
                 <button class="primary-btn">Play again</button>
             </div>
