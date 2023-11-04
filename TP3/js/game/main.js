@@ -4,19 +4,20 @@ document.addEventListener('DOMContentLoaded', initialize);
 
 function initialize() {
     setListeners();
-
+    const gameSection = document.querySelector(".game");
     const startBtn = document.querySelector(".start .play");
     const startScreen = document.querySelector(".start");
 
-    startBtn.addEventListener("click", (e) => {
+    startBtn.addEventListener("click", async (e) => {
         startScreen.classList.add("d-none");
-
-        const configuration = setConfiguration();
+        gameSection.classList.add("active");
+        gameSection.querySelector(".overlay").classList.add("active");
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+        gameSection.querySelector(".overlay").classList.remove("active");
+        const configuration = setConfiguration(gameSection.querySelector(".game-screen"));
         const game = new Game(configuration);
         game.initGame(configuration);
     });
-
-
 
 }
 
@@ -130,11 +131,11 @@ function setListeners() {
     });
 }
 
-function setConfiguration() {
+function setConfiguration(container) {
 
     const canvas = document.querySelector('canvas');
     const checkedRadio = document.querySelector('.radio.checked').getAttribute('value');
-
+    canvas.width = container.offsetWidth;
     let rows;
     let cols;
     let disks;
@@ -170,6 +171,7 @@ function setConfiguration() {
         width: parseInt(canvas.width),
         height: parseInt(canvas.height),
         tileSize: 60,
+        tileStyle: "t1",
         rows,
         cols,
         players: [

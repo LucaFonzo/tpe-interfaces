@@ -22,13 +22,14 @@ class Game {
             this.config.width / 2 - this.config.cols / 2 * this.config.tileSize,
             this.config.height / 2 - this.config.rows / 2 * this.config.tileSize,
             this.config.tileSize,
+            this.config.tileStyle,
             this.config.rows,
             this.config.cols);
 
         this.initScreen();
         //Creates a temporary canvas to move the disk
         this.initSecondaryCanvas();
-
+        /*
         this.players.player1.getPileCanvas().addEventListener('mousedown', async (e) => {
             if (this.currentPlayer !== this.players.player1) return;
             this.playTurn();
@@ -37,7 +38,7 @@ class Game {
         this.players.player2.getPileCanvas().addEventListener('mousedown', (e) => {
             if (this.currentPlayer !== this.players.player2) return;
             this.playTurn();
-        });
+        });*/
     }
 
     initScreen() {
@@ -46,12 +47,15 @@ class Game {
         this.ctx.canvas.parentElement.querySelector('.player-info.p1')?.remove();
         this.ctx.canvas.parentElement.querySelector('.player-info.p2')?.remove();
         this.ctx.canvas.parentElement.querySelector('.winner')?.remove();
+
         //Draws new board
         this.board.draw(this.ctx);
+        /*
         this.players.player1.fillDisks(this.config.totalDisks);
         this.players.player1.displayPlayerInfo(this.ctx, 1);
         this.players.player2.fillDisks(this.config.totalDisks);
         this.players.player2.displayPlayerInfo(this.ctx, 2);
+        */
     }
 
     initSecondaryCanvas() {

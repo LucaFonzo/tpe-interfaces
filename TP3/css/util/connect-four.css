@@ -254,7 +254,9 @@
     cursor: pointer;
     width: 105px;
     height: 100px;
-    background-image: url(../../assets/game/board-1.png);
+    background-image: url(../../assets/game/t1-mid.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .p2 {
@@ -308,3 +310,4 @@
     background-size: 100% 2px;
     transition: .4s;
 }
+

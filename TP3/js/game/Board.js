@@ -1,10 +1,11 @@
 import Tile from "./Tile.js";
 
 class Board {
-    constructor(x, y, tileSize, rows, cols) {
+    constructor(x, y, tileSize, tileStyle, rows, cols) {
         this.x = x;
         this.y = y;
         this.tileSize = tileSize;
+        this.tileStyle = tileStyle;
         this.rows = rows;
         this.cols = cols;
         this.tiles = [];
@@ -12,10 +13,38 @@ class Board {
     }
 
     initBoard() {
+        let base = "assets/game/" + this.tileStyle;
+        let url;
         for (let i = 0; i < this.rows; i++) {
             this[i] = [];
             for (let j = 0; j < this.cols; j++) {
-                this[i][j] = new Tile(this.x + j * this.tileSize, this.y + i * this.tileSize, this.tileSize, null);
+
+                if (i === 0) {
+                    if (j === 0) {
+                        url = base + "-left-top-corner.png";
+                    }
+                    else if (j < this.cols - 1) {
+                        url = base + "-mid.png";
+                    }
+                    else if (j === this.cols - 1) {
+                        url = base + "-right-top-corner.png";
+                    }
+                }
+                else if (i < this.rows - 1) {
+                    url = base + "-mid.png";
+                }
+                else if (i === this.rows - 1) {
+                    if (j === 0) {
+                        url = base + "-left-bot-corner.png";
+                    }
+                    else if (j < this.cols - 1) {
+                        url = base + "-mid.png";
+                    }
+                    else if (j === this.cols - 1) {
+                        url = base + "-right-bot-corner.png";
+                    }
+                }
+                this[i][j] = new Tile(this.x + j * this.tileSize, this.y + i * this.tileSize, this.tileSize, url);
             }
         }
     }
@@ -29,7 +58,7 @@ class Board {
     }
 
     async putDisk(ctx, disk, speed, col) {
-        if(col == null) return [false, null, null];
+        if (col == null) return [false, null, null];
         let tiles = this.getEmptyTiles(col);
         if (tiles == null) return [false, null, null];
         for (let i = 0; i < tiles.length - 1; i++) {

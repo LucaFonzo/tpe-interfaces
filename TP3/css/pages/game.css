@@ -25,9 +25,15 @@
 
 .game {
   display: flex;
-  justify-content: space-between;
-  margin: 0 10%;
-  height: 712px;
+  justify-content: space-around;
+  height: 756px;
+}
+
+.game.active {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: fit-content;
 }
 
 /*Game screen*/
@@ -35,7 +41,24 @@
 .game-screen {
   position: relative;
   width: 1010px;
-  height: 650px;
+  height: 720px;
+}
+
+.game .overlay {
+  width: 1010px;
+  height: 720px;
+}
+
+.game.active .game-screen, .game.active .game-screen canvas, .game.active .overlay.active {
+  width: 1400px;
+  height: 720px;
+  transition: width 1s ease;
+}
+
+.game.active .overlay.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Help panel*/
@@ -50,8 +73,20 @@
     ". instructions ."
     "circ3 . circ4";
   max-width: 293px;
-  margin-left: 5%;
   padding: 1%;
+  margin-top: 44px;
+  transition: 1s ease;
+}
+
+.game.active .help-panel {
+  grid-template-columns: 40px 180px auto 180px 40px;
+  grid-template-rows: 40px 1fr 40px;
+  grid-template-areas:
+    "circ1 . . . circ2"
+    ". controls . instructions ."
+    "circ3 . . . circ4";
+  max-width: 30%;
+  transition: 1s ease;
 }
 
 .help-panel>svg {
