@@ -30,6 +30,10 @@
     border: 6px solid var(--main);
 }
 
+.game .timer {
+    display: none;
+}
+
 .game.active .game-screen {
     width: 1400px;
     height: 720px;
@@ -40,6 +44,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.game.active .timer {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 675px;
+    z-index: 2;
+    background-color: rgba(54, 54, 54, 0.814);
+    border-radius: 10px;
+    display: flex;
+    font-size: 35px;
+    padding: 5px;
 }
 
 .game-screen * {

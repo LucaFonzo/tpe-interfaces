@@ -1,6 +1,7 @@
 import Player from './Player.js';
 import Board from './Board.js';
 import Disk from './Disk.js';
+import Timer from './Timer.js';
 class Game {
     constructor(config) {
         this.ctx = config.context;
@@ -15,6 +16,7 @@ class Game {
         this.currentPlayer = this.players.player1;
         this.winNumber = config.winNumber;
         this.speed = config.speed;
+        this.timer = new Timer(config.time, this);
     }
 
     initGame() {
@@ -39,6 +41,8 @@ class Game {
             if (this.currentPlayer !== this.players.player2) return;
             this.playTurn();
         });
+
+        this.timer.start();
     }
 
     initScreen() {
@@ -67,7 +71,7 @@ class Game {
 
         const moveDisk = (e) => this.moveDisk(e);
         const cancelMove = () => this.cancelMove();
-        const dropDisk = async (e) => await this.dropDisk(e, moveDisk, dropDisk, cancelMove);  
+        const dropDisk = async (e) => await this.dropDisk(e, moveDisk, dropDisk, cancelMove);
 
         this.tempCanvas.addEventListener('mousemove', moveDisk);
         this.tempCanvas.addEventListener('mouseup', dropDisk);
@@ -148,32 +152,47 @@ class Game {
         let disk = this.board[row][col].getDisk();
         if (this.checkHorizontal(row, col, disk) || this.checkVertical(row, col, disk) || this.checkDiagonal(row, col, disk)) {
             this.currentPlayer.incrementScore();
-            await this.showWinnerScreen();
+            await this.showEndGameScreen(true);
+        }
+        else if
+            (this.players.player1.getRemainingDisks() === 0
+            &&
+            this.players.player2.getRemainingDisks() === 0) {
+            await this.showEndGameScreen(false);
         }
     }
 
-    async showWinnerScreen() {
-        let winner = document.createElement('div');
-        winner.classList.add('winner', 'd-flex-col', 'align-center', 'justify-between');
-        
-        this.ctx.canvas.parentElement.appendChild(winner);
+    async showEndGameScreen(winner) {
+        let message = document.createElement('div');
+        message.classList.add('winner', 'd-flex-col', 'align-center', 'justify-between');
+        this.ctx.canvas.parentElement.appendChild(message);
         await new Promise(resolve => setTimeout(resolve, 100));
-        winner.classList.add('show');
+        message.classList.add('show');
         await new Promise(resolve => setTimeout(resolve, 500));
-        winner.innerHTML = `
+
+        if (winner) {
+            message.innerHTML = `
             <h1>${this.currentPlayer.getName()} wins!</h1>
             <img src="${this.currentPlayer.getImage()}" alt="${this.currentPlayer.getName()}">
             <span>Score: ${this.currentPlayer.getScore()}</span>
             <h2>Play again!</h2>
         `;
-        winner.querySelector('h2').addEventListener('click', () => {
+        } else {
+            message.innerHTML = `
+            <h1>Draw!</h1>
+            <h2>Play again!</h2>
+        `;
+        }
+
+        message.querySelector('h2').addEventListener('click', () => {
             let aux = this.players.player1;
             this.players.player1 = this.players.player2;
             this.players.player2 = aux;
             this.currentPlayer = this.players.player1;
             this.initGame();
         });
-        
+
+        this.timer.stop();
     }
 
     checkHorizontal(row, col, disk) {
@@ -254,6 +273,10 @@ class Game {
             j--;
         }
         if (count >= this.winNumber) return true;
+    }
+
+    endGame() {
+        this.showEndGameScreen(false);
     }
 }
 

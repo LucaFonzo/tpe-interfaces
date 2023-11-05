@@ -51,6 +51,10 @@ class Player {
         return this.disk;
     }
 
+    getRemainingDisks() {
+        return this.totalDisks;
+    }
+
     displayPlayerInfo(ctx, playerNumber) {
         let canvas = ctx.canvas;
         let div = document.querySelector(`.player.p${playerNumber}`);

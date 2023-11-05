@@ -197,6 +197,7 @@ function setConfiguration(container) {
         totalDisks: disks,
         winNumber: checkedRadio,
         speed,
+        time: 60
     }
 
     return config;
