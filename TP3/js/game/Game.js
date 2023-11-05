@@ -158,11 +158,11 @@ class Game {
             (this.players.player1.getRemainingDisks() === 0
             &&
             this.players.player2.getRemainingDisks() === 0) {
-            await this.showEndGameScreen(false);
+            await this.showEndGameScreen(false, false);
         }
     }
 
-    async showEndGameScreen(winner) {
+    async showEndGameScreen(winner, timeout) {
         let message = document.createElement('div');
         message.classList.add('winner', 'd-flex-col', 'align-center', 'justify-between');
         this.ctx.canvas.parentElement.appendChild(message);
@@ -179,7 +179,7 @@ class Game {
         `;
         } else {
             message.innerHTML = `
-            <h1>Draw!</h1>
+            <h1>Draw! ${timeout ? "Time's up'!" : "You ran out of disks."}</h1>
             <h2>Play again!</h2>
         `;
         }
@@ -276,7 +276,7 @@ class Game {
     }
 
     endGame() {
-        this.showEndGameScreen(false);
+        this.showEndGameScreen(false, true);
     }
 }
 

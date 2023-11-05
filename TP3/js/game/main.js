@@ -8,11 +8,17 @@ function initialize() {
     const gameSection = document.querySelector(".game");
     const startBtn = document.querySelector(".start .play");
     const startScreen = document.querySelector(".start");
+    const alertBtn = document.querySelector(".alert h2");
+
+    alertBtn.addEventListener("click", (e) => {
+        document.querySelector(".alert").classList.add("d-none");
+    });
 
     startBtn.addEventListener("click", async (e) => {
+        const configuration = setConfiguration(gameSection.querySelector(".game-screen"));
+        if(configuration == null) return;
         startScreen.classList.add("d-none");
         gameSection.classList.add("active");
-        const configuration = setConfiguration(gameSection.querySelector(".game-screen"));
         configuration.canvas.classList.remove("d-none");
         gameSection.querySelector(".game-screen").style.backgroundImage = `url(${configuration.background})`;
         const game = new Game(configuration);
@@ -132,6 +138,14 @@ function setListeners() {
 }
 
 function setConfiguration(container) {
+    let nameP1 = document.querySelector('input[name="p1-name"]').value;
+    let nameP2 = document.querySelector('input[name="p2-name"]').value;
+    let time = document.querySelector('input[name="time"]').value == "" ? 60 : document.querySelector('input[name="time"]').value;
+
+    if(nameP1 == "" || nameP2 == "" || time < 15){
+        document.querySelector(".alert").classList.remove("d-none");
+        return null;
+    }
 
     const canvas = document.querySelector('.main-canvas');
     const checkedRadio = document.querySelector('.radio.checked').getAttribute('value');
