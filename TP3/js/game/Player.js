@@ -66,18 +66,19 @@ class Player {
         div.classList.add('active');
         canvas.parentElement.prepend(div);
         this.subctx = div.querySelector('canvas').getContext('2d');
-        this.subctx.canvas.width = 100;
+        this.subctx.canvas.width = 120;
         this.updateDiskPile();
     }
 
     updateDiskPile() {
-        let height = 13 * this.totalDisks;
+        let height = 20 * this.totalDisks;
+        let width = 120;
         this.subctx.canvas.height = height;
-        this.subctx.clearRect(0, 0, 100, height);
-        let img = new Image(100, 13);
+        this.subctx.clearRect(0, 0, width, height);
+        let img = new Image(width, 13);
         img.src = this.color.slice(0, -4) + '-side.png';
         this.subctx.fillStyle = this.subctx.createPattern(img, 'repeat');
-        this.subctx.fillRect(0, 0, 100, height);
+        this.subctx.fillRect(0, 0, width, height);
     }
 
     getPileCanvas() {

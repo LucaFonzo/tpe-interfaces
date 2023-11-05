@@ -364,11 +364,11 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     position: absolute;
-    top: 102px;
+    top: 10px;
     z-index: 2;
     background-color: rgba(142, 20, 20, 0.576);
     width: 250px;
-    height: 516px;
+    height: 690px;
     margin: 0;
 }
 

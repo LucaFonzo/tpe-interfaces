@@ -67,7 +67,7 @@ class Game {
 
         const moveDisk = (e) => this.moveDisk(e);
         const cancelMove = () => this.cancelMove();
-        const dropDisk = async (e) => await this.dropDisk(e, moveDisk, dropDisk, cancelMove);        
+        const dropDisk = async (e) => await this.dropDisk(e, moveDisk, dropDisk, cancelMove);  
 
         this.tempCanvas.addEventListener('mousemove', moveDisk);
         this.tempCanvas.addEventListener('mouseup', dropDisk);
