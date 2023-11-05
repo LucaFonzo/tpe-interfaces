@@ -79,13 +79,13 @@
 }
 
 .game.active .help-panel {
-  grid-template-columns: 40px 180px auto 180px 40px;
+  grid-template-columns: 40px 250px auto 250px 40px;
   grid-template-rows: 40px 1fr 40px;
   grid-template-areas:
     "circ1 . . . circ2"
     ". controls . instructions ."
     "circ3 . . . circ4";
-  max-width: 30%;
+  max-width: 50%;
   transition: 1s ease;
 }
 
