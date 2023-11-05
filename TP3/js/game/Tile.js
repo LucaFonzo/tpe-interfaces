@@ -4,7 +4,7 @@ class Tile {
         this.y = y;
         this.size = size;
         this.imageUrl = img;
-        this.image = new Image();
+        this.image = new Image(size, size);
         this.image.src = this.imageUrl;
         this.disk = null;
     }
@@ -19,6 +19,7 @@ class Tile {
 
     draw(ctx) {
         ctx.drawImage(this.image, this.x, this.y, this.size, this.size);
+        if(this.disk != null) this.disk.draw(ctx);
     }
 
     generateHole(ctx) {
@@ -49,9 +50,8 @@ class Tile {
             await new Promise((resolve) => setTimeout(resolve, 10));
         }
         if (!complete) {
-            ctx.clearRect(this.x, this.y, this.size, this.size);
-            disk.move(this.x + this.size / 2, this.y + this.size / 2);
-            disk.draw(ctx);
+            this.disk.move(this.x + this.size / 2, this.y + this.size / 2);
+            this.draw(ctx);
         }
         ctx.restore();
     }

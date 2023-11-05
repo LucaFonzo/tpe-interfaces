@@ -1,3 +1,4 @@
+"use strict"
 import Game from "./Game.js";
 
 document.addEventListener('DOMContentLoaded', initialize);
@@ -11,10 +12,9 @@ function initialize() {
     startBtn.addEventListener("click", async (e) => {
         startScreen.classList.add("d-none");
         gameSection.classList.add("active");
-        gameSection.querySelector(".overlay").classList.add("active");
-        await new Promise((resolve) => setTimeout(resolve, 1500));
-        gameSection.querySelector(".overlay").classList.remove("active");
         const configuration = setConfiguration(gameSection.querySelector(".game-screen"));
+        configuration.canvas.classList.remove("d-none");
+        gameSection.querySelector(".game-screen").style.backgroundImage = `url(${configuration.background})`;
         const game = new Game(configuration);
         game.initGame(configuration);
     });
@@ -133,28 +133,35 @@ function setListeners() {
 
 function setConfiguration(container) {
 
-    const canvas = document.querySelector('canvas');
+    const canvas = document.querySelector('.main-canvas');
     const checkedRadio = document.querySelector('.radio.checked').getAttribute('value');
-    canvas.width = container.offsetWidth;
     let rows;
     let cols;
     let disks;
+    let tileSize;
+    let speed;
 
     switch (checkedRadio) {
         case '4':
             rows = 6;
             cols = 7;
             disks = 14;
+            tileSize = 100;
+            speed = 8;
             break;
         case '5':
             rows = 7;
             cols = 9;
             disks = 16;
+            tileSize = 80;
+            speed = 6;
             break;
         case '6':
             rows = 8;
             cols = 11;
             disks = 18;
+            tileSize = 70;
+            speed = 5;
             break;
     }
 
@@ -163,14 +170,13 @@ function setConfiguration(container) {
     const charP1 = getCharacter(document.querySelector(".start .p1 .char-select span.selected").getAttribute("character"));
     const charP2 = getCharacter(document.querySelector(".start .p2 .char-select span.selected").getAttribute("character"));
 
-
     let config = {
         canvas,
         context: canvas.getContext('2d'),
         background: document.querySelector(".start .settings #background img.selected").getAttribute("src"),
         width: parseInt(canvas.width),
         height: parseInt(canvas.height),
-        tileSize: 60,
+        tileSize,
         tileStyle: "t1",
         rows,
         cols,
@@ -179,21 +185,19 @@ function setConfiguration(container) {
                 name: document.querySelector('input[name="p1-name"]').value,
                 color: colorP1,
                 character: charP1,
-            img: document.querySelector(".player.p1 img").src
+                img: document.querySelector(".player.p1 img").src
             },
             {
                 name: document.querySelector('input[name="p2-name"]').value,
                 color: colorP2,
                 character: charP2,
-              img: document.querySelector(".player.p2 img").src
+                img: document.querySelector(".player.p2 img").src
             }
         ],
         totalDisks: disks,
         winNumber: checkedRadio,
-        speed: 10
+        speed,
     }
-
-    canvas.style.backgroundImage = `url(${config.background})`;
 
     return config;
 }

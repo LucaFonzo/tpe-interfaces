@@ -8,8 +8,8 @@ class Game {
         this.auxCtx = null;
         this.config = config;
         this.players = {
-            player1: new Player(config.players[0].name, config.players[0].color, config.players[0].character, config.players[0].img, config.totalDisks, new Disk(0, 0, config.tileSize / 3, config.players[0].color,config.players[0].character)),
-          player2: new Player(config.players[1].name, config.players[1].color, config.players[1].character, config.players[1].img, config.totalDisks, new Disk(0, 0, config.tileSize / 3, config.players[1].color, config.players[1].character))
+            player1: new Player(config.players[0].name, config.players[0].color, config.players[0].character, config.players[0].img, config.totalDisks, new Disk(0, 0, config.tileSize * 0.3, config.players[0].color, config.players[0].character)),
+            player2: new Player(config.players[1].name, config.players[1].color, config.players[1].character, config.players[1].img, config.totalDisks, new Disk(0, 0, config.tileSize * 0.3, config.players[1].color, config.players[1].character))
         };
         this.board = null;
         this.currentPlayer = this.players.player1;
@@ -29,7 +29,7 @@ class Game {
         this.initScreen();
         //Creates a temporary canvas to move the disk
         this.initSecondaryCanvas();
-        /*
+
         this.players.player1.getPileCanvas().addEventListener('mousedown', async (e) => {
             if (this.currentPlayer !== this.players.player1) return;
             this.playTurn();
@@ -38,7 +38,7 @@ class Game {
         this.players.player2.getPileCanvas().addEventListener('mousedown', (e) => {
             if (this.currentPlayer !== this.players.player2) return;
             this.playTurn();
-        });*/
+        });
     }
 
     initScreen() {
@@ -50,12 +50,11 @@ class Game {
 
         //Draws new board
         this.board.draw(this.ctx);
-        /*
+
         this.players.player1.fillDisks(this.config.totalDisks);
         this.players.player1.displayPlayerInfo(this.ctx, 1);
         this.players.player2.fillDisks(this.config.totalDisks);
         this.players.player2.displayPlayerInfo(this.ctx, 2);
-        */
     }
 
     initSecondaryCanvas() {
@@ -67,11 +66,12 @@ class Game {
         this.tempCtx = this.tempCanvas.getContext('2d');
 
         const moveDisk = (e) => this.moveDisk(e);
-        const dropDisk = async (e) => await this.dropDisk(e, moveDisk, dropDisk);
+        const cancelMove = () => this.cancelMove();
+        const dropDisk = async (e) => await this.dropDisk(e, moveDisk, dropDisk, cancelMove);        
 
         this.tempCanvas.addEventListener('mousemove', moveDisk);
         this.tempCanvas.addEventListener('mouseup', dropDisk);
-        this.tempCanvas.addEventListener('mouseleave', () => { this.cancelMove() });
+        this.tempCanvas.addEventListener('mouseleave', cancelMove);
     }
 
     playTurn() {
@@ -83,8 +83,13 @@ class Game {
     }
 
     moveDisk(e) {
-        let x = e.clientX - this.ctx.canvas.getBoundingClientRect().left;
-        let y = e.clientY - this.ctx.canvas.getBoundingClientRect().top;
+        let bounds = e.target.getBoundingClientRect();
+        let x = e.clientX - bounds.left;
+        let y = e.clientY - bounds.top;
+        x /= bounds.width;
+        y /= bounds.height;
+        x *= e.target.width;
+        y *= e.target.height;
         let disk = this.currentPlayer.getDisk();
         if (disk.getPosition().x !== x || disk.getPosition().y !== y) {
             this.tempCtx.clearRect(0, 0, this.config.width, this.config.height);
@@ -93,10 +98,11 @@ class Game {
         }
     }
 
-    async dropDisk(e, moveDiskFunction, dropDiskFunction) {
+    async dropDisk(e, moveDiskFunction, dropDiskFunction, cancelMoveFunction) {
         this.tempCtx.clearRect(0, 0, this.config.width, this.config.height);
         this.tempCanvas.removeEventListener('mousemove', moveDiskFunction);
         this.tempCanvas.removeEventListener('mouseup', dropDiskFunction);
+        this.tempCanvas.removeEventListener('mouseleave', cancelMoveFunction);
         this.tempCanvas.classList.add('dying');
 
         let col = this.getColumn();
@@ -104,7 +110,7 @@ class Game {
         let [success, row, column] = await this.board.putDisk(this.ctx, this.currentPlayer.disk.makeCopy(), this.config.tileSize / this.config.speed, col);
 
         if (success) {
-            this.checkWin(row, column);
+            await this.checkWin(row, column);
             this.switchTurns();
         }
         else {
@@ -138,62 +144,78 @@ class Game {
         this.currentPlayer = this.currentPlayer === this.players.player1 ? this.players.player2 : this.players.player1;
     }
 
-    checkWin(row, col) {
+    async checkWin(row, col) {
         let disk = this.board[row][col].getDisk();
         if (this.checkHorizontal(row, col, disk) || this.checkVertical(row, col, disk) || this.checkDiagonal(row, col, disk)) {
             this.currentPlayer.incrementScore();
-            this.showWinnerScreen();
+            await this.showWinnerScreen();
         }
     }
 
-    showWinnerScreen() {
+    async showWinnerScreen() {
         let winner = document.createElement('div');
-        winner.classList.add('winner');
+        winner.classList.add('winner', 'd-flex-col', 'align-center', 'justify-between');
+        
+        this.ctx.canvas.parentElement.appendChild(winner);
+        await new Promise(resolve => setTimeout(resolve, 100));
+        winner.classList.add('show');
+        await new Promise(resolve => setTimeout(resolve, 500));
         winner.innerHTML = `
-            <div class="d-flex-col align-center">
-                <h1>${this.currentPlayer.getName()} wins!</h1>
-                <button class="primary-btn">Play again</button>
-            </div>
+            <h1>${this.currentPlayer.getName()} wins!</h1>
+            <img src="${this.currentPlayer.getImage()}" alt="${this.currentPlayer.getName()}">
+            <span>Score: ${this.currentPlayer.getScore()}</span>
+            <h2>Play again!</h2>
         `;
-        winner.height = this.config.height;
-        winner.width = this.config.width;
-        winner.querySelector('button').addEventListener('click', () => {
+        winner.querySelector('h2').addEventListener('click', () => {
             let aux = this.players.player1;
             this.players.player1 = this.players.player2;
             this.players.player2 = aux;
             this.currentPlayer = this.players.player1;
             this.initGame();
         });
-        this.ctx.canvas.parentElement.appendChild(winner);
+        
     }
 
     checkHorizontal(row, col, disk) {
         let count = 1;
-        let i = col - 1;
-        while (i >= 0 && this.board[row][i].getDisk()?.getColor() === disk.getColor()) {
-            count++;
-            i--;
+        let i;
+        if (col !== 0) {
+            i = col - 1;
+            while (i >= 0 && this.board[row][i].getDisk()?.getColor() === disk.getColor()) {
+                count++;
+                i--;
+            }
         }
-        i = col + 1;
-        while (i < this.config.cols && this.board[row][i].getDisk()?.getColor() === disk.getColor()) {
-            count++;
-            i++;
+        if (col !== this.config.cols - 1) {
+            i = col + 1;
+            while (i < this.config.cols && this.board[row][i].getDisk()?.getColor() === disk.getColor()) {
+                count++;
+                i++;
+            }
         }
         if (count >= this.winNumber) return true;
     }
 
     checkVertical(row, col, disk) {
         let count = 1;
-        let i = row - 1;
-        while (i >= 0 && this.board[i][col].getDisk()?.getColor() === disk.getColor()) {
-            count++;
-            i--;
+        let i;
+
+        if (row !== 0) {
+            i = row - 1;
+            while (i >= 0 && this.board[i][col].getDisk()?.getColor() === disk.getColor()) {
+                count++;
+                i--;
+            }
         }
-        i = row + 1;
-        while (i < this.config.rows && this.board[i][col].getDisk()?.getColor() === disk.getColor()) {
-            count++;
-            i++;
+
+        if (row !== this.config.rows - 1) {
+            i = row + 1;
+            while (i < this.config.rows && this.board[i][col].getDisk()?.getColor() === disk.getColor()) {
+                count++;
+                i++;
+            }
         }
+
         if (count >= this.winNumber) return true;
     }
 
@@ -213,6 +235,7 @@ class Game {
             i++;
             j++;
         }
+
         if (count >= this.winNumber) return true;
 
         count = 1;

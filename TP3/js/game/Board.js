@@ -18,7 +18,6 @@ class Board {
         for (let i = 0; i < this.rows; i++) {
             this[i] = [];
             for (let j = 0; j < this.cols; j++) {
-
                 if (i === 0) {
                     if (j === 0) {
                         url = base + "-left-top-corner.png";
@@ -65,6 +64,7 @@ class Board {
             await tiles[i].animateFall(ctx, disk, speed, true);
         }
         await tiles[tiles.length - 1].putDisk(ctx, disk, speed, false);
+        this.draw(ctx);
         return [true, tiles.length - 1, col];
     }
 

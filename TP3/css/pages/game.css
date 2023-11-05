@@ -23,44 +23,6 @@
   border-radius: 1.4vmin;
 }
 
-.game {
-  display: flex;
-  justify-content: space-around;
-  height: 756px;
-}
-
-.game.active {
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: fit-content;
-}
-
-/*Game screen*/
-
-.game-screen {
-  position: relative;
-  width: 1010px;
-  height: 720px;
-}
-
-.game .overlay {
-  width: 1010px;
-  height: 720px;
-}
-
-.game.active .game-screen, .game.active .game-screen canvas, .game.active .overlay.active {
-  width: 1400px;
-  height: 720px;
-  transition: width 1s ease;
-}
-
-.game.active .overlay.active {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /*Help panel*/
 
 .help-panel {

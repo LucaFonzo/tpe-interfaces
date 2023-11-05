@@ -1,7 +1,8 @@
 class Player {
     constructor(name, color, character, image, totalDisks, disk) {
         this.name = name;
-        this.character = character;
+        let char = character.slice(12);
+        this.character = char.charAt(0).toUpperCase() + char.slice(1, -4);
         this.image = image;
         this.color = color;
         this.score = 0;
@@ -20,6 +21,10 @@ class Player {
 
     getScore() {
         return this.score;
+    }
+
+    getImage() {
+        return this.image;
     }
 
     setColor(color) {
@@ -48,47 +53,34 @@ class Player {
 
     displayPlayerInfo(ctx, playerNumber) {
         let canvas = ctx.canvas;
-        let div = document.createElement('div');
-        div.classList.add('player-info', `p${playerNumber}`);
+        let div = document.querySelector(`.player.p${playerNumber}`);
+
         div.innerHTML = `
-            <div>
+            <div class="d-flex-col align-center justify-center">
                 <h2>${this.score}</h2>
-                <div class="user-picture">
-                    <img src="${this.image}" alt="${this.name}">
-                </div>
-                <span>${this.name} (${this.character})</span>
+                <img src="${this.image}" alt="player ${playerNumber}">
+                <h2>${this.name} (${this.character})</h2>
             </div>
             <canvas></canvas>
         `;
-        canvas.parentElement.appendChild(div);
+        div.classList.add('active');
+        canvas.parentElement.prepend(div);
         this.subctx = div.querySelector('canvas').getContext('2d');
-        this.subctx.canvas.width = 2 * this.disk.radius;
+        this.subctx.canvas.width = 100;
         this.updateDiskPile();
     }
 
     updateDiskPile() {
-        let height = 10 * this.totalDisks;
+        let height = 13 * this.totalDisks;
         this.subctx.canvas.height = height;
-        this.subctx.clearRect(0, 0, 2 * this.disk.radius, height);
-        this.subctx.strokeStyle = this.color;
-        this.subctx.lineWidth = 8;
-        for (let i = 0; i < this.totalDisks; i++) {
-            this.subctx.beginPath();
-            this.subctx.moveTo(0, 8 * i+4);
-            this.subctx.lineTo(2 * this.disk.radius, 8 * i+4);
-            this.subctx.stroke();
-        }
-        this.subctx.strokeStyle = 'white';
-        this.subctx.lineWidth = 1;
-        for (let i = 0; i < this.totalDisks; i++) {
-            this.subctx.beginPath();
-            this.subctx.moveTo(0, 1+8 * i);
-            this.subctx.lineTo(2 * this.disk.radius, 1+8 * i);
-            this.subctx.stroke();
-        }
+        this.subctx.clearRect(0, 0, 100, height);
+        let img = new Image(100, 13);
+        img.src = this.color.slice(0, -4) + '-side.png';
+        this.subctx.fillStyle = this.subctx.createPattern(img, 'repeat');
+        this.subctx.fillRect(0, 0, 100, height);
     }
 
-    getPileCanvas(){
+    getPileCanvas() {
         return this.subctx.canvas;
     }
 }

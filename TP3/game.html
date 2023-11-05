@@ -108,7 +108,7 @@
     </div>
     <input type="text" placeholder="Buscar juegos..." class="search-bar">
     <div class="main-menu d-flex justify-between align-center">
-      <div class="cart-dropdown"> <!-- Nueva div para el desplegable del carrito -->
+      <div class="cart-dropdown">
         <svg class="icon cart-icn" id="cart-icon"></svg>
         <span class="hidden text-center"></span>
         <div class="cart-items main-color-s1 d-none">
@@ -140,16 +140,13 @@
         </div>
 
         <div class="game-screen">
-          <div class="overlay">
-            <div class="loader"></div>
-          </div>
           <div class="start">
             <h1>Tom & Jerry: Connect 4!</h1>
             <div class="player p1">
               <img src="assets/img/profile-pictures/profile-pic.jpg" alt="player 1">
               <div>
                 <h2>Player 1</h2>
-                <input type="text" name="p1-name" placeholder="Name">
+                <input type="text" name="p1-name" placeholder="Name" value="Camilo">
               </div>
               <div class="d-flex-col w-100">
                 <h2>Disk</h2>
@@ -174,10 +171,10 @@
               <div class="d-flex-col align-center">
                 <h2>Background</h2>
                 <div id="background">
-                  <img class="selected" src="../TP3/assets/game/bg1.jpg" alt="Background 1">
-                  <img src="../TP3/assets/game/bg2.jpg" alt="Background 2">
-                  <img src="../TP3/assets/game/bg3.png" alt="Background 3">
-                  <img src="../TP3/assets/game/bg4.jpg" alt="Background 4">
+                  <img class="selected" src="../assets/game/bg1.jpg" alt="Background 1">
+                  <img src="../assets/game/bg2.jpg" alt="Background 2">
+                  <img src="../assets/game/bg3.png" alt="Background 3">
+                  <img src="../assets/game/bg4.jpg" alt="Background 4">
                 </div>
               </div>
               <div class="d-flex-col align-center">
@@ -188,7 +185,7 @@
             <div class="player p2">
               <img src="assets/img/profile-pictures/default-profile.jpg" alt="player 2">
               <h2>Player 2</h2>
-              <input type="text" name="p2-name" placeholder="Name">
+              <input type="text" name="p2-name" placeholder="Name" value="Luca">
               <div class="d-flex-col w-100">
                 <h2>Disk</h2>
                 <div class="d-flex align-center justify-between ml-5"><label>Color</label>
@@ -217,7 +214,7 @@
             </div>
             <span class="play">Play!</span>
           </div>
-          <canvas width="1010" height="700"></canvas>
+          <canvas width="1400" height="720" class="main-canvas d-none"></canvas>
         </div>
       </div>
 
@@ -693,11 +690,14 @@
   <script src="js/carousel.js"></script>
   <script src="js/new-comment.js"></script>
   <script type="module" src="js/game/main.js"></script>
-  <img src="../TP3/assets/game/t1-left-bot-corner.png" class="d-none">
-  <img src="../TP3/assets/game/t1-left-top-corner.png" class="d-none">
-  <img src="../TP3/assets/game/t1-mid.png" class="d-none">
-  <img src="../TP3/assets/game/t1-right-bot-corner.png" class="d-none">
-  <img src="../TP3/assets/game/t1-right-top-corner.png" class="d-none">
+  <img src="/assets/game/t1-left-bot-corner.png" class="d-none">
+  <img src="/assets/game/t1-left-top-corner.png" class="d-none">
+  <img src="/assets/game/t1-mid.png" class="d-none">
+  <img src="/assets/game/t1-right-bot-corner.png" class="d-none">
+  <img src="/assets/game/t1-right-top-corner.png" class="d-none">
+  <img src="/assets/game/disk-b-side.png" class="none">
+  <img src="/assets/game/disk-r-side.png" class="none">
+  <img src="/assets/game/disk-y-side.png" class="none">
 </body>
 
 </html>

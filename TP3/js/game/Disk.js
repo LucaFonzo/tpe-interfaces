@@ -3,12 +3,16 @@ class Disk {
     this.x = x;
     this.y = y;
     this.radius = radius;
-    this.color = color;
-    this.character = character;
+    const imageColor = new Image();
+    imageColor.src = color;
+    const imageCharacter = new Image();
+    imageCharacter.src = character;
+    this.color = imageColor;
+    this.character = imageCharacter;
   }
 
   makeCopy() {
-    return new Disk(0, 0, this.radius, this.color, this.character);
+    return new Disk(0, 0, this.radius, this.color.src, this.character.src);
   }
 
   move(x, y) {
@@ -25,23 +29,14 @@ class Disk {
   }
 
   getColor() {
-    return this.color;
+    return this.color.src;
   }
 
   draw(ctx) {
-    ctx.beginPath();
-    const imageColor = new Image();
-    const imageCharacter = new Image();
-    ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-    imageCharacter.src = this.character;
-    imageColor.src = this.color;
-    imageCharacter.onload = () => {
-      ctx.drawImage(imageCharacter, this.x - 25, this.y - 22, 50, 50);
-    };
-    imageColor.onload = () => {
-      ctx.drawImage(imageColor, this.x - 25, this.y - 22, 50, 50);
-    };
-    ctx.closePath();
+    let cornerLeft = this.x - this.radius;
+    let cornerTop = this.y - this.radius;
+    ctx.drawImage(this.color, cornerLeft, cornerTop, this.radius*2, this.radius*2);
+    ctx.drawImage(this.character, cornerLeft + this.radius*0.4, cornerTop + this.radius * 0.4, this.radius*1.2, this.radius*1.2);
   }
 }
 
