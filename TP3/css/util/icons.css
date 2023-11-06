@@ -154,6 +154,10 @@
     background-image: url('../../assets/icons/circle.svg');
 }
 
+.drag-icn {
+  background-image: url('../../assets/icons/drag.svg');
+}
+
 .icon {
     background-size: contain;
     background-position: center;
