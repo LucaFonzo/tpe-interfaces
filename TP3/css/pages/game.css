@@ -365,6 +365,10 @@
   animation: append-comment 2s ease;
 }
 
+.volume {
+  position: absolute;
+}
+
 #music-btn {
   width: 2rem;
   margin-left: 5px;
