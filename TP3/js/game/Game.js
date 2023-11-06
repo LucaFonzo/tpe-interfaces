@@ -170,6 +170,7 @@ class Game {
     message.classList.add('show');
     await new Promise(resolve => setTimeout(resolve, 500));
     const backgroundMusic = document.getElementById("music");
+    console.log(backgroundMusic.paused);
     if (winner) {
       message.innerHTML = `
             <h1>${this.currentPlayer.getName()} wins!</h1>
@@ -178,13 +179,21 @@ class Game {
             <h2>Play again!</h2>
         `;
       if (backgroundMusic.paused) {
-        backgroundMusic.src = './assets/music/win-music.mp3'
+        backgroundMusic.src = './assets/music/win-music.mp3';
+      } else {
         backgroundMusic.pause();
+        backgroundMusic.src = './assets/music/win-music.mp3';
+        backgroundMusic.load();
+        backgroundMusic.play();
       }
     } else {
       if (backgroundMusic.paused) {
-        backgroundMusic.src = './assets/music/win-music.mp3'
+        backgroundMusic.src = './assets/music/win-music.mp3';
+      } else {
         backgroundMusic.pause();
+        backgroundMusic.src = './assets/music/win-music.mp3';
+        backgroundMusic.load();
+        backgroundMusic.play();
       }
       message.innerHTML = `
             <h1>Draw! ${timeout ? "Time's up!" : "You ran out of disks."}</h1>
@@ -198,8 +207,12 @@ class Game {
       this.players.player2 = aux;
       this.currentPlayer = this.players.player1;
       if (backgroundMusic.paused) {
-        backgroundMusic.src = './assets/music/undertale.mp3';
+        backgroundMusic.src = './assets/music/win-music.mp3';
+      } else {
         backgroundMusic.pause();
+        backgroundMusic.src = './assets/music/undertale.mp3';
+        backgroundMusic.load();
+        backgroundMusic.play();
       }
       this.initGame();
     });

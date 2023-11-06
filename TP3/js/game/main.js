@@ -17,6 +17,7 @@ function initialize() {
   });
 
   musicBtn.addEventListener('click', (e) => {
+    console.log(backgroundMusic.paused);
     if (backgroundMusic.paused) {
       backgroundMusic.play();
       musicBtn.classList.remove('sound-mute-icn');
@@ -31,6 +32,7 @@ function initialize() {
   startBtn.addEventListener("click", async (e) => {
     backgroundMusic.volume = 0.15;
     backgroundMusic.play();
+    console.log(backgroundMusic.paused);
     musicBtn.parentElement.classList.remove('d-none');
     const configuration = setConfiguration(gameSection.querySelector(".game-screen"));
     if (configuration == null) return;
