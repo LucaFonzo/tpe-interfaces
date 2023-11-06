@@ -179,7 +179,7 @@ class Game {
         `;
         } else {
             message.innerHTML = `
-            <h1>Draw! ${timeout ? "Time's up'!" : "You ran out of disks."}</h1>
+            <h1>Draw! ${timeout ? "Time's up!" : "You ran out of disks."}</h1>
             <h2>Play again!</h2>
         `;
         }
