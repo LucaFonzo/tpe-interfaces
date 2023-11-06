@@ -177,9 +177,15 @@ class Game {
             <span>Score: ${this.currentPlayer.getScore()}</span>
             <h2>Play again!</h2>
         `;
-      backgroundMusic.src = './assets/music/win-music.mp3'
+      if (backgroundMusic.paused) {
+        backgroundMusic.src = './assets/music/win-music.mp3'
+        backgroundMusic.pause();
+      }
     } else {
-      backgroundMusic.src = './assets/music/win-music.mp3'
+      if (backgroundMusic.paused) {
+        backgroundMusic.src = './assets/music/win-music.mp3'
+        backgroundMusic.pause();
+      }
       message.innerHTML = `
             <h1>Draw! ${timeout ? "Time's up!" : "You ran out of disks."}</h1>
             <h2>Play again!</h2>
