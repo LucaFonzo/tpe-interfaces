@@ -367,12 +367,15 @@
 
 .volume {
   position: absolute;
+  z-index: 101;
 }
 
 #music-btn {
   width: 2rem;
   margin-left: 5px;
   padding: 20px;
+  pointer-events: auto;
   background-color: transparent;
   border: none;
+  z-index: 1000;
 }

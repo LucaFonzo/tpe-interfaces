@@ -29,7 +29,7 @@ function initialize() {
   })
 
   startBtn.addEventListener("click", async (e) => {
-    backgroundMusic.volume = 0.3;
+    backgroundMusic.volume = 0.15;
     backgroundMusic.play();
     musicBtn.parentElement.classList.remove('d-none');
     const configuration = setConfiguration(gameSection.querySelector(".game-screen"));
