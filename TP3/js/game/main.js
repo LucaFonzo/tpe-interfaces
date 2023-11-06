@@ -14,7 +14,10 @@ function initialize() {
         document.querySelector(".alert").classList.add("d-none");
     });
 
-    startBtn.addEventListener("click", async (e) => {
+  startBtn.addEventListener("click", async (e) => {
+    const backgroundMusic = document.getElementById("music");
+    backgroundMusic.volume = 0.5;
+    backgroundMusic.play();
         const configuration = setConfiguration(gameSection.querySelector(".game-screen"));
         if(configuration == null) return;
         startScreen.classList.add("d-none");
