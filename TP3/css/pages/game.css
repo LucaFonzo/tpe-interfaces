@@ -364,3 +364,11 @@
 .created-comment {
   animation: append-comment 2s ease;
 }
+
+#music-btn {
+  width: 2rem;
+  margin-left: 5px;
+  padding: 20px;
+  background-color: transparent;
+  border: none;
+}

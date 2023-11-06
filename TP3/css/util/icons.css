@@ -158,6 +158,14 @@
   background-image: url('../../assets/icons/drag.svg');
 }
 
+.sound-icn {
+  background-image: url('../../assets/icons/sound.svg');
+}
+
+.sound-mute-icn {
+  background-image: url('../../assets/icons/sound-mute.svg');
+}
+
 .icon {
     background-size: contain;
     background-position: center;
