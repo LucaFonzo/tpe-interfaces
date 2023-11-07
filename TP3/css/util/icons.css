@@ -158,6 +158,10 @@
   background-image: url('../../assets/icons/drag.svg');
 }
 
+.mouse-icn {
+    background-image: url('../../assets/icons/mouse.svg');
+}
+
 .sound-icn {
   background-image: url('../../assets/icons/sound.svg');
 }
