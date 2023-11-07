@@ -207,13 +207,14 @@ class Game {
       this.players.player2 = aux;
       this.currentPlayer = this.players.player1;
       if (backgroundMusic.paused) {
-        backgroundMusic.src = './assets/music/win-music.mp3';
+        backgroundMusic.src = './assets/music/undertale.mp3';
       } else {
         backgroundMusic.pause();
         backgroundMusic.src = './assets/music/undertale.mp3';
         backgroundMusic.load();
         backgroundMusic.play();
       }
+      console.log(backgroundMusic.src);
       this.initGame();
     });
 
