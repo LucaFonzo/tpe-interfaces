@@ -61,3 +61,16 @@ header .primary-btn {
     width: 200px;
 }
 
+.main-hero {
+  height: 720px;
+  width: 1280px;
+  background-image: url('../assets/img/clouds.png');
+}
+
+
+.left-side-header {
+  width: 200px;
+  height: 200px;
+  background-image: url('../assets/img/3-buildings.png');
+}
+
