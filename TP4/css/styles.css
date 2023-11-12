@@ -62,15 +62,24 @@ header .primary-btn {
 }
 
 .main-hero {
+  position: relative;
   height: 720px;
   width: 1280px;
   background-image: url('../assets/img/clouds.png');
 }
 
+.main-hero img {
+  position: absolute;
+}
 
-.left-side-header {
-  width: 200px;
-  height: 200px;
-  background-image: url('../assets/img/3-buildings.png');
+.image1 {
+  left: -4%;
+}
+.image2 {
+  left: 30%;
+  top: 70%;
+}
+.image3 {
+  left: 70%;
 }
 
