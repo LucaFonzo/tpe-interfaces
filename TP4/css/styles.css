@@ -64,8 +64,10 @@ header .primary-btn {
 .main-hero {
   position: relative;
   height: 720px;
-  width: 1280px;
+  width: 100%;
   background-image: url('../assets/img/clouds.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .main-hero img {
@@ -73,13 +75,37 @@ header .primary-btn {
 }
 
 .image1 {
-  left: -4%;
+  left: 7%;
 }
 .image2 {
   left: 30%;
-  top: 70%;
+  top: 68%;
 }
 .image3 {
-  left: 70%;
+  left: 57%;
+  top: -1%;
 }
 
+.spider-white {
+  top: 35%;
+  left: 16%;
+}
+
+.spider-normal {
+  top: 40%;
+  left: 30.5%;
+}
+
+.spider-black {
+  top: 27%;
+  left: 45%;
+}
+
+.spider-web-1 {
+  top: 35%;
+  left: 60%;
+}
+
+.spider-web-2 {
+  top: 36%;
+}
