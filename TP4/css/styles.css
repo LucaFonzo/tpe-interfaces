@@ -70,7 +70,7 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 1000;
   animation: reduceElement 0.2s ease-out;
 }
 
@@ -84,17 +84,41 @@ header {
   box-sizing: content-box;
   transition: transform 0.3s ease-out;
 }
-
+@keyframes bar1 {
+  50% {
+    transform: translateY(11px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(11px) rotate(45deg);
+  }
+}
 .hamburger-btn.active span:nth-child(1) {
-  transform: translateY(11px) rotate(45deg);
+  animation: bar1 1s forwards;
 }
+@keyframes bar2 {
+  0% {
 
+  }
+  50% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
 .hamburger-btn.active span:nth-child(2) {
-  transform: scaleX(0);
+  animation: bar2 1s forwards;
 }
-
+@keyframes bar3 {
+  50% {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+}
 .hamburger-btn.active span:nth-child(3) {
-  transform: translateY(-11px) rotate(-45deg);
+  animation: bar3 1s forwards;
 }
 
 header img {

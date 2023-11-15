@@ -2,7 +2,7 @@ document.querySelector('.hamburger-btn').addEventListener('click', function () {
   this.classList.toggle('active');
 });
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   if (this.window.scrollY > 10) {
     this.document.querySelector('header').classList.add('header-sticky');
     this.document.querySelector('header img').classList.remove('hidden');
@@ -10,7 +10,7 @@ window.addEventListener('scroll', function() {
     this.document.querySelector('header').classList.remove('header-sticky');
     this.document.querySelector('header img').classList.add('hidden');
   }
-})
+});
 
 const spiderWhite = document.querySelector('.spider-white');
 const spiderNormal = document.querySelector('.spider-normal');
@@ -28,4 +28,4 @@ window.addEventListener('scroll', function () {
   //Spiderman normal
   spiderNormal.style.transform = `translateY(${y * -0.3}px)`;
   spiderWeb2.style.transform = `translateY(${y * -0.3}px)`;
-})
+});
