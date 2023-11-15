@@ -233,3 +233,16 @@ header .primary-btn {
   left: 10%;
 }
 /*CARDS*/
+.cards-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  width: 400px;
+  height: 400px;
+  margin-left: 40px;
+}
+.card p{
+  max-width: 80%;
+}
