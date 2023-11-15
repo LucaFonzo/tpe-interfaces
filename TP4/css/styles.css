@@ -20,6 +20,7 @@
 
 .container {
   max-width: 1080px;
+  margin: 0 auto;
 }
 
 .hidden {
@@ -195,7 +196,7 @@ header .primary-btn {
 .know-container {
   position: relative;
   z-index: 2;
-  top: 87%;
+  top: -90px;
   height: 800px;
   padding: 100px;
   background-image: url('../assets/img/conoce-rectangle.png');
@@ -203,6 +204,7 @@ header .primary-btn {
 .know-information {
   position: absolute;
   top: 20%;
+  left: 11%;
   color: var(--white);
   max-width: 60%;
 }
@@ -216,7 +218,7 @@ header .primary-btn {
   font-size: 20px;
   line-height: 24px;
   font-weight: 400;
-  max-width: 80%;
+  max-width: 77%;
 }
 .green-goblin {
   position: absolute;
@@ -226,5 +228,8 @@ header .primary-btn {
 }
 
 .know-game {
+  position: absolute;
   top: 60%;
+  left: 10%;
 }
+/*CARDS*/
