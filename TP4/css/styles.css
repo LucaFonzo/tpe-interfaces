@@ -9,12 +9,17 @@
     outline: none;
     border: none;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
 
 /*GENERALS*/
 .d-none {
   display: none;
+}
+
+.container {
+  max-width: 1080px;
 }
 
 .hidden {
@@ -136,6 +141,7 @@ header .primary-btn {
 .spider-normal {
   top: 40%;
   left: 30.5%;
+  z-index: 3;
 }
 
 .spider-black {
@@ -147,11 +153,13 @@ header .primary-btn {
   top: 34.5%;
   left: 77%;
   max-width: 1280px;
+  z-index: 3;
 }
 
 .spider-web-2 {
   top: 36%;
   left: -16%;
+  z-index: 3;
 }
 
 .title-img {
@@ -160,7 +168,39 @@ header .primary-btn {
 }
 
 /*Conoce section*/
-.learn-container {
+.know-container {
+  position: relative;
+  z-index: 2;
+  top: 87%;
   height: 800px;
+  padding: 100px;
   background-image: url('../assets/img/conoce-rectangle.png');
+}
+.know-information {
+  position: absolute;
+  top: 20%;
+  color: var(--white);
+  max-width: 60%;
+}
+.know-information h2{
+  line-height: 56px;
+  font-weight: 600;
+  font-size: 60px;
+}
+.know-information p {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  max-width: 80%;
+}
+.green-goblin {
+  position: absolute;
+  left: 60%;
+  top: 13%;
+  z-index: 2;
+}
+
+.know-game {
+  top: 60%;
 }
