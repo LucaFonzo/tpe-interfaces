@@ -235,6 +235,7 @@ header .primary-btn {
 /*CARDS*/
 .cards-container {
   margin-top: 100px;
+  height: 550px;
   display: flex;
   justify-content: space-between;
 }
@@ -245,4 +246,29 @@ header .primary-btn {
 }
 .card p{
   max-width: 80%;
+}
+
+/*SPIDER WHITE SECTION*/
+.spider-white-section {
+  background-image: url('../assets/img/spider-white-background.png');
+  height: 550px;
+  margin-top: 100px;
+  position: relative;
+}
+.spider-white-section img {
+  position: absolute;
+}
+.spider-white-section .container img:first-child {
+  top: 30%;
+  left: 5%;
+  z-index: 2;
+}
+.spider-white-section .container img:nth-child(2) {
+  top: -3%;
+  left: 2%;
+  z-index: 1;
+}
+.spider-white-section .container img:nth-child(3) {
+  top: -30%;
+  left: 2%;
 }
