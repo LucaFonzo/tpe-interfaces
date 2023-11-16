@@ -232,16 +232,39 @@ header .primary-btn {
   left: 10%;
 }
 /*CARDS*/
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .cards-container {
   margin-top: 150px;
   height: 550px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .card {
   width: 400px;
   height: 400px;
   margin-left: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.card.card-hidden {
+    visibility: hidden;
+}
+.card.card-visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s; /* Agrega un pequeño retraso para un efecto más suave */
 }
 .card p{
   max-width: 80%;

@@ -29,7 +29,6 @@ window.addEventListener('scroll', function () {
   spiderNormal.style.transform = `translateY(${y * -0.3}px)`;
   spiderWeb2.style.transform = `translateY(${y * -0.3}px)`;
 });
-
 window.addEventListener('scroll', function (e) {
   console.log(this.window.scrollY);
   if (this.window.scrollY > 400 && this.window.scrollY < 600) {
@@ -40,3 +39,22 @@ window.addEventListener('scroll', function (e) {
     greenGoblin.style.top = nuevaPosicion + 'px';
   }
 })
+window.addEventListener('scroll', function (e) {
+  const cards = this.document.querySelectorAll('.card');
+  cards.forEach(c => {
+    console.log(isElementInViewport(c));
+    if (isElementInViewport(c)) {
+      c.classList.add("card-visible");
+    }
+  })
+})
+
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
