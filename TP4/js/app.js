@@ -1,23 +1,12 @@
 document.querySelector('.hamburger-btn').addEventListener('click', function () {
   this.classList.toggle('active');
 });
-
 window.addEventListener('scroll', function () {
-  if (this.window.scrollY > 10) {
-    this.document.querySelector('header').classList.add('header-sticky');
-    this.document.querySelector('header img').classList.remove('hidden');
-  } else {
-    this.document.querySelector('header').classList.remove('header-sticky');
-    this.document.querySelector('header img').classList.add('hidden');
-  }
-});
-
-const spiderWhite = document.querySelector('.spider-white');
-const spiderNormal = document.querySelector('.spider-normal');
-const spiderBlack = document.querySelector('.spider-black');
-const spiderWeb1 = document.querySelector('.spider-web-1');
-const spiderWeb2 = document.querySelector('.spider-web-2');
-window.addEventListener('scroll', function () {
+  const spiderWhite = document.querySelector('.spider-white');
+  const spiderNormal = document.querySelector('.spider-normal');
+  const spiderBlack = document.querySelector('.spider-black');
+  const spiderWeb1 = document.querySelector('.spider-web-1');
+  const spiderWeb2 = document.querySelector('.spider-web-2');
   //I take the y to move the elements
   let y = window.scrollY;
   //SpidermanWhite
@@ -29,16 +18,16 @@ window.addEventListener('scroll', function () {
   spiderNormal.style.transform = `translateY(${y * -0.3}px)`;
   spiderWeb2.style.transform = `translateY(${y * -0.3}px)`;
 });
+//Move of goblin
 window.addEventListener('scroll', function (e) {
   const greenGoblin = this.document.querySelector('.green-goblin');
   if (this.window.scrollY > 400 && this.window.scrollY < 700) {
-    console.log("Moving goblin...");
     const nuevaPosicion = window.scrollY * 0.1;
     // Aplica la nueva posición al elemento
-    console.log(greenGoblin.style.top);
     greenGoblin.style.top = nuevaPosicion + 'px';
   }
 })
+//FADE IMAGES
 window.addEventListener('scroll', function (e) {
   const cards = this.document.querySelectorAll('.card');
   cards.forEach(c => {
@@ -48,6 +37,15 @@ window.addEventListener('scroll', function (e) {
     }
   })
 })
+window.addEventListener('scroll', function () {
+  if (this.window.scrollY > 10) {
+    this.document.querySelector('header').classList.add('header-sticky');
+    this.document.querySelector('header img').classList.remove('hidden');
+  } else {
+    this.document.querySelector('header').classList.remove('header-sticky');
+    this.document.querySelector('header img').classList.add('hidden');
+  }
+});
 
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();

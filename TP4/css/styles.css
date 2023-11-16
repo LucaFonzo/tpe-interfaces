@@ -14,8 +14,24 @@
 
 
 /*GENERALS*/
+
+h3 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 37.8px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 18.9px;
+}
+
 .d-none {
   display: none;
+}
+.d-flex {
+  display: flex;
 }
 
 .container {
@@ -25,6 +41,9 @@
 
 .hidden {
   visibility: hidden;
+}
+.justify-between {
+  justify-content: space-between;
 }
 
 @keyframes reduceElement {
@@ -274,25 +293,26 @@ header .primary-btn {
 .spider-white-section {
   background-image: url('../assets/img/spider-white-background.png');
   height: 550px;
-  margin-top: 100px;
   position: relative;
+  top: 90px;
+  z-index: 1;
 }
 .spider-white-section img {
   position: absolute;
 }
 .spider-white-section .container img:first-child {
-  top: 30%;
+  top: 20%;
   left: 5%;
   z-index: 2;
 }
 .spider-white-section .container img:nth-child(2) {
-  top: -3%;
+  top: -10%;
   left: 2%;
   z-index: 1;
 }
 .spider-white-section .container img:nth-child(3) {
   top: -30%;
-  left: 2%;
+  left: 5%;
 }
 /*AVENGERS SECTION*/
 .avengers-section {
@@ -308,7 +328,7 @@ header .primary-btn {
   line-height: 56.7px;
   color: var(--white);
   max-width: 50%;
-  top: 20%;
+  top: 24%;
 }
 
 .clouds-avengers-section {
@@ -341,4 +361,24 @@ header .primary-btn {
   top: 64%;
   left: 60%;
   z-index: 4;
+}
+/*MORE-FRIENDS SECTION*/
+.more-friends-section {
+  margin-top: 200px;
+  height: 1000px;
+}
+
+.more-friends-section h2 {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 56.7px;
+}
+.article-more-friends {
+  margin-top: 100px;
+}
+.information {
+  margin-left: 40px;
+}
+.information p {
+  margin-top: 20px;
 }
