@@ -30,20 +30,20 @@ window.addEventListener('scroll', function () {
   spiderWeb2.style.transform = `translateY(${y * -0.3}px)`;
 });
 window.addEventListener('scroll', function (e) {
-  console.log(this.window.scrollY);
-  if (this.window.scrollY > 400 && this.window.scrollY < 600) {
-    const greenGoblin = this.document.querySelector('.green-goblin');
-    const nuevaPosicion = window.scrollY * 0.2;
-
+  const greenGoblin = this.document.querySelector('.green-goblin');
+  if (this.window.scrollY > 400 && this.window.scrollY < 700) {
+    console.log("Moving goblin...");
+    const nuevaPosicion = window.scrollY * 0.1;
     // Aplica la nueva posición al elemento
+    console.log(greenGoblin.style.top);
     greenGoblin.style.top = nuevaPosicion + 'px';
   }
 })
 window.addEventListener('scroll', function (e) {
   const cards = this.document.querySelectorAll('.card');
   cards.forEach(c => {
-    console.log(isElementInViewport(c));
     if (isElementInViewport(c)) {
+      c.classList.remove("card-hidden");
       c.classList.add("card-visible");
     }
   })
