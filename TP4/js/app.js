@@ -29,3 +29,14 @@ window.addEventListener('scroll', function () {
   spiderNormal.style.transform = `translateY(${y * -0.3}px)`;
   spiderWeb2.style.transform = `translateY(${y * -0.3}px)`;
 });
+
+window.addEventListener('scroll', function (e) {
+  console.log(this.window.scrollY);
+  if (this.window.scrollY > 400 && this.window.scrollY < 600) {
+    const greenGoblin = this.document.querySelector('.green-goblin');
+    const nuevaPosicion = window.scrollY * 0.2;
+
+    // Aplica la nueva posición al elemento
+    greenGoblin.style.top = nuevaPosicion + 'px';
+  }
+})
