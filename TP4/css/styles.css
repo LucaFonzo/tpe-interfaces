@@ -55,6 +55,35 @@ p {
         height: 50px;
     }
 }
+/*SPINNER*/
+#loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/img/background-loader.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background: url('../assets/img/cara-loader.webp') center/contain no-repeat;
+    animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 /*BTNS*/
 .primary-btn {
@@ -166,19 +195,25 @@ header .primary-btn {
 .side-bar {
   position: fixed;
   background-color: var(--blue);
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
   z-index: 4;
   display: flex;
   justify-content: center;
   transition: 0.3s ease-out;
   transform: translateX(-100%);
 }
+.side-bar ul {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
 .side-bar ul li {
   visibility: hidden;
   transition: opacity 0.8s ease, transform 0.8s ease;
   opacity: 0;
-  padding: 10px;
+  padding: 5px;
+  margin: 10px;
   color: var(--white);
 }
 .side-bar.active ul li {

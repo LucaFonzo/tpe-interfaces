@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // Simula el tiempo de carga de la página
+  setTimeout(function () {
+    document.getElementById("loader-container").style.display = "none";
+  }, 5000);
+});
+
+
 document.querySelector('.hamburger-btn').addEventListener('click', function () {
   this.classList.toggle('active');
   console.log(document.querySelector('.side-bar'));
