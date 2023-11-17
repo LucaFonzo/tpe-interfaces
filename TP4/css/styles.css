@@ -164,7 +164,7 @@ header .primary-btn {
     }
 }
 .side-bar {
-  position: absolute;
+  position: fixed;
   background-color: var(--blue);
   height: 300px;
   width: 300px;
