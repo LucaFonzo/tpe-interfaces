@@ -1,9 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Simula el tiempo de carga de la página
+  document.querySelector('#loader-container').addEventListener('wheel', preventScroll, { passive: false });
+  console.log(document.querySelector('#loader-container'));
   setTimeout(function () {
     document.getElementById("loader-container").style.display = "none";
   }, 5000);
 });
+
+const preventScroll = (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  return false;
+}
 
 
 document.querySelector('.hamburger-btn').addEventListener('click', function () {
