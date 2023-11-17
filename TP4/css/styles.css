@@ -68,6 +68,9 @@ p {
     box-sizing: content-box;
     -webkit-text-stroke: #02187E 1px;
 }
+.primary-btn:hover {
+  cursor: pointer;
+}
 
 .blue-shadow {
     box-shadow: 4px 5px #02187E;
@@ -151,7 +154,58 @@ header .primary-btn {
   height: 50px;
   width: 200px;
 }
+/*NAV*/
+@keyframes smoothAppear {
+  from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.side-bar {
+  position: absolute;
+  background-color: var(--blue);
+  height: 300px;
+  width: 300px;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s ease-out;
+  transform: translateX(-100%);
+}
+.side-bar ul li {
+  visibility: hidden;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  opacity: 0;
+  padding: 10px;
+  color: var(--white);
+}
+.side-bar.active ul li {
+  visibility: visible;
+  opacity: 1;
+}
+.side-bar.active ul li:nth-child(0) {
+  transition-delay: 0.2s;
+}
+.side-bar.active ul li:nth-child(1) {
+  transition-delay: 0.4s;
+}
+.side-bar.active ul li:nth-child(2) {
+  transition-delay: 0.6s;
+}
+.side-bar.active ul li:nth-child(3) {
+  transition-delay: 0.8s;
+}
+.side-bar.active ul li:nth-child(4) {
+  transition-delay: 1s;
+}
+.side-bar.active {
+  transform: translateX(0%);
+}
 
+
+/*MAIN*/
 .main-hero {
   position: relative;
   height: 720px;
@@ -299,6 +353,8 @@ header .primary-btn {
 }
 .spider-white-section img {
   position: absolute;
+  width: fit-content;
+  transition: transform 0.5s ease;
 }
 .spider-white-section .container img:first-child {
   top: 20%;
@@ -313,6 +369,16 @@ header .primary-btn {
 .spider-white-section .container img:nth-child(3) {
   top: -30%;
   left: 5%;
+}
+.spider-white-section .container img:hover {
+  transform: perspective(800px) rotateY(10deg); /* Adjust the perspective and rotation as needed */
+}
+.spider-white-section .container img:nth-child(2) {
+  transition-delay: 0.2s; /* Delay the transition for the second image */
+}
+
+.spider-white-section .container img:nth-child(3) {
+  transition-delay: 0.4s; /* Delay the transition for the third image */
 }
 /*AVENGERS SECTION*/
 .avengers-section {
@@ -365,7 +431,7 @@ header .primary-btn {
 /*MORE-FRIENDS SECTION*/
 .more-friends-section {
   margin-top: 200px;
-  height: 1000px;
+  height: 1800px;
 }
 
 .more-friends-section h2 {
@@ -381,4 +447,22 @@ header .primary-btn {
 }
 .information p {
   margin-top: 20px;
+}
+/*A-POWER-SECTION*/
+.a-power-section {
+  background-color: black;
+  height: 300px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.a-power-section h2 {
+  color: var(--white);
+  line-height: 72px;
+  font-size: 60px;
+}
+.a-power-section button {
+  width: 292px;
+  height: 50px;
+  margin-top: 30px;
 }

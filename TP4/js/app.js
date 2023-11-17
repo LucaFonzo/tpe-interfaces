@@ -1,5 +1,7 @@
 document.querySelector('.hamburger-btn').addEventListener('click', function () {
   this.classList.toggle('active');
+  console.log(document.querySelector('.side-bar'));
+  document.querySelector('.side-bar').classList.toggle('active');
 });
 window.addEventListener('scroll', function () {
   const spiderWhite = document.querySelector('.spider-white');
@@ -46,6 +48,17 @@ window.addEventListener('scroll', function () {
     this.document.querySelector('header img').classList.add('hidden');
   }
 });
+
+window.addEventListener('scroll', function (e) {
+  const section = this.document.querySelector('.spider-white-section');
+  if (isElementInViewport(section)) {
+    const y = window.scrollY;
+    const images = this.document.querySelectorAll('.spider-white-section .container img');
+    images.forEach((image,index) => {
+      //image.style.transform = `translateY(${y - 10}px)`;
+    })
+  }
+})
 
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
