@@ -613,3 +613,30 @@ main {
   position: absolute;
   top: 40%;
 }
+/*FOOTER*/
+.plataforms-section {
+  background-color: #242424;
+  height: 80px;
+}
+
+.rights-section {
+  background-color: #5E5E5D;
+  padding: 10px;
+  height: 598px;
+}
+.rights-section p {
+  color: var(--white);
+  width: 68.5%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 18.9px;
+}
+.rights-section span {
+  color: var(--white);
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+.social-medias {
+  margin-top: 40px;
+}
