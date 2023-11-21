@@ -203,6 +203,7 @@ header .primary-btn {
   height: 250px;
   width: 250px;
   z-index: 4;
+  top: 87px;
   display: flex;
   justify-content: center;
   transition: 0.3s ease-out;
@@ -431,7 +432,6 @@ main {
   background-color: black;
   position: relative;
   height: 800px;
-  z-index: 1;
 }
 
 .avengers-section h2 {
@@ -479,10 +479,12 @@ main {
 .more-friends-section {
   height: 1000px;
   background-image: url("../assets/img/background-white.png");
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -100px;
   z-index: -1;
-}
-.more-friends-section .container {
-  margin-top: 200px;
 }
 
 .more-friends-section h2 {
@@ -531,4 +533,83 @@ main {
   width: 292px;
   height: 50px;
   margin-top: 30px;
+}
+/*three-spiders-section*/
+.three-spiders-section {
+  position: relative;
+  background-image: url('../assets/img/background-white-three-spiders.png');
+  background-color: black;
+  height: 400px;
+}
+
+.three-spiders-section img:nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+.three-spiders-section img:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+.three-spiders-section img:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+}
+/*EMAIL SECTION*/
+.email-section {
+  background-image: url('../assets/img/rectangle-correo.png');
+  height: 1200px;
+  margin-top: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.email-section h2 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 56.7px;
+  width: 70%;
+  text-align: center;
+}
+.email-section .container {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+}
+.email-section .container div {
+  border-radius: 20px;
+  margin-top: 10px;
+  width: 780px;
+  height: 60px;
+}
+.email-section .container div input {
+  width: 70%;
+  border-radius: 10px;
+  height: 100%;
+  border: 5px solid var(--blue);
+  border-radius: 15px 0px 0px 15px;
+}
+.email-section .container div button {
+  color: #02187E;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 18.9px;
+  width: 29.5%;
+  height: 100%;
+  background-color: var(--yellow);
+  border: 5px solid var(--blue);
+  border-radius: 0px 15px 15px 0px;
+}
+.email-section .container p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 18.9px;
+  width: 60%;
+}
+.building-image {
+  position: absolute;
+  top: 40%;
 }
