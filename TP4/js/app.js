@@ -68,9 +68,8 @@ window.addEventListener('scroll', function () {
 window.addEventListener('scroll', function (e) {
   const section = this.document.querySelector('.spider-white-section');
   if (isElementInViewport(section)) {
-    const y = window.scrollY;
     const images = this.document.querySelectorAll('.spider-white-section .container img');
-    images.forEach((image,index) => {
+    images.forEach((image, index) => {
       //image.style.transform = `translateY(${y - 10}px)`;
     })
   }
@@ -85,3 +84,9 @@ function isElementInViewport(el) {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
+
+
+
+document.addEventListener("scroll", function () {
+  
+});

@@ -46,6 +46,10 @@ p {
   justify-content: space-between;
 }
 
+.mt-10 {
+  margin-top: 10px;
+}
+
 @keyframes reduceElement {
   from {
         height: 100px;
@@ -111,6 +115,7 @@ header {
   align-items: center;
   background: var(--blue-gradient);
   padding: 10px;
+  margin-bottom: 0px;
 }
 
 .hamburger-btn {
@@ -241,11 +246,16 @@ header .primary-btn {
 
 
 /*MAIN*/
+main {
+  margin-top: 0px;
+}
+
 .main-hero {
   position: relative;
   height: 720px;
   width: 100%;
   background-image: url('../assets/img/clouds.png');
+  top: -10px;
   background-size: cover;
   background-position: center;
 }
@@ -390,6 +400,7 @@ header .primary-btn {
   position: absolute;
   width: fit-content;
   transition: transform 0.5s ease;
+  height: auto;
 }
 .spider-white-section .container img:first-child {
   top: 20%;
@@ -402,7 +413,7 @@ header .primary-btn {
   z-index: 1;
 }
 .spider-white-section .container img:nth-child(3) {
-  top: -30%;
+  top: -34%;
   left: 5%;
 }
 .spider-white-section .container img:hover {
@@ -420,6 +431,7 @@ header .primary-btn {
   background-color: black;
   position: relative;
   height: 800px;
+  z-index: 1;
 }
 
 .avengers-section h2 {
@@ -465,8 +477,12 @@ header .primary-btn {
 }
 /*MORE-FRIENDS SECTION*/
 .more-friends-section {
+  height: 1000px;
+  background-image: url("../assets/img/background-white.png");
+  z-index: -1;
+}
+.more-friends-section .container {
   margin-top: 200px;
-  height: 1800px;
 }
 
 .more-friends-section h2 {
@@ -477,11 +493,26 @@ header .primary-btn {
 .article-more-friends {
   margin-top: 100px;
 }
-.information {
+.text-container {
   margin-left: 40px;
 }
-.information p {
+.text-container p {
   margin-top: 20px;
+}
+.image-container {
+  position: relative;
+}
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.image-container.active {
+  opacity: 1;
+}
+.image-container.inactive {
+  opacity: 0;
 }
 /*A-POWER-SECTION*/
 .a-power-section {
