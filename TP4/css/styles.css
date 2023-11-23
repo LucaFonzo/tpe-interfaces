@@ -693,7 +693,9 @@ main {
   height: 50px;
   width: 40px;
   background: url("../assets/img/sprite-sheet-spiderman-transformed.png") left center;
-  background-position: -225px;
+  background-position: 0px;
+}
+.spider-normal-building:hover {
   animation: spiderAnimation 6s steps(11) infinite;
 }
 @keyframes spiderAnimation {
