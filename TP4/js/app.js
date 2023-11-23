@@ -1,6 +1,6 @@
 // document.addEventListener("DOMContentLoaded", function () {
-//   // Simula el tiempo de carga de la página
-//   //document.querySelector('#loader-container').addEventListener('wheel', preventScroll, { passive: false });
+//    Simula el tiempo de carga de la página
+//   document.querySelector('#loader-container').addEventListener('wheel', preventScroll, { passive: false });
 //   console.log(document.querySelector('#loader-container'));
 //   setTimeout(function () {
 //     document.getElementById("loader-container").style.display = "none";
@@ -95,7 +95,6 @@ window.addEventListener('scroll', (e) => {
       text.classList.remove('show');
     })
   }
-  console.log(window.scrollY);
   if (window.scrollY >= 3500 && window.scrollY <= 3900) {
     clearShow();
     document.querySelector('#text-1').classList.add('show');
@@ -114,4 +113,54 @@ window.addEventListener('scroll', (e) => {
     document.querySelector('#derrota-villanos-diviertete').classList.add('show');
     document.querySelector('#text-4').classList.add('show');
   }
+})
+
+document.querySelectorAll(".three-spiders-section img").forEach(img => {
+  img.addEventListener("mouseover", (e) => {
+    console.log(e);
+    if (img.alt == "spider-white") {
+      img.classList.add("show");
+      const spiderNormal = img.nextElementSibling;
+      const spiderBlack = spiderNormal.nextElementSibling;
+      spiderNormal.classList.add("blur");
+      spiderBlack.classList.add("blur");
+      document.querySelector('.background-spider-pink').classList.add('show');
+    } else if (img.alt == "spider-normal") {
+      img.classList.add("show");
+      const spiderWhite = img.previousElementSibling;
+      const spiderBlack = img.nextElementSibling;
+      spiderWhite.classList.add("blur");
+      spiderBlack.classList.add("blur");
+      document.querySelector('.background-spider-normal').classList.add('show');
+    } else if (img.alt == "spider-black") {
+      img.classList.add("show");
+      const spiderNormal = img.previousElementSibling;
+      const spiderWhite = spiderNormal.previousElementSibling;
+      spiderNormal.classList.add("blur");
+      spiderWhite.classList.add("blur");
+      document.querySelector('.background-spider-black').classList.add('show');
+    }
+  });
+  img.addEventListener("mouseout", (e) => {
+    img.classList.remove("show");
+    if (img.alt == "spider-white") {
+      const spiderNormal = img.nextElementSibling;
+      const spiderBlack = spiderNormal.nextElementSibling;
+      spiderNormal.classList.remove("blur");
+      spiderBlack.classList.remove("blur");
+      document.querySelector('.background-spider-pink').classList.remove('show');
+    } else if (img.alt == "spider-normal") {
+      const spiderWhite = img.previousElementSibling;
+      const spiderBlack = img.nextElementSibling;
+      spiderWhite.classList.remove("blur");
+      spiderBlack.classList.remove("blur");
+      document.querySelector('.background-spider-normal').classList.remove('show');
+    } else if (img.alt == "spider-black") {
+      const spiderNormal = img.previousElementSibling;
+      const spiderWhite = spiderNormal.previousElementSibling;
+      spiderNormal.classList.remove("blur");
+      spiderWhite.classList.remove("blur");
+      document.querySelector('.background-spider-black').classList.remove('show');
+    }
+  })
 })
