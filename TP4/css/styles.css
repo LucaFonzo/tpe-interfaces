@@ -692,13 +692,24 @@ main {
   left: 79%;
   height: 50px;
   width: 40px;
-  background: url("../assets/img/sprite-sheet-spiderman-transformed.png") left center;
+  background: url("../assets/img/punch-spritesheet.png") left center no-repeat;
   background-position: 0px;
+  animation: punchAnimation 6s steps(8) infinite;
 }
 .spider-normal-building:hover {
-  animation: spiderAnimation 6s steps(11) infinite;
+  background-position: 0px;
+  background: url("../assets/img/sprite-sheet-spiderman-transformed.png") left center;
+  animation: punchedAnimation 6s steps(11) infinite;
 }
-@keyframes spiderAnimation {
+@keyframes punchAnimation {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -373.33px 0px;
+  }
+}
+@keyframes punchedAnimation {
   0% {
     background-position: 0px 0px;
   }
