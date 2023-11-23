@@ -685,8 +685,24 @@ main {
 }
 .spider-normal-building {
   position: absolute;
-  top: 72%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 75%;
   left: 79%;
+  height: 50px;
+  width: 40px;
+  background: url("../assets/img/sprite-sheet-spiderman-transformed.png") left center;
+  background-position: -225px;
+  animation: spiderAnimation 6s steps(11) infinite;
+}
+@keyframes spiderAnimation {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -495px 0px;
+  }
 }
 /*FOOTER*/
 .plataforms-section {
