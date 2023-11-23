@@ -1,11 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Simula el tiempo de carga de la página
-  document.querySelector('#loader-container').addEventListener('wheel', preventScroll, { passive: false });
-  console.log(document.querySelector('#loader-container'));
-  setTimeout(function () {
-    document.getElementById("loader-container").style.display = "none";
-  }, 5000);
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Simula el tiempo de carga de la página
+//   //document.querySelector('#loader-container').addEventListener('wheel', preventScroll, { passive: false });
+//   console.log(document.querySelector('#loader-container'));
+//   setTimeout(function () {
+//     document.getElementById("loader-container").style.display = "none";
+//   }, 5000);
+// });
 
 const preventScroll = (e) => {
   e.preventDefault();
@@ -85,8 +85,33 @@ function isElementInViewport(el) {
   );
 }
 
-
-
-document.addEventListener("scroll", function () {
-  
-});
+/**MORE FRIENDS SECTION */
+window.addEventListener('scroll', (e) => {
+  function clearShow() {
+    document.querySelectorAll('.image-container div img').forEach(img => {
+      img.classList.remove('show');
+    })
+    document.querySelectorAll('information').forEach(text => {
+      text.classList.remove('show');
+    })
+  }
+  console.log(window.scrollY);
+  if (window.scrollY >= 3500 && window.scrollY <= 3900) {
+    clearShow();
+    document.querySelector('#text-1').classList.add('show');
+    document.querySelector('#mas-100-misiones').classList.add('show');
+  }
+  else if (window.scrollY >= 4000 && window.scrollY <= 4400) {
+    clearShow();
+    document.querySelector('#text-2').classList.add('show');
+    document.querySelector('#escenas-deslumbrantes').classList.add('show');
+  } else if (window.scrollY >= 4450 && window.scrollY <= 4700) {
+    clearShow();
+    document.querySelector('#text-3').classList.add('show');
+    document.querySelector('#cada-mision-puntos').classList.add('show');
+  } else if (window.scrollY >= 4750){
+    clearShow();
+    document.querySelector('#derrota-villanos-diviertete').classList.add('show');
+    document.querySelector('#text-4').classList.add('show');
+  }
+})
