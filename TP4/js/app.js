@@ -186,5 +186,22 @@ document.querySelectorAll(".three-spiders-section img").forEach(img => {
       spiderWhite.classList.remove("blur");
       document.querySelector('.background-spider-black').classList.remove('show');
     }
+  });
+
+  img.addEventListener("click", (e) => {
+    if (img.alt == "spider-normal") {
+      document.querySelector('#infoPeter').classList.add('active');
+    } else if (img.alt == "spider-white") {
+      document.querySelector('#infoGwen').classList.add('active');
+    } else if (img.alt == "spider-black") {
+      document.querySelector('#infoMiles').classList.add('active');
+    }
+  })
+})
+
+
+document.querySelectorAll('.cross-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.target.parentElement.parentElement.parentElement.classList.remove('active');
   })
 })
