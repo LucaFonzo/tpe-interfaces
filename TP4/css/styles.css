@@ -207,9 +207,10 @@ header .primary-btn {
   position: fixed;
   background-color: var(--blue);
   height: 250px;
-  width: 250px;
+  width: 300px;
   z-index: 4;
   top: 10%;
+  border-radius: 0px 10px 10px 0px;
   display: flex;
   justify-content: center;
   transition: 0.3s ease-out;
@@ -223,10 +224,16 @@ header .primary-btn {
 .side-bar ul li {
   visibility: hidden;
   transition: opacity 0.8s ease, transform 0.8s ease;
+  font-size: 20px;
+  line-height: 18px;
   opacity: 0;
   padding: 5px;
   margin: 10px;
   color: var(--white);
+}
+.side-bar ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 .side-bar.active ul li {
   visibility: visible;
@@ -425,14 +432,16 @@ main {
   left: 5%;
 }
 .spider-white-section .container img:hover {
-  transform: perspective(800px) rotateY(10deg); /* Adjust the perspective and rotation as needed */
+  transform: perspective(800px) rotateY(15deg);
+  transform: scale(1.1);
+  cursor: pointer;
 }
 .spider-white-section .container img:nth-child(2) {
-  transition-delay: 0.2s; /* Delay the transition for the second image */
+  transition-delay: 0.2s;
 }
 
 .spider-white-section .container img:nth-child(3) {
-  transition-delay: 0.4s; /* Delay the transition for the third image */
+  transition-delay: 0.4s;
 }
 /*AVENGERS SECTION*/
 .avengers-section {
@@ -668,13 +677,13 @@ main {
   font-size: 60px;
   font-weight: 600;
   line-height: 56.7px;
-  width: 90%;
+  width: 80%;
   text-align: center;
 }
 .email-section .container {
   position: absolute;
   top: 10%;
-  left: 30%;
+  left: 20%;
 }
 .box-email {
   display: flex;
@@ -720,7 +729,7 @@ main {
   font-size: 20px;
   line-height: 18.9px;
   margin-top: 20px;
-  width: 65%;
+  width: 55%;
   margin-top: 40px;
   margin-left: 40px;
 }
