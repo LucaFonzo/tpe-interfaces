@@ -91,9 +91,12 @@ p {
     border-radius: 111px;
     box-sizing: content-box;
     -webkit-text-stroke: #02187E 1px;
+    transition: all 0.5s ease;
 }
 .primary-btn:hover {
   cursor: pointer;
+  background-color: var(--yellow-light);
+  transform: scale(1.1);
 }
 
 .blue-shadow {
