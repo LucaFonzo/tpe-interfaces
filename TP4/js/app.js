@@ -13,18 +13,19 @@ const preventScroll = (e) => {
   return false;
 }
 
-
 document.querySelector('.hamburger-btn').addEventListener('click', function () {
   this.classList.toggle('active');
   console.log(document.querySelector('.side-bar'));
   document.querySelector('.side-bar').classList.toggle('active');
 });
+
 window.addEventListener('scroll', function () {
   const spiderWhite = document.querySelector('.spider-white');
   const spiderNormal = document.querySelector('.spider-normal');
   const spiderBlack = document.querySelector('.spider-black');
   const spiderWeb1 = document.querySelector('.spider-web-1');
   const spiderWeb2 = document.querySelector('.spider-web-2');
+  const title = this.document.querySelector('.title-img');
   //I take the y to move the elements
   let y = window.scrollY;
   //SpidermanWhite
@@ -35,6 +36,7 @@ window.addEventListener('scroll', function () {
   //Spiderman normal
   spiderNormal.style.transform = `translateY(${y * -0.3}px)`;
   spiderWeb2.style.transform = `translateY(${y * -0.3}px)`;
+
 });
 //Move of goblin
 window.addEventListener('scroll', function (e) {
@@ -55,7 +57,13 @@ window.addEventListener('scroll', function (e) {
     }
   })
 })
+/**HEADER */
 window.addEventListener('scroll', function () {
+  /**
+   * Agrego la clase sticky si ya no se muestra
+   * el header y cambio la visibility del logo
+   * en el header achicado
+   */
   if (this.window.scrollY > 10) {
     this.document.querySelector('header').classList.add('header-sticky');
     this.document.querySelector('header img').classList.remove('hidden');
@@ -70,11 +78,13 @@ window.addEventListener('scroll', function (e) {
   if (isElementInViewport(section)) {
     const images = this.document.querySelectorAll('.spider-white-section .container img');
     images.forEach((image, index) => {
-      //image.style.transform = `translateY(${y - 10}px)`;
+      const y = window.scrollY;
+      image.style.transform = `translateY(${(y) * 0.03}px)`;
     })
   }
 })
 
+/**Detecta si un elemento esta dentro del viewport */
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
   return (
@@ -87,6 +97,9 @@ function isElementInViewport(el) {
 
 /**MORE FRIENDS SECTION */
 window.addEventListener('scroll', (e) => {
+  /**
+   * Le quito la clase show,que es la que muestra el contenido cambiando su opacity
+   */
   function clearShow() {
     document.querySelectorAll('.image-container div img').forEach(img => {
       img.classList.remove('show');
@@ -95,6 +108,10 @@ window.addEventListener('scroll', (e) => {
       text.classList.remove('show');
     })
   }
+  /**
+   * Agrego la clase show segun la posicion del
+   * scroll para que se muestre la imagen y el texto
+  */
   if (window.scrollY >= 3500 && window.scrollY <= 3900) {
     clearShow();
     document.querySelector('#text-1').classList.add('show');
@@ -116,8 +133,15 @@ window.addEventListener('scroll', (e) => {
 })
 
 document.querySelectorAll(".three-spiders-section img").forEach(img => {
+  /**
+   * Selecciono todas las imaganes
+   * de los spider-mans y segun donde
+   * hace hover añado el blur a las imagenes
+   * en las que no este el mouse encima y
+   * a la que si le agrego un show que
+   * agranda su tamaño
+   */
   img.addEventListener("mouseover", (e) => {
-    console.log(e);
     if (img.alt == "spider-white") {
       img.classList.add("show");
       const spiderNormal = img.nextElementSibling;

@@ -50,15 +50,6 @@ p {
   margin-top: 10px;
 }
 
-@keyframes reduceElement {
-  from {
-        height: 100px;
-    }
-
-    to {
-        height: 50px;
-    }
-}
 /*SPINNER*/
 #loader-container {
     position: fixed;
@@ -109,6 +100,15 @@ p {
     box-shadow: 4px 5px #02187E;
 }
 /*HEADER*/
+@keyframes reduceElement {
+  from {
+        height: 100px;
+    }
+
+    to {
+        height: 90px;
+    }
+}
 header {
   display: flex;
   justify-content: space-around;
@@ -116,7 +116,7 @@ header {
   background: var(--blue-gradient);
   padding: 10px;
   margin-bottom: 0px;
-  animation: reduceElement 0.2s ease-out;
+  height: 100px;
 }
 
 .hamburger-btn {
@@ -128,7 +128,10 @@ header {
   position: sticky;
   top: 0;
   left: 0;
+  animation: reduceElement 0.6s ease-out;
   z-index: 1000;
+  height: 90px;
+  padding: 10px;
 }
 
 .hamburger-btn span{
@@ -309,6 +312,7 @@ main {
 .title-img {
   top: -3%;
   left: 30%;
+  transition: width 0.5s, height 0.5s;
 }
 
 /*Conoce section*/
@@ -694,12 +698,12 @@ main {
   width: 40px;
   background: url("../assets/img/punch-spritesheet.png") left center no-repeat;
   background-position: 0px;
-  animation: punchAnimation 6s steps(8) infinite;
+  animation: punchAnimation 2s steps(8) infinite;
 }
 .spider-normal-building:hover {
   background-position: 0px;
   background: url("../assets/img/sprite-sheet-spiderman-transformed.png") left center;
-  animation: punchedAnimation 6s steps(11) infinite;
+  animation: punchedAnimation 4s steps(11) infinite;
 }
 @keyframes punchAnimation {
   0% {
