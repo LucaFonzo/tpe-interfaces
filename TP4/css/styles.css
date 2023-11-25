@@ -452,41 +452,44 @@ main {
   top: 90px;
   z-index: 1;
 }
-.spider-white-section img {
+.spider-white-section div {
   position: absolute;
-  width: fit-content;
   transition: transform 0.5s ease;
   max-height: 546px;
 }
-.spider-white-section .container img:first-child {
-  top: 20%;
-  left: 5%;
+#card-spider-white-1 {
+  top: 170px;
+  left: 50px;
+  z-index: 3;
+}
+#card-spider-white-2 {
+  top: -20px;
+  left: 30px;
   z-index: 2;
 }
-.spider-white-section .container img:nth-child(2) {
-  top: -10%;
-  left: 2%;
-  z-index: 1;
+#card-spider-white-3 {
+  top: -150px;
+  left: 30px;
 }
-.spider-white-section .container img:nth-child(3) {
-  top: -34%;
-  left: 5%;
+.spider-white-section .container div img {
+  transition: transform 0.5s ease;
 }
-.spider-white-section .container img:hover {
+.spider-white-section .container div img:hover {
   transform: perspective(800px) rotateY(15deg);
   cursor: pointer;
 }
-.spider-white-section .container img:nth-child(2) {
+#card-spider-white-2 img {
   transition-delay: 0.2s;
 }
 
-.spider-white-section .container img:nth-child(3) {
+#card-spider-white-3 img {
   transition-delay: 0.4s;
 }
 /*AVENGERS SECTION*/
 .avengers-section {
   position: relative;
   height: 800px;
+  margin-top: 100px;
 }
 
 .background-avengers {

@@ -76,10 +76,10 @@ window.addEventListener('scroll', function () {
 window.addEventListener('scroll', function (e) {
   const section = this.document.querySelector('.spider-white-section');
   if (isElementInViewport(section)) {
-    const images = this.document.querySelectorAll('.spider-white-section .container img');
-    images.forEach((image, index) => {
+    const divs = this.document.querySelectorAll('.spider-white-section .container div');
+    divs.forEach((div, index) => {
       const y = window.scrollY;
-      image.style.transform = `translateY(${(y) * 0.03}px)`;
+      div.style.transform = `translateY(${(y) * 0.03}px)`;
     })
   }
 })
