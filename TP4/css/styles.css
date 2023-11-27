@@ -192,6 +192,71 @@ p {
   z-index: 1;
 }
 
+.spider-white-section div div {
+  position: absolute;
+  transition: 0.5s ease;
+  cursor: pointer;
+  width: 450px;
+  height: 220px;
+  overflow: visible;
+}
+
+.spider-white-section div div.active {
+  transition: 0.5s ease;
+}
+
+.spider-white-section div div img {
+  pointer-events: none;
+}
+
+#card-spider-white-1 {
+  top: 295px;
+  left: -550px;
+  z-index: 3;
+  transform: rotateZ(-36deg);
+}
+
+#card-spider-white-1:hover {
+  transform: perspective(800px) rotateY(15deg) rotateZ(-36deg);
+}
+
+#card-spider-white-1.active {
+  transition-delay: 0.2s;
+  left: 50px;
+}
+
+#card-spider-white-2 {
+  top: 75px;
+  left: -570px;
+  z-index: 2;
+  transform: rotateZ(-26deg);
+}
+
+#card-spider-white-2:hover {
+  transform: perspective(800px) rotateY(15deg) rotateZ(-26deg);
+}
+
+#card-spider-white-2.active {
+  transition-delay: 0.1s;
+  left: 30px;
+}
+
+#card-spider-white-3 {
+  top: -105px;
+  left: -570px;
+  transform: rotateZ(-13deg);
+}
+
+#card-spider-white-3:hover {
+  transform: perspective(800px) rotateY(15deg) rotateZ(-13deg);
+}
+
+#card-spider-white-3.active {
+  left: 30px;
+}
+
+
+/*
 .spider-white-section div {
   position: absolute;
   transition: transform 0.5s ease;
@@ -199,6 +264,7 @@ p {
 }
 
 #card-spider-white-1 {
+  transform: rotateY()
   top: 170px;
   left: 50px;
   z-index: 3;
@@ -219,10 +285,7 @@ p {
   transition: transform 0.5s ease;
 }
 
-.spider-white-section .container div img:hover {
-  transform: perspective(800px) rotateY(15deg);
-  cursor: pointer;
-}
+
 
 #card-spider-white-2 img {
   transition-delay: 0.2s;
@@ -231,7 +294,7 @@ p {
 #card-spider-white-3 img {
   transition-delay: 0.4s;
 }
-
+*/
 /*AVENGERS SECTION*/
 .background-avengers {
   background-color: black;

@@ -4,6 +4,15 @@ const preventScroll = (e) => {
   return false;
 }
 
+/**Detecta si un elemento esta dentro del viewport */
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
 //MAIN HEROS PARALLAX
 const spiderWhite = document.querySelector('.spider-white');
 const spiderNormal = document.querySelector('.spider-normal');
@@ -53,6 +62,33 @@ window.addEventListener('scroll', function (e) {
   })
 })
 
+//SPIDER-WHITE SECTION
+const spiderWhiteSection = this.document.querySelector('.spider-white-section');
+const spiderWhiteDivs = [];
+document.querySelectorAll('.spider-white-section .container div').forEach(div => {
+  let object = {
+    div: div,
+    originalTop: parseInt(getComputedStyle(div, null).getPropertyValue("top").slice(0, -2)),
+  }
+  spiderWhiteDivs.push(object);
+})
+
+window.addEventListener('scroll', function (e) {
+  console.log(isElementInViewport(spiderWhiteSection));
+  if (isElementInViewport(spiderWhiteSection)) {
+    for (let divObject of spiderWhiteDivs) {
+      const top = divObject.originalTop;
+      const y = window.scrollY;
+      divObject.div.classList.add('active');
+      divObject.div.style.top = `${((y)-2000) * 0.15 + top}px`;
+    }
+  } else {
+    for (let divObject of spiderWhiteDivs) {
+      divObject.div.classList.remove('active');
+    }
+  }
+});
+
 
 //AVENGERS SECTION
 const div = document.querySelector('.avengers-section').parentElement;
@@ -60,7 +96,7 @@ const images = [];
 
 div.querySelectorAll('img').forEach(img => {
   let i = {
-    img,
+    img: img,
     depthX: img.getAttribute('data-depth-x'),
     depthY: img.getAttribute('data-depth-y')
   }
@@ -70,33 +106,10 @@ div.querySelectorAll('img').forEach(img => {
 div.addEventListener('mousemove', (e) => {
   const x = e.clientX;
   const y = e.clientY;
-  for(let img of images){
-    img.img.style.transform = `translateX(${x * img.depthX}px) translateY(${y * img.depthY}px)`;
+  for (let imageObject of images) {
+    imageObject.img.style.transform = `translateX(${x * imageObject.depthX}px) translateY(${y * imageObject.depthY}px)`;
   }
 });
-
-
-window.addEventListener('scroll', function (e) {
-  const section = this.document.querySelector('.spider-white-section');
-  if (isElementInViewport(section)) {
-    const divs = this.document.querySelectorAll('.spider-white-section .container div');
-    divs.forEach((div, index) => {
-      const y = window.scrollY;
-      div.style.transform = `translateY(${(y) * 0.03}px)`;
-    })
-  }
-})
-
-/**Detecta si un elemento esta dentro del viewport */
-function isElementInViewport(el) {
-  var rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
 
 /**MORE FRIENDS SECTION */
 window.addEventListener('scroll', (e) => {
