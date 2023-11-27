@@ -1,0 +1,63 @@
+/*MAIN*/
+main {
+    margin-top: 0px;
+  }
+  
+  .main-hero {
+    position: relative;
+    height: 720px;
+    width: 100%;
+    background-image: url('../assets/img/clouds.png');
+    top: -10px;
+    background-size: cover;
+    background-position: center;
+    overflow-x: clip;
+  }
+  
+  .main-hero img {
+    position: absolute;
+  }
+  
+  .image1 {
+    left: 0;
+    top: 2%;
+  }
+  
+  .image2 {
+    left: 33%;
+    top: 68%;
+  }
+  
+  .image3 {
+    right: 0;
+    top: -1%;
+  }
+  
+  .spider-white {
+    top: 35%;
+    left: calc(25% - 300px);
+  }
+  
+  .spider-normal {
+    top: 40%;
+    left: 25%;
+    z-index: 3;
+  }
+  
+  .spider-web-2 {
+    top: calc(40% - 30px);
+    left: calc(25% - 590px);
+    z-index: 3;
+  }
+  
+  .spider-black {
+    top: 33%;
+    left: calc(25% + 300px);
+  }
+  
+  .spider-web-1 {
+    top: calc(33% + 55px);
+    left: calc(25% + 590px);
+    max-width: 1280px;
+    z-index: 3;
+  }

@@ -1,0 +1,75 @@
+/*NAV*/
+@keyframes smoothAppear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.side-bar {
+    position: fixed;
+    background-color: var(--blue);
+    height: 250px;
+    width: 300px;
+    z-index: 4;
+    top: 9%;
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s ease-out;
+    transform: translateX(-100%);
+}
+
+.side-bar ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.side-bar ul li {
+    visibility: hidden;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    font-size: 20px;
+    line-height: 18px;
+    opacity: 0;
+    padding: 5px;
+    margin: 10px;
+    color: var(--white);
+}
+
+.side-bar ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.side-bar.active ul li {
+    visibility: visible;
+    opacity: 1;
+}
+
+.side-bar.active ul li:nth-child(0) {
+    transition-delay: 0.2s;
+}
+
+.side-bar.active ul li:nth-child(1) {
+    transition-delay: 0.4s;
+}
+
+.side-bar.active ul li:nth-child(2) {
+    transition-delay: 0.6s;
+}
+
+.side-bar.active ul li:nth-child(3) {
+    transition-delay: 0.8s;
+}
+
+.side-bar.active ul li:nth-child(4) {
+    transition-delay: 1s;
+}
+
+.side-bar.active {
+    transform: translateX(0%);
+}

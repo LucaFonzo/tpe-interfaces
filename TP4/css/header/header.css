@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--blue-gradient);
+    padding: 10px;
+    margin-bottom: 0px;
+    height: 100px;
+}
+
+.header-sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 90px;
+    padding: 10px;
+}
+
+header .primary-btn {
+    margin-bottom: 10px;
+    height: 50px;
+    width: 200px;
+}
+
+.title-img {
+    transform: translateY(180px);
+}
