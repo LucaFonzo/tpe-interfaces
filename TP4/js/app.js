@@ -1,9 +1,3 @@
-const preventScroll = (e) => {
-  e.preventDefault();
-  e.stopPropagation();
-  return false;
-}
-
 /**Detecta si un elemento esta dentro del viewport */
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
@@ -74,7 +68,6 @@ document.querySelectorAll('.spider-white-section .container div').forEach(div =>
 })
 
 window.addEventListener('scroll', function (e) {
-  console.log(isElementInViewport(spiderWhiteSection));
   if (isElementInViewport(spiderWhiteSection)) {
     for (let divObject of spiderWhiteDivs) {
       const top = divObject.originalTop;

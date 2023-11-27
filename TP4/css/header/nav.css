@@ -14,7 +14,7 @@
     background-color: var(--blue);
     height: 250px;
     width: 300px;
-    z-index: 4;
+    z-index: 999;
     top: 9%;
     border-radius: 0px 10px 10px 0px;
     display: flex;
