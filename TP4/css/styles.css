@@ -235,10 +235,11 @@ p {
 /*AVENGERS SECTION*/
 .background-avengers {
   background-color: black;
-  height: 900px;
+  height: 1000px;
   width: 1280px;
   padding: 20px;
   position: absolute;
+  margin-top: -120px;
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 85%);
 }
 
