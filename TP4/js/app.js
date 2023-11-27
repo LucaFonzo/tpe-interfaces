@@ -203,8 +203,8 @@ document.querySelectorAll(".three-spiders-section img").forEach(img => {
 })
 
 
-document.querySelectorAll('.cross-btn').forEach(btn => {
+document.querySelectorAll('.close').forEach(btn => {
   btn.addEventListener('click', (e) => {
-    e.target.parentElement.parentElement.parentElement.classList.remove('active');
+    e.target.parentElement.classList.remove('active');
   })
 })

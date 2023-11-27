@@ -474,6 +474,9 @@ p {
 }
 
 .close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -481,16 +484,9 @@ p {
   position: relative;
   margin-top: 10px;
   margin-right: 10px;
-}
-
-.cross button {
-  position: absolute;
   cursor: pointer;
-  left: 35%;
-  top: 30%;
   color: #000;
   font-size: 40px;
-  background: none;
 }
 
 /*EMAIL SECTION*/
