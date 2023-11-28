@@ -9,7 +9,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     z-index: 1000;
+}
+
+#loader-container span {
+    margin-top: 15px;
+    color: var(--white);
+    font-size: 40px;
 }
 
 .loader {
